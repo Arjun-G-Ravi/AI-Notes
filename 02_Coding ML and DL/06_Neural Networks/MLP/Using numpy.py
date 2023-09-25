@@ -21,11 +21,15 @@ class MLP:
             w = np.zeros([shape_for_weight, i])
             # print(w.shape)
             self.weight.append(w)
-
             bias = np.zeros(i)
             self.bias.append(bias)
-
             shape_for_weight = i
+
+
+        # BACK PROPOGATION  
+        # forward pass
+        X_out = self.predict(X)
+
 
         return 
 
@@ -36,12 +40,7 @@ class MLP:
             bias = self.bias[i]
             X_traversing = X_traversing @ weight + bias
         return X_traversing
-            
-
-
-
-        return
-    
+                
     def sigmoid(self, x):
         return 1/(1+np.exp(-x))
         

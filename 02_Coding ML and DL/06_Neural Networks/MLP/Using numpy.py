@@ -3,7 +3,7 @@
 import numpy as np
 
 class MLP:
-    def __init__(self,lr=0.01, num_epochs=100, layers=[1, 3, 1]):
+    def __init__(self,lr=0.01, num_epochs=100, layers=[5, 3, 1]):
         self.lr = lr
         self.num_epochs = num_epochs
         self.layers = layers
@@ -14,22 +14,31 @@ class MLP:
 
     def fit(self, X, y):
         m, n = X.shape # num_data X num_features
+
+        # defining shape of weights and initializing them with zeros
+        shape_for_weight = n
         for i in self.layers:
-            bias_per_layer = []
-            wt_per_layer = []
-            for j in range(i): # me completely forgot the existence of np.zeros() :0
-                wt_of_that_neuron = [0 for k in range(n)] # make it random
-                bias_of_that_neuron = [0] # make it random
-                wt_per_layer.append(wt_of_that_neuron)
-                bias_per_layer.append(bias_of_that_neuron)
-            self.weight.append(wt_per_layer)
-            self.bias.append(bias_per_layer)
-        # print(self.weight)
+            w = np.zeros([shape_for_weight, i])
+            # print(w.shape)
+            self.weight.append(w)
+
+            bias = np.zeros(i)
+            self.bias.append(bias)
+
+            shape_for_weight = i
+
         return 
 
     def predict(self, X):
-        to_next_layer = X
-    
+        X_traversing = X
+        for i,v in enumerate(self.layers):
+            weight = self.weight[i]
+            bias = self.bias[i]
+            X_traversing = X_traversing @ weight + bias
+        return X_traversing
+            
+
+
 
         return
     
@@ -46,6 +55,7 @@ if __name__ == '__main__':
     from sklearn import datasets
     X, y = datasets.make_blobs(n_samples=100, n_features=2, cluster_std=1.05, random_state=2)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
+    print('X.shape=',X_train.shape)
 
     obj = MLP()
     obj.fit(X_train, y_train)

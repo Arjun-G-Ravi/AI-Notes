@@ -57,6 +57,7 @@ class MLP:
 
     def sigmoid(self, x):
         out = 1/(1+np.exp(-x))
+    
         # print(out.shape)
         return out
 

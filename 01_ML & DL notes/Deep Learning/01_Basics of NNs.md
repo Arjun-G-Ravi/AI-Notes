@@ -45,19 +45,7 @@ The backpropagation algorithm works as follows:
 ![Alt text](image-4.png)
 
  3. Optimisation: The network's parameters are updated using the corresponding gradients. The learning rate, a hyperparameter, is multiplied by the gradient to determine the step size. This step size controls the rate at which the parameters are adjusted. One iteration of backpropagation involves updating the parameters based on the calculated gradients for the given batch of data. An epoch consists of multiple iterations, where each iteration updates the parameters using a different batch of data.
-   
-## Gradient Checking
-It is a method for checking if gradient calculation is accurate or not. It can be used to verify if backpropogation implementation is correct or not.
-
-## Exploding and Vanishing gradients
-
-Exploding and vanishing gradients are issues that can occur during the training of neural networks, particularly those with many layers. These problems are related to the way gradients are propagated backward through the network during the backpropagation process. It is vastly prevalent in RNNs.
-
-**Exploding Gradients:** When gradients grow exponentially as they are propagated backward through the layers of a deep neural network, it's referred to as the "exploding gradients" problem. As the gradients become extremely large, parameter updates can also become very large, causing the network's parameters to change significantly in each iteration. This can lead to instability in training, making it difficult for the network to converge to a good solution.
-
-**Vanishing Gradients:** This often happens when the network has many layers, particularly in networks with activation functions that squash their inputs. As gradients become smaller and smaller, the updates to the parameters become insignificant, and the network learns at an extremely slow pace. This can lead to early layers of the network not learning effectively, resulting in poor overall performance.
-
-One way to reduce this problem is to initialise the weights with a varience of 1/n (or 2/n). 
+    
 
 ## Types of Neural Networks
 1. Multilayer Perceptrons

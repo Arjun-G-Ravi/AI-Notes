@@ -49,4 +49,25 @@ Gradient checking is a technique used to verify the correctness of the gradients
 5. After checking all parameters, if all gradients are correct (i.e., their absolute differences with numerical gradients are smaller than epsilon), you can be more confident that your gradient calculations are accurate.
 ```
 
-   
+## 7. Batching the dataset
+Instead of training the whole dataset in one go, we split up dataset as batches. This vastly speeds up the training process, as each epoch takes way less time. After this, we can implement mini batch gradient descent for optimisation.
+
+## 8. Exponentially weighted average
+Exponentially weighted average is a statistical technique that give more weight to recent data points while diminishing the influence of older data points. This is used in ML to update paramters based on influence from earlier parameters.
+
+y(t) = beta*y(t-1) + (1-beta)*f(x)
+
+Bias correction can be implemented in this to make this more accurate.
+
+## 9. Gradient Descent with momentum
+The basic idea is to compute an exponentially weighted average of your gradients, and then use that gradient to update your weights instead.
+
+This is helpful if the gradient has to go slow in one direction and fast in the other.So, we can use a larger lr, and be fine with it. It can be seen in the diagram below.
+![Alt text](<Screenshot from 2023-10-12 21-11-00.png>)
+
+## 10. RMSprop
+Just like Grad desc with moementum, with a small algorithmic change.
+RMSprop, which stands for Root Mean Square Propagation, is an optimization algorithm commonly used in training machine learning models, particularly deep neural networks.The primary goal of RMSprop is to adapt the learning rates for each parameter during training, making it suitable for non-stationary and ill-conditioned problems. It helps to converge faster and reach better solutions by scaling the learning rates based on the historical gradient information.
+
+![Alt text](<Screenshot from 2023-10-12 21-24-45.png>)
+

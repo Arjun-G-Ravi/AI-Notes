@@ -78,7 +78,6 @@ The Adam (Adaptive Moment Estimation) optimization algorithm is basically taking
 
 ## 12. Learning Rate Decay
 
-
 One of the things that might help speed up your learning algorithm is to slowly reduce your learning rate over time. This is called learning rate decay, and can be implemented as:
 ![Alt text](<Screenshot from 2023-10-13 06-39-52.png>)
 
@@ -88,3 +87,6 @@ This works, because we might want a large lr at the start, and smaller ones as w
 
 ## 13. Local Minima
 Most of the 'dertivative = 0' points in a high dimensional function are saddle points, not local minima. So getting stuck in a local minima is not a common problem. But plateuing is.
+
+## 14. Batch normalisation
+Normalising each layers of the nn, before applying the activation function.

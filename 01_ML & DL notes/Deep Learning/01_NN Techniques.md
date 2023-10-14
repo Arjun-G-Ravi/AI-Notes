@@ -90,3 +90,15 @@ Most of the 'dertivative = 0' points in a high dimensional function are saddle p
 
 ## 14. Batch normalisation
 Normalising each layers of the nn, before applying the activation function.
+
+## 15. Softmax Algorithm
+It is logistic regression extended for multi-class problems. 
+
+![Alt text](<Screenshot from 2023-10-14 06-46-50.png>)
+
+![Alt text](<Screenshot from 2023-10-14 20-18-37.png>)
+
+## 16. Early stopping
+
+Early stopping is a regularization technique used to avoid overfitting when training a machine learning model. It works by monitoring a model's performance on a held-out validation set, and stopping training when the model's performance on the validation set starts to degrade.
+

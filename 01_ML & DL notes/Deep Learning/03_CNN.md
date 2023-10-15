@@ -16,13 +16,16 @@ Different types of kernels are used to detect different edges. This image shows 
 
 In reality, we can use Sobel or Scharr filter, which perform better. **A  better idea is to treat the filter itself as a learnable parameter, and learn it via backpropogation.** This is the way convolution is implemented in CNNs.
 
+NOTE: In mathematics, convolution is always preceded by flipping the filter. In CS, we don't do that. Thus in reality, what we are doing is called 'cross-correlation'.
+
 ## Padding
-Padding allows getting a larger output matrix,after covolution is performed. The cells added by padding usually contain zeroes.
+Padding allows getting a larger output matrix, after covolution is performed. The cells added by padding usually contain zeroes.
 
 ![Alt text](image-9.png)
 
-
-
+## Stride 
+We step the convolution of the matrix by the filter by 'stride' number of steps. 
+![Alt text](<Screenshot from 2023-10-15 20-33-35.png>)
 
 
 # Convolutional Neural Network

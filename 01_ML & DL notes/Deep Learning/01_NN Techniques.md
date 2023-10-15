@@ -77,7 +77,6 @@ The Adam (Adaptive Moment Estimation) optimization algorithm is basically taking
 ![Alt text](<Screenshot from 2023-10-13 06-35-25.png>)
 
 ## 12. Learning Rate Decay
-
 One of the things that might help speed up your learning algorithm is to slowly reduce your learning rate over time. This is called learning rate decay, and can be implemented as:
 ![Alt text](<Screenshot from 2023-10-13 06-39-52.png>)
 
@@ -99,6 +98,5 @@ It is logistic regression extended for multi-class problems.
 ![Alt text](<Screenshot from 2023-10-14 20-18-37.png>)
 
 ## 16. Early stopping
-
 Early stopping is a regularization technique used to avoid overfitting when training a machine learning model. It works by monitoring a model's performance on a held-out validation set, and stopping training when the model's performance on the validation set starts to degrade.
 

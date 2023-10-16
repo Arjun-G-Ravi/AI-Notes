@@ -7,6 +7,7 @@ Convolution is performed using a convolutional kernel (also called a filter), wh
 
 ![Alt text](image-7.png)
 
+![Alt text](<Screenshot from 2023-10-15 15-54-59.png>)
 Convolution can be used to detect edges in an image. Therefore, we design NN, which encoporates convolution for image processing.
 
 ![Alt text](<Screenshot from 2023-10-15 19-47-23.png>)
@@ -16,7 +17,7 @@ Different types of kernels are used to detect different edges. This image shows 
 
 In reality, we can use Sobel or Scharr filter, which perform better. **A  better idea is to treat the filter itself as a learnable parameter, and learn it via backpropogation.** This is the way convolution is implemented in CNNs.
 
-NOTE: In mathematics, convolution is always preceded by flipping the filter. In CS, we don't do that. Thus in reality, what we are doing is called 'cross-correlation'.
+**NOTE:** In mathematics, convolution is always preceded by flipping the filter. In CS, we don't do that. Thus in reality, what we are doing is called 'cross-correlation'.
 
 ## Padding
 Padding allows getting a larger output matrix, after covolution is performed. The cells added by padding usually contain zeroes.
@@ -27,24 +28,36 @@ Padding allows getting a larger output matrix, after covolution is performed. Th
 We step the convolution of the matrix by the filter by 'stride' number of steps. 
 ![Alt text](<Screenshot from 2023-10-15 20-33-35.png>)
 
+## Convolution over 3 dimensions
+Just like 2d, convolution can be extended to three dimensions as:
+![Alt text](<Screenshot from 2023-10-16 06-30-57.png>)
+Thus a 3d image, convolved on a 3d filter gives a 2d output.
 
 # Convolutional Neural Network
 A convolutional neural network (CNN) is a special kind of feed forward NN that significantly reduces the number of parameters in a deep neural network with many units without losing too much in the quality of the model. It generally takes input in matrix form and was designed to work on image processing, as an image consists of block of information as a chunk.
 
-A CNN typically has three layers: convolutional layer, pooling layer, and fully connected layer. These layers work together to learn patterns and edges in input data(images).
+![Alt text](<Screenshot from 2023-10-16 08-01-51.png>)
+
+A CNN typically has three layers: 
+ - convolutional layer
+ - pooling layer
+ - fully connected layer  
+  
+These layers work together to learn patterns and edges in input data(images).
 
 ![Alt text](image-6.png)
+Generally in a CNN, as we go deeper into the layers, the height and width decreases and the number of channels increases.
 
-## Convolution Layer
-The convolution layer is the core building block of the CNN. It carries the main portion of the network’s computational load. This layer performs a dot product between two matrices, where one matrix is the set of learnable parameters otherwise known as a kernel/filter, and the other matrix is the restricted portion of the input from the previous layer. The kernel is spatially smaller than an image but is more in-depth (to handle color channels).
+## 1. Convolution Layer
+The convolution layer is the core building block of the CNN. It carries the main portion of the network’s computational load. This layer performs convolution with the filter (which is a matrix with weights). These layers are responsible for detecting edges in the image, which will be used in image processing.
 
-![Alt text](<Screenshot from 2023-10-15 15-54-59.png>)
+When the kernel slides across the height and width of the image, it produces the image representation of that receptive region. This produces a two-dimensional representation of the image known as an activation map that gives the response of the kernel at each spatial position of the image. 
 
-The kernel slides across the height and width of the image-producing the image representation of that receptive region. This produces a two-dimensional representation of the image known as an activation map that gives the response of the kernel at each spatial position of the image. The sliding size of the kernel is called a stride. 
+![Alt text](<Screenshot from 2023-10-16 07-00-16.png>)
+The number of channels in the filter will be the same as that of the layer it is convolving. In the fig, we convolve a 39x39x3 image with a 3x3x3 filter. We also use 10 filters in parallel. This can help in detecting various edges across different directions. The output will be of the size 37x37x10.
 
-
-## Pooling Layer
-The pooling layer replaces the output of the network at certain locations by deriving a summary statistic of the nearby outputs. This helps in reducing the spatial size of the representation, which decreases the required amount of computation and weights. This vastly increases performance.The most popular pooling process is max pooling, which reports the maximum output from the neighborhood. Pooling layers reduce the spatial dimensions of the feature maps, helping to decrease computational complexity and control overfitting.
+## 2. Pooling Layer
+The pooling layer replaces the output of the network at certain locations by deriving a summary statistic of the nearby outputs. This helps in reducing the spatial size of the representation, which decreases the required amount of computation and weights. This can vastly increases performance. The most popular pooling process is max pooling, which reports the maximum output from the neighborhood. Pooling layers reduce the spatial dimensions of the feature maps, helping to decrease computational complexity and control overfitting.
 
 ![Alt Text](image-8.png)
 

@@ -17,7 +17,7 @@ Different types of kernels are used to detect different edges. This image shows 
 
 In reality, we can use Sobel or Scharr filter, which perform better. **A  better idea is to treat the filter itself as a learnable parameter, and learn it via backpropogation.** This is the way convolution is implemented in CNNs.
 
-**NOTE:** In mathematics, convolution is always preceded by flipping the filter. In CS, we don't do that. Thus in reality, what we are doing is called 'cross-correlation'.
+**NOTE:** In mathematics, convolution is always preceded by flipping the filter. In CS, we don't do that as it will not have any advantage. So, according to Mathematics theory, what we are doing is called 'cross-correlation', not convolution.
 
 ## Padding
 Padding allows getting a larger output matrix, after covolution is performed. The cells added by padding usually contain zeroes.
@@ -34,7 +34,7 @@ Just like 2d, convolution can be extended to three dimensions as:
 Thus a 3d image, convolved on a 3d filter gives a 2d output.
 
 # Convolutional Neural Network
-A convolutional neural network (CNN) is a special kind of feed forward NN that significantly reduces the number of parameters in a deep neural network with many units without losing too much in the quality of the model. It generally takes input in matrix form and was designed to work on image processing, as an image consists of block of information as a chunk.
+A convolutional neural network (CNN) is a special kind of feed forward NN that significantly reduces the number of parameters in a deep neural network, by appllying convolution in it. It generally takes input in matrix form and was designed to work on image processing, as an image consists of block of information as a chunk.
 
 ![Alt text](<Screenshot from 2023-10-16 08-01-51.png>)
 
@@ -46,15 +46,15 @@ A CNN typically has three layers:
 These layers work together to learn patterns and edges in input data(images).
 
 ![Alt text](image-6.png)
-Generally in a CNN, as we go deeper into the layers, the height and width decreases and the number of channels increases.
+Generally in a CNN, as we go deeper into the layers, the height and width decreases and the number of channels(depth of the kernel) increases.
 
 ## 1. Convolution Layer
-The convolution layer is the core building block of the CNN. It carries the main portion of the network’s computational load. This layer performs convolution with the filter (which is a matrix with weights). These layers are responsible for detecting edges in the image, which will be used in image processing.
+This layer performs convolution with the filter (which is a matrix with weights). These layers are responsible for detecting edges in the image, which will be used in image processing.
 
 When the kernel slides across the height and width of the image, it produces the image representation of that receptive region. This produces a two-dimensional representation of the image known as an activation map that gives the response of the kernel at each spatial position of the image. 
 
 ![Alt text](<Screenshot from 2023-10-16 07-00-16.png>)
-The number of channels in the filter will be the same as that of the layer it is convolving. In the fig, we convolve a 39x39x3 image with a 3x3x3 filter. We also use 10 filters in parallel. This can help in detecting various edges across different directions. The output will be of the size 37x37x10.
+In the fig, we convolve a 39x39x3 image with a 3x3x3 filter. We also use 10 filters in parallel. This can help in detecting various edges across different directions. The output will be of the size 37x37x10.
 
 ## 2. Pooling Layer
 The pooling layer replaces the output of the network at certain locations by deriving a summary statistic of the nearby outputs. This helps in reducing the spatial size of the representation, which decreases the required amount of computation and weights. This can vastly increases performance. The most popular pooling process is max pooling, which reports the maximum output from the neighborhood. Pooling layers reduce the spatial dimensions of the feature maps, helping to decrease computational complexity and control overfitting.
@@ -66,6 +66,6 @@ Neurons in this layer have full connectivity with all neurons in the preceding a
 
 
 ## Working of CNN on image data
-1. The input is consumed by the model as matrix. This matrix is composed of pixel values that correspond to the intensity of light at different positions in the image. This is passed into the CNN.
-2. The CNN will have convolutional layer, which will perform convolution of the input with filter. This can be passed into pooling and fully connected layers. A CNN can have multiple of each layers. Usually, a pooling layer follows a convolution layer, and it gets the output of convolution as input.
+1. The input is consumed by the model as a flattened matrix. This matrix is composed of pixel values that correspond to the intensity of light at different positions in the image. This is passed into the CNN.
+2. The CNN will have convolutional layer, which will perform convolution of the input with filter. This can be passed into pooling and fully connected layers. Usually, a pooling layer follows a convolution layer, and it gets the output of convolution as input. This can be followed by FC leyers.
 3. The very last FC layer is often followed by a classification layer, which is typically a softmax layer for classification tasks. This layer computes the probability distribution over different classes based on the learned features from the preceding layers.

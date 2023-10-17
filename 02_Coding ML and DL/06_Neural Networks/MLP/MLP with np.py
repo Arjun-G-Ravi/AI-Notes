@@ -42,9 +42,6 @@ class MLP:
         for z_i,w_i,b_i in layer_cache[::-1]:
             print(z_i)
 
-
-
- 
         return 
 
     def predict(self, X):

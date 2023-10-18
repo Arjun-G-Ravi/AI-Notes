@@ -100,3 +100,15 @@ It is logistic regression extended for multi-class problems.
 ## 16. Early stopping
 Early stopping is a regularization technique used to avoid overfitting when training a machine learning model. It works by monitoring a model's performance on a held-out validation set, and stopping training when the model's performance on the validation set starts to degrade.
 
+## 17. Transfer Learning
+Transfer learning is a machine learning technique where a model trained on one task is adapted and used as a starting point for a second related task. Transfer learning can save time and computational resources because the model doesn't have to learn everything from scratch. It's especially effective when the source and target tasks share some underlying features or patterns. The goal is to transfer this knowledge to a target task, which may have a smaller, more specific dataset.
+
+## 18. Fine tuning
+Fine-tuning is a specific type of transfer learning. It refers to the process of taking a pre-trained model and making adjustments to its weights and parameters to adapt it to a new, related task. Fine-tuning typically involves modifying the top layers of the model and training it on a new dataset. The pre-trained model's parameters are adjusted to better fit the new data, overcoming the challenges of limited data.
+For eg, we can just take a really good open source model, and freeze everything except the last few layers. This can lead to performance superior to the one, if we had just trained our model.
+
+## 19. Data Augmentation
+Data augmentation is a technique used in machine learning, particularly in computer vision and natural language processing, to artificially increase the size of a training dataset by applying various transformations to the existing data.
+It includes:
+ - Rotation, Mirroring, Random cropping, etc.
+ - Color shifting (shift RGB values by a small value)

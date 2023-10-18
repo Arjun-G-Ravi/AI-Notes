@@ -17,3 +17,13 @@ One object detection method, where we slide an incresingly bigger window over an
 We can implement convolution over this to make this more efficient.
 
 #### Learn yolo algorithm, u-net algo
+
+## One shot learning
+One-shot learning is a machine learning and computer vision technique designed for tasks where you have very limited data for each category or class. 
+
+It can be implemented by defining some function that maps the difference between the trained data, against the image to classify. If this function stays in a threshold, we can say that the image is classified to the corresponding label. 
+
+This function can be implemented via methods like siamese network, which makes encodings of the image and compares the encodings.
+
+## Thriplet Loss
+![Alt text](<Screenshot from 2023-10-18 21-29-57.png>)

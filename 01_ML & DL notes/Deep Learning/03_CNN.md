@@ -5,6 +5,8 @@ Whenever we are working with image data, we end up having a lot of features. Thi
 # Convolution
 Convolution is performed using a convolutional kernel (also called a filter), which is a small matrix that slides or "convolves" across the input data, element-wise multiplying and summing values as it goes. The result is a feature map that represents certain features or patterns in the input data. 
 
+The filters will have the same number of channels as the convolution layer. The number of channels in the output after convolution is the **number of filters** used for convolution
+
 ![Alt text](image-7.png)
 
 ![Alt text](<Screenshot from 2023-10-15 15-54-59.png>)
@@ -48,6 +50,9 @@ These layers work together to learn patterns and edges in input data(images).
 ![Alt text](image-6.png)
 Generally in a CNN, as we go deeper into the layers, the height and width decreases and the number of channels(depth of the kernel) increases.
 
+## Computational Cost for Convolution
+![Alt text](<Screenshot from 2023-10-18 07-50-33.png>)
+
 ## 1. Convolution Layer
 This layer performs convolution with the filter (which is a matrix with weights). These layers are responsible for detecting edges in the image, which will be used in image processing.
 
@@ -61,11 +66,23 @@ The pooling layer replaces the output of the network at certain locations by der
 
 ![Alt Text](image-8.png)
 
-## Fully Connected Layer
+## 3. Fully Connected Layer
 Neurons in this layer have full connectivity with all neurons in the preceding and succeeding layer as seen in regular FCNN. This is why it can be computed as usual by a matrix multiplication followed by a bias effect. The FC layer helps to map the representation between the input and the output.
-
 
 ## Working of CNN on image data
 1. The input is consumed by the model as a flattened matrix. This matrix is composed of pixel values that correspond to the intensity of light at different positions in the image. This is passed into the CNN.
 2. The CNN will have convolutional layer, which will perform convolution of the input with filter. This can be passed into pooling and fully connected layers. Usually, a pooling layer follows a convolution layer, and it gets the output of convolution as input. This can be followed by FC leyers.
 3. The very last FC layer is often followed by a classification layer, which is typically a softmax layer for classification tasks. This layer computes the probability distribution over different classes based on the learned features from the preceding layers.
+
+## 1x1 Convolution
+![Alt text](<Screenshot from 2023-10-18 07-24-41.png>)
+It takes the product about a point, for all the channels. Thus, it is a fully connected neural network that applies to each of the depth of channels at different positions. This can carry out a pretty non-trivial computation on your input volume.
+This is widely used to reduce the number of channels in a NN.
+
+# Popular CNNs
+ - LeNet-5
+ - Alex Network
+ - VGG-16
+ - ResNets
+ - Inception Network
+ - MobileNet (uses Depthwise separable convolution)

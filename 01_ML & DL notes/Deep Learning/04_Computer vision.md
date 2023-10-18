@@ -25,5 +25,5 @@ It can be implemented by defining some function that maps the difference between
 
 This function can be implemented via methods like siamese network, which makes encodings of the image and compares the encodings.
 
-## Thriplet Loss
+## Triplet Loss
 ![Alt text](<Screenshot from 2023-10-18 21-29-57.png>)

@@ -11,3 +11,9 @@ Each recurrent layer in an RNN takes two inputs – one is the input coming into
 The major problems faced by RNNs are:
     1. Exploding and vanishing gradients
     2. As the length of the input sequence grows, the feature vectors from the beginning of the sequence tend to be “forgotten,” because the state of each unit, which serves as network’s memory, becomes significantly affected by the feature vectors read more recently.The short-term memory limitation of traditional recurrent neural networks is primarily due to the vanishing gradient problem.
+
+## RNN based Language models
+
+In a very high level view, 
+
+They have a vocabulory, on which they are trained. They predict the probability for each word, given the earlier word. 

@@ -1,3 +1,12 @@
+## RNN cell
+![Alt text](<Screenshot from 2023-10-19 20-36-38.png>)
+
+## GRUs
+![Alt text](<Screenshot from 2023-10-19 20-51-19.png>)
+
+GRU (Gated Recurrent Unit) is a type of recurrent neural network (RNN) architecture used in the field of NLP, designed to address some of the limitations of traditional RNNs, such as the vanishing gradient problem and the difficulty of capturing long-range dependencies in sequences.
+GRUs help RNNs capture and remember important information from the past while also allowing them to adapt to new data as it comes in. 
+
 ## LSTM 
 Long Short-Term Memory networks were specifically designed to address both the exploding and vanishing gradient problems as well as the long-term dependencies issue, making them a significant improvement over vanilla RNNs in these aspects.
 
@@ -6,6 +15,7 @@ LSTM networks have two kinds of memory – short and long term memory. Each LSTM
 ![Alt text](image-11.png)
 
 In each gate, the sigmoid activation function determines how much of the data is to be remembered.
+
 
 ### Forget gate
 This gate decides how much of the data is to be remembered in the long term memory. The forget gate takes in the weighted sum of the input vector from tth and (t-1)th state, and pass them through a sigmoid function. This gives an output between 0 and 1, which will be multiplied with the long term memory. 

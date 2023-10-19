@@ -8,12 +8,14 @@ A problem with this is that RNNs can only use the previous words when processing
 
 Each recurrent layer in an RNN takes two inputs – one is the input coming into the from the previous layer, and the other is the output of the same layer from the previous data. RNNs use a variation of backpropagation called Backpropagation Through Time (BPTT) to update the model's weights and biases. BPTT involves computing gradients through the entire sequence and updating the model parameters accordingly. Generally tanh activation functions are used throughout the hidden layers.
 
-The major problems faced by RNNs are:
-    1. Exploding and vanishing gradients
-    2. As the length of the input sequence grows, the feature vectors from the beginning of the sequence tend to be “forgotten,” because the state of each unit, which serves as network’s memory, becomes significantly affected by the feature vectors read more recently.The short-term memory limitation of traditional recurrent neural networks is primarily due to the vanishing gradient problem.
+![Alt text](<Screenshot from 2023-10-19 20-36-38.png>)
+
+As the length of the input sequence grows, the feature vectors from the beginning of the sequence tend to be “forgotten,” because the state of each unit, which serves as network’s memory, becomes significantly affected by the feature vectors read more recently. **The short-term memory limitation of traditional recurrent neural networks is primarily due to the vanishing gradient problem.**
+Another common problem is exploding gradients, where the numbers just blow up to NaNs.
+
+While the e exploding gradients can be easily solved by gradient clipping, vanishing gradients are hard to spot and solve.
 
 ## RNN based Language models
 
-In a very high level view, 
-
-They have a vocabulory, on which they are trained. They predict the probability for each word, given the earlier word. 
+###### In a very high level view: 
+RNN based Language models (or almost any basic language model) have a vocabulory, on which they are limited to. They predict the probability for each word, given the earlier word(s). 

@@ -24,8 +24,7 @@ We can solve this by subtracting embeddings of (Man and Woman) and finding a emb
 ## The embedding Matrix
 It is a matrix that contains the word embeddings for all the words in a vocabulary. To get the word embeddings of a word, we matmul the embedding matrix with the one hot encoding vector of the word, whose word embedding is needed.
 
-## Skip gram - a Word2Vec Embedding
-
+## Skip gram - a Word2Vec embedding
 Skip-gram is a type of word embedding model used in natural language processing and natural language understanding tasks. It is designed to learn distributed representations (word embeddings) for words in a large corpus of text. Skip-gram is part of the word2vec family of models, which aims to capture the semantic relationships between words in continuous vector spaces.
 
 - The skip-gram model starts by being fed a large dataset of text. 
@@ -40,4 +39,17 @@ Skip-gram is a type of word embedding model used in natural language processing 
 
 - Word Embeddings: The result of this training process is a set of word embeddings. These embeddings capture the meaning and context of words based on their co-occurrence patterns in the text.
 
-## 
+## Negative Sampling
+Negative sampling is a technique used during the training of word embedding models, such as Skip-gram, to make the training process more efficient and manageable. During training, we choose the correct context and word pair, and many other 'wrong'(negative) words with the context. Then we train a supervised learning algorithm with the dataset. 
+
+![Alt text](<Screenshot from 2023-10-25 21-33-19.png>)
+
+Thus instead of training a whole softmax layer for predicting for the whole vocabulory, we train on multiple k-1 number of negative sample and 1 positive sample. This leads to lowered computational cost, with comparable performance. 
+
+Thus one 10K-way softmax -> 10K k-way binary classification.
+
+The selection of the negative samples is not random, but based on a huristic value.
+
+## GloVe (Global vectors for word representations)
+
+GloVe is a word embedding model that works by learning continuous vector representations for words. GloVe is designed to capture semantic and syntactic relationships between words based on their co-occurrence patterns in a large corpus of text. 

@@ -1,6 +1,6 @@
 # Modifications to RNN s
 
-## 1. (Normal) RNN
+## 1. RNN
 ![Alt text](<Screenshot from 2023-10-19 20-36-38.png>)
 
 ## 2. LSTM 

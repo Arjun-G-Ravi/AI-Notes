@@ -9,7 +9,7 @@ Word embeddings are distributed representations of words in a vector space, wher
 ![Alt text](<Screenshot from 2023-10-20 20-29-14.png>)
 Visualising this on an n-dimensional graph will reveal that similar items will be grouped together.
 
-## Featurised Representation of Word embeddings
+## Feature Enginnering
 Featurized representations of word embeddings, often referred to as feature engineering, involve extracting or creating additional features from word embeddings to enhance their utility for specific NLP tasks.
 
 ## Extracting relationships from word embeddings
@@ -25,7 +25,7 @@ We can solve this by subtracting embeddings of (Man and Woman) and finding a emb
 It is a matrix that contains the word embeddings for all the words in a vocabulary. To get the word embeddings of a word, we matmul the embedding matrix with the one hot encoding vector of the word, whose word embedding is needed.
 
 ## Skip gram - a Word2Vec embedding
-Skip-gram is a type of word embedding model used in natural language processing and natural language understanding tasks. It is designed to learn distributed representations (word embeddings) for words in a large corpus of text. Skip-gram is part of the word2vec family of models, which aims to capture the semantic relationships between words in continuous vector spaces.
+Skip-gram is a type of word embedding model used in natural language processing and natural language understanding tasks. Skip-gram is part of the word2vec family of models, which aims to capture the semantic relationships between words in continuous vector spaces.
 
 - The skip-gram model starts by being fed a large dataset of text. 
 

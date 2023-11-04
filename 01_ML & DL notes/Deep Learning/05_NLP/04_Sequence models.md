@@ -44,4 +44,4 @@ The BLEU score is a number between 0 and 1, with 1 being a perfect match to the 
 It is used in NLP situations where multiple answers can be correct like translation. Speech-to-text shouldnot use bleu score, as we always expect a one-on-one correct answer.
 
 ## 7. Attention models
-
+Normal encoder decoder architecture's performance on NLP tasks starts to go down as the length of the input sentence increases. This c

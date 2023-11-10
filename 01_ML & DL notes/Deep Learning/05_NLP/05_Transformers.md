@@ -43,7 +43,12 @@ The key innovation of transformers is their self-attention mechanism, which allo
 - In self-attention, a model looks at different words within the same input sequence to understand how they relate to each other.
 - It's like a person reading a sentence and understanding the relationships between different words in that sentence without any external context.
 - Transformers use self-attention extensively to build representations of words or tokens in a sequence based on their relationships with other words or tokens in the same sequence.
-- In self attention, the word embedding is formed with relation to the input text. But for normal attention, it is not so
+
+##### The HUGE difference
+In self attention, the word embedding is formed with relation to the input text. But for normal attention, it is not so. ie,
+For the following senteces, apple has the same vector representation in attention mechanism(like using word2vec), but very different representation if self attention is used.
+ - Steve Jobs is the CEO of apple.
+ - An apple fell over Newton's head.
 
 ### Query, Key, Value system for attention
 The Query, Key, Value (QKV) system is a fundamental component of the attention mechanism used in transformers. In this system, when processing a sequence of input data, each element (e.g., word) is associated with three vectors: a Query vector (Q), a Key vector (K), and a Value vector (V). Here's a brief overview of their roles:
@@ -58,11 +63,12 @@ The QKV system is crucial in the attention mechanism's ability to selectively fo
 This is the self-attention running in a for loop, parallely. At each loop, a different query is asked. 
 
 For eg: To translate Jane visits Africa in September
-    - Query1: What with Africa?  # High attention to visits
-    - Query2: When visit?  # High attention to September
-    - Query3: Who?  # Jane
-    - ...
-    - ....h heads
+- Query1: What with Africa?  # High attention to visits
+- Query2: When visit?  # High attention to September
+- Query3: Who?  # Jane
+- ...
+- ....h heads
+  
 ![Alt text](<Screenshot from 2023-11-08 21-14-51.png>)
 
 The concatenation of the representation of all the heads is used for final prediction.
@@ -74,7 +80,7 @@ The most basic part of the transformers is shown here.
 There are certain things that can vastly improve the performance of transformer models
 
 ## 1. Positional Encodings
-The position of the words can play a major role in its meaning. So we encode the postion of the words also. Instead of directly adding it, we encode it as sine and cosine wave - probably for performance.
+The position of the words can play a major role in its meaning. So we encode the postion of the words also. This will shift the word in the vector space along a particular dimension, closer to other words with the same index. This will let the model have a better understanding of the context. This shift should not be too large, or else the positional similarity will overwrite the semantics similarity with other words.So, we encode the position as sine and cosine wave .
 
 ![Alt text](<Screenshot from 2023-11-08 21-33-22.png>)
 

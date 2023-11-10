@@ -65,12 +65,10 @@ For eg: To translate Jane visits Africa in September
     - ....h heads
 ![Alt text](<Screenshot from 2023-11-08 21-14-51.png>)
 
-
 The concatenation of the representation of all the heads is used for final prediction.
 
-
 # The transformer Architecture
-
+The most basic part of the transformers is shown here. 
 ![Alt text](<Screenshot from 2023-11-08 21-23-09.png>)
 
 There are certain things that can vastly improve the performance of transformer models
@@ -86,8 +84,7 @@ Just like resnet, so that transformers will remember better.
 ## 3. Batch normalisation
 For faster convergence.
 
-Thus the transformers model is:
-
+# Transformers
 ![Alt text](<Screenshot from 2023-11-08 21-38-39.png>)
 
 ![Alt text](1_BHzGVskWGS_3jEcYYi6miQ.png)

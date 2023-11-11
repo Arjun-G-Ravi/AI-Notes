@@ -9,6 +9,7 @@ The key innovation of transformers is their self-attention mechanism, which allo
 Basic Idea: Attention mechanisms allow a model to focus on different parts of the input sequence when processing a particular element.
 Usage: In a general attention mechanism, the model considers the entire input sequence and assigns different weights to different elements based on their relevance to the current element being processed.
 Components: There are typically three components in attention: a query, a set of key-value pairs, and a mechanism to compute attention scores and weight the values based on these scores.
+Attention is learned during training period.
 
 ## Self-Attention (or Intra-Attention):
 Basic Idea: Self-attention is a specific type of attention where the elements of the input sequence attend to each other.
@@ -16,7 +17,7 @@ Usage: In self-attention, the input sequence is used as the set of key-value pai
 Components: Self-attention mechanisms have a query, key, and value derived from the same input sequence. The attention scores are computed based on the similarity between the query and key, and the values are weighted accordingly.
 
 ##### The way self-attention is done in transformers
-The context of words is generated from in transformers during inference and it is used by the model, instead of word embeddings. This representation is different from normal word2vec model as they learn the word embedding from a large text corpus, and store them in a matrix-to be used.
+The context of words is generated from in transformers during inference and it is used by the model, instead of word embeddings. This representation is different from normal word2vec model as they learn the word embedding from a large text corpus, and store them in a matrix-to be used. 
 Learning this context uses the self attention mechanism. This lets us have a rich representation of the word - allowing the model to perform better as it allows the model to focus on different parts of the input sequence differently for each position. This is used along with the normal word embedding for a really good representation.
 
 For the following senteces, apple has the same vector representation in attention mechanism(like using word2vec), but very different representation if self attention is used.
@@ -26,14 +27,18 @@ For the following senteces, apple has the same vector representation in attentio
 ### Query, Key, Value system for attention
 The Query, Key, Value (QKV) system is a fundamental component of the attention mechanism used in transformers. In this system, when processing a sequence of input data, each element (e.g., word) is associated with three vectors: a Query vector (Q), a Key vector (K), and a Value vector (V). Here's a brief overview of their roles:
 
-1. Query (Q): This vector represents the element that is used to inquire about the other elements in the sequence. In the context of attention mechanisms, the query is used to calculate the attention scores indicating how much focus each element should receive.
+1. Query (Q): This vector represents the element that is used to inquire about the other elements in the sequence. In the context of attention mechanisms, the query is used to calculate the attention scores indicating how much focus each element should receive. This is obtained from the generated part of the output.
 2. Key (K): The key vector is associated with the element being considered for attention. The key helps determine the relevance of this element to the query. The dot product of the query and key vectors is used to calculate the attention scores.
 3. Value (V): The value vector contains information about the element being considered. The attention scores (derived from the query-key interaction) are used to weight the values. The final weighted sum of values forms the output of the attention mechanism for that particular element.
+   
+``` A = softmax(Q@K.T)@V ```
+
+The query looks at the aldready generated part of the output and asks a question. This is matmul-ed with the query value to generate a matrix. A higher value on this matrix means more attention. This matrix is matmul-ed with the value vector to get a one dimensional vector that marks the attention to be given to each word in the input for that particular query.
 
 The QKV system is crucial in the attention mechanism's ability to selectively focus on different parts of the input sequence, allowing transformers to capture complex relationships and dependencies within the data. This mechanism is typically used in multiple heads (multi-head attention) to enhance the model's capacity to learn diverse patterns and representations.
 
 ## Multi-headed attention
-This is the self-attention running in a for loop, parallely. At each loop, a different query is asked. 
+This is the self-attention running in a loop, parallely. At each loop, a different query is asked. 
 
 For eg: To translate Jane visits Africa in September
 - Query1: What with Africa?  # High attention to visits
@@ -44,13 +49,14 @@ For eg: To translate Jane visits Africa in September
   
 ![Alt text](<Screenshot from 2023-11-08 21-14-51.png>)
 
+In theory, each head will learn something different, giving the model better representation power.
 The concatenation of the representation of all the heads is used for final prediction.
 
 # The transformer Architecture
 The most basic part of the transformers is shown here. 
 ![Alt text](<Screenshot from 2023-11-08 21-23-09.png>)
 
-n short,transformer architecture can be summarised as:
+In short,transformer architecture can be summarised as:
 
     1. Input Representation:
         Embedding: Convert input words into vectors (embeddings).
@@ -63,6 +69,7 @@ n short,transformer architecture can be summarised as:
 
         - Self-Attention Layer: Allows the model to weigh different parts of the input sequence differently when making predictions.
         - Feedforward Neural Network: Applies a set of transformations to the outputs of the self-attention layer.
+        The output from the encoder is a numerical representation of the the input, with attention information. This lets the decoder focus on relevant information. 
 
     4. Decoder: Similar to the encoder but with an additional layer:
         - Self attention layer        - 
@@ -91,7 +98,7 @@ The position of the words can play a major role in its meaning. So we encode the
 ![Alt text](<Screenshot from 2023-11-08 21-33-22.png>)
 
 ## 2. Residual Networks
-Just like resnet, so that transformers will remember better.
+Just like resnet, we create connections that add earlier part of the network to the later parts. This will vastly improve transformer's ability to remember context for a longer period of time.
 
 ## 3. Batch normalisation
 For faster convergence.

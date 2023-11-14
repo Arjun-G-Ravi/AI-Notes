@@ -5,7 +5,6 @@ Transformers, a revolutionary neural network architecture, introduce a self-atte
 The key innovation of transformers is their self-attention mechanism, which allows them to process input data in parallel rather than sequentially, making them highly scalable and efficient. This self-attention mechanism enables transformers to capture long-range dependencies in data, making them well-suited for tasks involving sequences.
 
 ## Attention:
-
 Basic Idea: Attention mechanisms allow a model to focus on different parts of the input sequence when processing a particular element.
 Usage: In a general attention mechanism, the model considers the entire input sequence and assigns different weights to different elements based on their relevance to the current element being processed.
 Components: There are typically three components in attention: a query, a set of key-value pairs, and a mechanism to compute attention scores and weight the values based on these scores.

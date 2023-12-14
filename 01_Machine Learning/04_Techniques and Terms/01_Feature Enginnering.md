@@ -48,3 +48,8 @@ The typical approaches of dealing with missing values for a feature include:
 - Finally, if you have a significantly large dataset and just a few features with missing values, you can increase the dimensionality of your feature vectors by adding a binary indicator feature for each feature with missing values.
 
 
+## 5. Handling Imbalanced datasets
+- We should use precision and recall for error measurement
+- Over-sampling: It consists of increasing the importance of examples of some class by making multiple copies of the examples of that class.Eg: SMOTE and ADASYN.
+- Undersampling is to randomly remove from the training set some examples of the majority class
+- Some algorithms are less sensitive to the problem of an imbalanced dataset. Decision trees, as well as random forest and gradient boosting, often perform well on imbalanced datasets.

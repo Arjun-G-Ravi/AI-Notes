@@ -52,8 +52,14 @@ Pruning in decision trees is a technique used to reduce the complexity of a deci
 Frequently, a node is not split further if the number of training instances reaching a node is smaller than a certain percentage of the training set for example, 5 percent—regardless of the impurity or error. The idea is that any decision based on too few instances causes variance and thus generalization error. Stopping tree construction early on before it is full is called prepruning the tree.
 
 #### Postpruning
-In postpruning, we grow the tree full until all leaves are pure and wehave no training error. We then ﬁnd subtrees that cause overﬁtting and we prune them.
+In postpruning, we grow the tree full until all leaves are pure and wehave no training error. We then ﬁnd subtrees that cause overﬁtting and we prune them.in practice, it works better than prepruning.
 
+Comparing prepruning and postpruning, we can say that prepruning is faster but postpruning generally leads to more accurate trees.
+
+## Hard and soft decision Trees
+The decision tree we discussed until now have hard decision nodes that is, we take one of the branches depending on the test. We start from the root and follow a single path and stop at a leaf where we output the response value stored in that leaf. 
+
+In a soft decision tree, however, we take all the branches but with diﬀerent probabilities, and we follow in parallel all the paths and reach all the leaves, but with diﬀerent probabilities. The output is the weighted average of all the outputs in all the leaves where the weights correspond to the probabilities accumulated over the paths
 
 ## Random Forest
 A random forest is essentially a collection of decision trees, where each tree is slightly different from the others. The idea behind random forests is that each tree might do a relatively good job of predicting, but will likely overfit on part of the data. If we build many trees, all of which work well and overfit in different ways, we can reduce the amount of overfitting by averaging their results. Also, instead of looking for the best test for each node in each node,  the algorithm randomly selects a subset of the features, and it looks for the best possible test involving one of these features.

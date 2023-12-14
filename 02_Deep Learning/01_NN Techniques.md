@@ -112,3 +112,10 @@ Data augmentation is a technique used in machine learning, particularly in compu
 It includes:
  - Rotation, Mirroring, Random cropping, etc.
  - Color shifting (shift RGB values by a small value)
+
+## 20. Regularization
+In neural networks, besides L1 and L2 regularization, you can use neural network specific regularizers: dropout, early stopping, and batch-normalization.
+    • Dropout: Each time you run a training example through the network, you temporarily exclude at random some units from the computation. The higher the percentage of units excluded the higher the regularization effect.
+    • Early stopping is the way to train a neural network by saving the preliminary model after every epoch and assessing the performance of the preliminary model on the validation set. Models saved after each epoch are called checkpoints.
+    • Batch normalization (which rather has to be called batch standardization) is a technique that consists of standardizing the outputs of each layer before the units of the subsequent layer receive them as input. In practice, batch normalization results in faster and more stable training, as well as some regularization effect.
+    • Data augmentation: It is a technique used to preprocess image dataset. Once you have your original labeled training set, you can create a synthetic example from an original example by applying various transformations to the original image: zooming it slightly, rotating, flipping, darkening, and so on.

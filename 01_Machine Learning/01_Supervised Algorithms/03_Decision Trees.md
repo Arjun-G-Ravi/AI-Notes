@@ -7,9 +7,7 @@ The picture shows how the data is split into sections, for the tree to split.
 A decision tree can be converted to a set of IF-THEN rules that are easily understandable. For this reason, decision trees are very popular and sometimes preferred over more accurate but less interpretable
 methods.
 
-Decision Trees are of two types:
- 1. Classification trees
- 2. Regression trees
+Trees can be **univariate** [each decision node makes decision using only one feature] (like ID3), or **multivariate**.
 
 ![Alt text](image-3.png)
 
@@ -18,9 +16,15 @@ Decision Trees are non parametric in nature. Non-parametric models make fewer as
 
 As each feature is processed separately, and the possible splits of the data don’t depend on scaling. No preprocessing like normalization or standardization of features is needed for decision tree algorithms.
 
-Pruning in decision trees is a technique used to reduce the complexity of a decision tree model by removing branches (subtrees) that do not provide significant predictive power and may lead to overfitting. 
+# Types
+Decision Trees are of two types:
+ 1. Classification trees
+ 2. Regression trees
 
-Trees can be univariate [each decision node makes decision using only one feature] (like ID3), or multivariate.
+
+
+# Pruning
+Pruning in decision trees is a technique used to reduce the complexity of a decision tree model by removing branches (subtrees) that do not provide significant predictive power and may lead to overfitting. 
 
 ## Random Forest
 A random forest is essentially a collection of decision trees, where each tree is slightly different from the others. The idea behind random forests is that each tree might do a relatively good job of predicting, but will likely overfit on part of the data. If we build many trees, all of which work well and overfit in different ways, we can reduce the amount of overfitting by averaging their results. Also, instead of looking for the best test for each node in each node,  the algorithm randomly selects a subset of the features, and it looks for the best possible test involving one of these features.

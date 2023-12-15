@@ -1,10 +1,9 @@
-
-# 5. Support Vector Machines (SVM)
+#  Support Vector Machines (SVM)
 SVM sees every feature vector as a point in a high-dimensional space. The algorithm puts all feature vectors on an imaginary n-dimensional plot and draws an imaginary (n-1) dimensional  hyperplane[decision boundary] that separates examples with positive labels from examples with negative labels.
 
 The equation of the hyperplane is given by two parameters, a real-valued vector w of the same dimensionality as our input feature vector x, and a real number b like this:
 
-```wx − b = 0  (some people use wx + b = 0)```
+```wx − b = 0  (some people use wx + b = 0, but makes no difference.)```
 
 ![Alt text](image-7.png)
 

@@ -1,8 +1,8 @@
-# OVERFITTING AND UNDERFITTING
+# UNDERFITTING and OVERFITTING
 ![Alt text](image.png)
 
 # Underfitting
-If the model makes many mistakes on the training data, we say that the model has a high bias or that the model underfits.Underfitting is the inability of the model to predict well the labels of the data it was trained on.
+If the model makes many mistakes on the training data, we say that the model has a high bias or that the model underfits. Underfitting is the inability of the model to predict well the labels of the data it was trained on.
 
 Reasons:
 - Model is too simple
@@ -10,7 +10,7 @@ Reasons:
 
 # Overfitting
 The model that overfits predicts very well the training data but poorly the data from at least one of the two holdout sets. It is also called the problem of high variance.
-Regularization is the most widely used approach to prevent overfitting.
+```Regularization``` is the most widely used approach to prevent overfitting.
 
 Reasons:
 - The model is too complex for the data

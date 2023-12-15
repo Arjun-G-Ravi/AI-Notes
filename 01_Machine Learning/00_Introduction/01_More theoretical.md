@@ -14,3 +14,4 @@ The Vapnik-Chervonenkis (VC) dimension is a concept in statistical learning theo
 - The VC dimension of the hypothesis class H is the maximum number of datapoints that H can shatter. 
 
 
+### TO UPDATE ...

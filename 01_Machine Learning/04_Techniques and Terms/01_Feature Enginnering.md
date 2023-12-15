@@ -1,5 +1,5 @@
 # Feature Engineering
-A feature vector is an ordered list of numerical properties of an observed phenomenon. It represents input features to a machine learning model that makes a prediction. The problem of transforming raw data into a dataset, which can be used by a ML model is called feature engineering.
+A feature vector is an ordered list of numerical properties of an observed phenomenon. It represents input features to a machine learning model that makes a prediction. The process of transforming raw data into a dataset that can be used by a ML model is called feature engineering.
 
 ## 1. One-Hot Encoding
 Some learning algorithms only work with numerical feature vectors. So we reperesent each class in  a feature as a separate feature and assign that feature to have 0 or 1.
@@ -47,9 +47,8 @@ The typical approaches of dealing with missing values for a feature include:
   
 - Finally, if you have a significantly large dataset and just a few features with missing values, you can increase the dimensionality of your feature vectors by adding a binary indicator feature for each feature with missing values.
 
-
 ## 5. Handling Imbalanced datasets
-- We should use precision and recall for error measurement
+- We should use ```precision and recall``` for error measurement
 - Over-sampling: It consists of increasing the importance of examples of some class by making multiple copies of the examples of that class.Eg: SMOTE and ADASYN.
 - Undersampling is to randomly remove from the training set some examples of the majority class
 - Some algorithms are less sensitive to the problem of an imbalanced dataset. Decision trees, as well as random forest and gradient boosting, often perform well on imbalanced datasets.

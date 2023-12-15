@@ -1,4 +1,4 @@
-# REGRESSION
+# REGRESSION ALGORITHMS
 
 # 1. Linear Regression
 Linear regression is a ML algorithm through which we develop a linear model of the data, and use it to perform prediction.

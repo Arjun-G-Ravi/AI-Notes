@@ -4,14 +4,14 @@ Machine Learning (ML) is a field of artificial intelligence focused on the devel
 
 These models are never meant to be perfect. They are meant to be 'good enough' to be used as an approximation.
 
-“ML is data compression” – Another thought.
+	“ML is data compression” – Another thought.
 
 
 ### AI, ML and DL
 
 ![Alt text](image.png)
 
-# Types of ML
+# Types of ML Algorithms
 	1. Supervised ML: 
   		  • Uses labelled data for training
   		  • Regression [Predict an exact value], Classification [Predicting the class]

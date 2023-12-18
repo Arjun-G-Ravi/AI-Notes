@@ -6,6 +6,7 @@ Inner product measures how much of vector A lies in the direction of vector B - 
 
 # Word Embeddings
 Word embeddings are distributed representations of words in a vector space, where words with similar meanings are represented by similar vectors. These vector representations are used to capture the semantic and syntactic relationships between words and are a fundamental concept in NLP. These embeddings can be learned by eating up a large corpus of text data.
+
 ![Alt text](<Screenshot from 2023-10-20 20-29-14.png>)
 Visualising this on an n-dimensional graph will reveal that similar items will be grouped together.
 

@@ -17,6 +17,7 @@ Featurized representations of word embeddings, often referred to as feature engi
 Man : Woman  =  King : ?
 
 We can solve this by subtracting embeddings of (Man and Woman) and finding a embedding that gives the similar result with King.
+
 ![Alt text](<Screenshot from 2023-10-20 21-00-18.png>)
 
  This similarity is usually done by cosine similarity. 

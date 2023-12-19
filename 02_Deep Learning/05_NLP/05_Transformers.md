@@ -5,17 +5,17 @@ Transformers, a revolutionary neural network architecture, introduce a self-atte
 The key innovation of transformers is their self-attention mechanism, which allows them to process input data in parallel rather than sequentially, making them highly scalable and efficient. This self-attention mechanism enables transformers to capture long-range dependencies in data, making them well-suited for tasks involving sequences.
 
 ## Attention:
-Basic Idea: Attention mechanisms allow a model to focus on different parts of the input sequence when processing a particular element.
-Usage: In a general attention mechanism, the model considers the entire input sequence and assigns different weights to different elements based on their relevance to the current element being processed.
-Components: There are typically three components in attention: a query, a set of key-value pairs, and a mechanism to compute attention scores and weight the values based on these scores.
+- Basic Idea: Attention mechanisms allow a model to focus on different parts of the input sequence when processing a particular element.
+- Usage: In a general attention mechanism, the model considers the entire input sequence and assigns different weights to different elements based on their relevance to the current element being processed.
+- Components: There are typically three components in attention: a query, a set of key-value pairs, and a mechanism to compute attention scores and weight the values based on these scores.
 Attention is learned during training period.
 
 ## Self-Attention (or Intra-Attention):
-Basic Idea: Self-attention is a specific type of attention where the elements of the input sequence attend to each other.
-Usage: In self-attention, the input sequence is used as the set of key-value pairs, and each element in the sequence attends to all other elements, including itself.
-Components: Self-attention mechanisms have a query, key, and value derived from the same input sequence. The attention scores are computed based on the similarity between the query and key, and the values are weighted accordingly.
+- Basic Idea: Self-attention is a specific type of attention where the elements of the input sequence attend to each other.
+- Usage: In self-attention, the input sequence is used as the set of key-value pairs, and each element in the sequence attends to all other elements, including itself.
+- Components: Self-attention mechanisms have a query, key, and value derived from the same input sequence. The attention scores are computed based on the similarity between the query and key, and the values are weighted accordingly.
 
-##### The way self-attention is done in transformers
+### The way self-attention is done in transformers
 The context of words is generated from in transformers during inference and it is used by the model, instead of word embeddings. This representation is different from normal word2vec model as they learn the word embedding from a large text corpus, and store them in a matrix-to be used. 
 Learning this context uses the self attention mechanism. This lets us have a rich representation of the word - allowing the model to perform better as it allows the model to focus on different parts of the input sequence differently for each position. This is used along with the normal word embedding for a really good representation.
 

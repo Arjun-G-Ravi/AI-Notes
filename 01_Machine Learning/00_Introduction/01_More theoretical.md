@@ -1,4 +1,3 @@
-
 ### Hypothesis Space:
 The hypothesis space refers to the set of all possible hypotheses or candidate models that a machine learning algorithm considers to make predictions or classifications. 
 

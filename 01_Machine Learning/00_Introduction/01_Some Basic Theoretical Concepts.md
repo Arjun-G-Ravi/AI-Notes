@@ -52,3 +52,11 @@ A correlation matrix is a table showing correlation coefficients between variabl
 
 It can be used in pandas using df.corr().
 
+# Parametric and nonparametric models
+Parametric and nonparametric models are two broad categories of machine learning models based on their underlying assumptions about the form of the relationship between input variables and the output.
+
+Parametric models assume a specific functional form or distribution for the relationship between variables. The model has a fixed number of parameters, and its complexity is determined by the number of parameters. They perform data compression, and store only the compressed (parametrised) data.
+Eg: Linear Regression, 
+
+Nonparametric models do not assume a specific functional form or distribution for the underlying relationship. They are more flexible and adapt to the complexity of the data.Nonparametric models adapt their complexity to the complexity of the data. The number of parameters may grow with the size of the dataset. They require us to store the whole dataset.
+EG: Decision Trees, KNN

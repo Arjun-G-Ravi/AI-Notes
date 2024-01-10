@@ -22,7 +22,28 @@ Common methods for dimensionality reduction include:
 ## Principal Component Analysis
 Principal Component Analysis (PCA) is a dimensionality reduction technique, that transforms high-dimensional data into a new coordinate system, where the axes are the principal components. The principal components are orthogonal vectors that capture the maximum variance in the data. By focusing on the most significant features, PCA allows for a reduction in dimensionality while retaining as much of the original information as possible.
 
+![Alt text](image-1.png)
+
+## Factor Analysis
+Factor Analysis aims to identify latent (unobservable) factors that contribute to the observed variables in a dataset. It assumes that the observed variables are linear combinations of these latent factors and error terms.
+
+Principal component analysis generates new variables that are linear combinations of the original input variables. In factor analysis, however, we posit that there are factors that when linearly combined generate the input variables.
+
+![Alt text](image-2.png)
+
+## Linear discriminant analysis 
+Linear discriminant analysis (LDA) is a supervised method for dimension-
+ality reduction for classiﬁcation problems.
 
 
-## UMAP
-Another dime redn technique <- didn't read more
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 # 1. Gradient Descent 
-Gradient descent is an iterative optimization algorithm for finding the local minima of a function. To find a local minimum of a function using gradient descent, one starts at some random point and takes steps proportional to the negative of the gradient (or approximate gradient) of the function at the current point. 
+Gradient descent is an iterative optimization algorithm for finding the local minima of a function. To find a local minimum of a function using gradient descent, one starts at some random point and takes steps proportional to the negative of the gradient (or approximate gradient) of the function at the current point. This algorithm is utilised in ML for finding the parameters of a model that minimises the loss function.
 
 For many models, such as linear, logistic regression or SVM, the optimization criterion is convex. Convex functions have only one minimum, which is global. So, G.D can be used to get to the minima of the optimisation function. 
 

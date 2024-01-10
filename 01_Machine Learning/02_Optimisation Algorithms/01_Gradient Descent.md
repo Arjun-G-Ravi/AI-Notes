@@ -5,13 +5,13 @@ For many models, such as linear, logistic regression or SVM, the optimization cr
 
 ![Alt text](image.png)
 
-Linear regression for 1 dimension has a closed form solution. That means that gradient descent is not needed to solve this specific type of problem. We can use linear algebra techniques to find w* and b*. However, for illustration purposes, linear regression is a perfect problem to explain gradient descent.
+Linear regression for 1 dimension has a closed form solution. That means that gradient descent is not needed to solve this specific type of problem. We can use basic algebraic techniques to find w* and b*. However, for illustration purposes, linear regression is a perfect problem to explain gradient descent.
 
 ## Terms
 - Epoch: Training of the whole dataset once on a model constitutes an epoch
 - Learning Rate (lr): It refers to the size of one update. Bigger lr leads to faster convergence, but risks overshooting.
 - Parameter: The variables that changes (gets updated) during training. Eg: Weights, Biases
-- Hyperparameter: The variables that are initially set, and is not changed throughout the training process. Eg: num_epochs, learning rate, etc.
+- Hyperparameter: The variables that are initially set, and is not changed throughout the training process. Eg: num_epochs, learning rate, batch size, etc.
 
 ## Working of Gradient Descent
     (1) Let our model be  f(x) = w.x + b

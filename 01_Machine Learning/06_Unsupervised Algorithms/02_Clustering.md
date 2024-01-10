@@ -2,7 +2,7 @@
 
 Clustering algorithms are a category of unsupervised learning techniques that group similar data points together into clusters or clusters of data points with similar characteristics. There is a variety of clustering algorithms, and, unfortunately, it’s hard to tell which one is better in quality for your dataset. Usually, the performance of each algorithm depends on the unknown properties of the probability distribution that the dataset was drawn from.
 
-## K-Means
+## 1. K-Means
 It is the most common and basic clustering algorithm. It works as following:
 
 - First, you choose k — the number of clusters to be formed from the dataset. This is a hyperparameter to be given in by the ML programmer. Techniques like elbow method can be used to do this.

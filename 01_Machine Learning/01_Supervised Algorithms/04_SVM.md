@@ -3,14 +3,15 @@ SVM sees every feature vector as a point in a high-dimensional space. The algori
 
 The equation of the hyperplane is given by two parameters, a real-valued vector w of the same dimensionality as our input feature vector x, and a real number b like this:
 
-```wx − b = 0  (some people use wx + b = 0, but makes no difference.)```
+```wx − b = 0``` (some people use wx + b = 0, but makes no difference.)
 
 ![Alt text](image-7.png)
 
 We would also prefer that the hyperplane separates positive examples from negative ones with the largest margin, as it contributes to a better generalization. To achieve that, we needto minimize the Euclidean norm of w denoted by ||w||.
 
 The goal of  SVM is to leverage the dataset and find the optimal values w* and b* for parameters w and b. Once the learning algorithm identifies these optimal values, the model f (x) is then defined as:
-			f(x) = sign(w*. x − b* )
+
+```f(x) = sign(w*. x − b* )```
 
 Thus, SVM creates a decision boundary on the data, which can be used for classification. It is very similar to linear regression, except for the fact that SVM tries to find a line that best separates the data points, while L.Regression tries to model a line that best fits in the data points.
 

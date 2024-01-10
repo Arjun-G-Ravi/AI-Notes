@@ -21,3 +21,25 @@ PAC (Probably Approximately Correct) learning is a theoretical framework in mach
 
 PAC learning is a specific theoretical framework within the broader field of machine learning. While PAC learning principles are foundational to understanding the generalization and reliability of learning algorithms, not all of machine learning is explicitly framed within the PAC model.
 
+In practical terms, many machine learning algorithms and techniques used today draw inspiration from the principles of PAC learning. PAC learning focuses on the probabilistic correctness and efficiency of learning algorithms, addressing questions about how well they generalize to new, unseen data.
+
+So, you could say that PAC learning is a subset or specific perspective within the field of machine learning, providing theoretical foundations for understanding the learning process and the generalization performance of algorithms.
+
+# Inductive Bias
+The set of assumptions we make to have learning possible is called the inductive bias of the learning algorithm. Learning is a very huge problem, and these inductive biases are what makes it possible.
+
+# Maximum Likelihood Estimation (MLE)
+
+MLE stands for Maximum Likelihood Estimation. It is `a method used in statistics to estimate the parameters of a statistical model`. The fundamental idea behind MLE is to find the values of the model parameters that maximize the likelihood function, which measures how well the model explains the observed data.
+
+### Likelihood Function:
+The likelihood function represents the probability of observing the given data under a particular set of parameter values. In other words, it measures how likely the observed data is for different parameter values.
+
+### Log-Likelihood Function:
+Because likelihood values can become very small, it is common to work with the log-likelihood function instead. This doesn't change the position of the maximum likelihood estimates but simplifies computations.
+
+### MLE
+MLE involves finding the values of the model parameters that maximize the likelihood (or log-likelihood) function.
+
+
+

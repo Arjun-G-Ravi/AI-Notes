@@ -18,3 +18,7 @@ The initial position of centroids influence the final positions, so two runs of 
 
 ## 2. DBSCAN and HDBSCAN
 They are other clustering algorithms. Didn’t read more.
+
+
+# Application
+An interesting application of clustering is in image compression.If in an image, there are only shades of a small number of colors, and if we code those belonging to the same group with one color, for example, their average, then the image is quantized.

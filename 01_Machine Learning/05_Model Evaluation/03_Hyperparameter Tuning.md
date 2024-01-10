@@ -1,6 +1,6 @@
 # Hyperparameter Tuning
 
-Hyperparameters are variables that are not optimized by the learning algorithm itself. The data analyst has to “tune” hyperparameters by experimentally finding the best combination of values, one per hyperparameter.
+Hyperparameters are variables that are not optimized by the learning algorithm, but by the ML programmer. The data analyst has to “tune” hyperparameters by experimentally finding the best combination of values, one per hyperparameter.
 
 One method is grid search, but trying all combinations of hyperparameters, especially if there are more than a couple of them, could be time-consuming.
 

@@ -21,7 +21,7 @@ It also helps us to have an idea about where the prediction is going wrong. This
 
       High precision => if prediction == Positive: result = Positive  # says +ve only if sure
 
-- Recall is the ratio of correct positive predictions to the overall number of correct predictions in the dataset.
+- Recall is the ratio of correct positive predictions to the overall number of "True" answers in the dataset.
 ```Recall = TP/ (TP+FN)```
 
       High recall => if  result == Positive: prediction = Positive # says +ve if there is a chance

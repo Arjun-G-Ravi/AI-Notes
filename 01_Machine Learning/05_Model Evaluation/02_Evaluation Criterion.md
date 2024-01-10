@@ -1,7 +1,12 @@
 # Evaluation Criterions
 
 ## 1. Regression Models
-First, we compute the mean squared error (or any such error measure) for the training, and, separately, for the test data. If the MSE of the model on the test data is substantially higher than the MSE obtained on the training data, this is a sign of overfitting. If both underperforms, it is underfitting.
+The evaluation criterion for regression models include
+ - Mean Squared Error(MSE) - **the most popular**
+ - Mean Absolute Error (MAE)
+ - R-squared (R2)
+
+If the MSE of the model on the test data is substantially higher than the MSE obtained on the training data, this is a sign of overfitting. If both underperforms, it is underfitting.
                    
 ## 2. Classification Models
 

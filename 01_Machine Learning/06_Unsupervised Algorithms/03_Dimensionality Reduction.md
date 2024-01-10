@@ -1,17 +1,28 @@
 # Dimensionality Reduction
-Three widely used techniques of dimensionality reduction are principal component analysis (PCA), uniform manifold approximation and projection (UMAP), and autoencoders.
+Dimensionality reduction is a technique in machine learning and statistics aimed at reducing the number of features or variables in a dataset. The primary goal is to simplify the dataset while retaining its essential information. High-dimensional data, where the number of features is large, can suffer from various issues, including increased computational complexity, the curse of dimensionality, and difficulties in visualization and interpretation.
 
-<!-- Why did i write this thing here? -->
-## Autoencoders
-You can use the low-dimensional output of the bottleneck layer of the autoencoder as the vector of reduced dimensionality that represents the high-dimensional input feature vector.
+There are two main types of dimensionality reduction:
+
+### 1. Feature Selection:
+Feature selection involves selecting a subset of the original features while discarding others. This process is based on criteria such as feature importance, correlation with the target variable, or other statistical measures. The selected features form a reduced-dimensional representation of the dataset.
+
+There are two approaches
+- **Forward selection**: We start with no variables and add them one by one, at each step adding the one that decreases the error the most, until any further addition does not decrease the error (or decreases it only slightly).
+- **Backward selection**: We start will all features, and remove features from them, constantly monitoring the loss.
+
+### 2. Feature Extraction:
+It involves transforming the original features into a new set of features, typically of lower dimensionality. Principal Component Analysis (PCA) and t-distributed Stochastic Neighbor Embedding (t-SNE) are examples of feature extraction techniques. These methods aim to capture the most important information in the data in a reduced number of features.
+
+Common methods for dimensionality reduction include:
+- Principal Component Analysis (PCA):
+- t-Distributed Stochastic Neighbor Embedding (t-SNE):
+- Autoencoders:
+- Linear Discriminant Analysis (LDA):
 
 ## Principal Component Analysis
--  PCA Defines a New Coordinate System - it identifies a new set of axes, called principal components, to represent the data. These axes are chosen to maximize the variance of the data along each axis.
--  First Principal Component: The first principal component represents the direction in the data space along which the data varies the most. It accounts for the highest variance in the data.
--  Orthogonal Axes: Subsequent principal components are orthogonal (perpendicular) to the previous ones. This ensures that each component captures a unique and uncorrelated source of variance in the data.
--  Sequential Capture of Variance: If the data is three-dimensional, PCA will determine the first principal component along the axis of highest variance, the second principal component along the axis of second-highest variance, and so on for higher-dimensional data.
--  Dimensionality Reduction: After identifying the principal components, you can choose to retain a subset of them to reduce the dimensionality of the data. This can be particularly useful when dealing with high-dimensional data while preserving most of the data's information.
+Principal Component Analysis (PCA) is a dimensionality reduction technique, that transforms high-dimensional data into a new coordinate system, where the axes are the principal components. The principal components are orthogonal vectors that capture the maximum variance in the data. By focusing on the most significant features, PCA allows for a reduction in dimensionality while retaining as much of the original information as possible.
+
 
 
 ## UMAP
-Another dime redn technique
+Another dime redn technique <- didn't read more

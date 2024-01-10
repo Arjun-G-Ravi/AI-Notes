@@ -1,5 +1,5 @@
 # Vectorisation and Broadcasting
-Vectorization and broadcasting are techniques used in Python, particularly with libraries like NumPy, to boost the speed and efficiency of numerical operations on arrays or matrices. 
+Vectorization and broadcasting are techniques used in Python, particularly with libraries like NumPy and Pytorch, to boost the speed and efficiency of numerical operations on arrays or matrices. 
 
 ## Vectorization
 Vectorization is the process of rewriting a loop-based, scalar computation to work on entire arrays or vectors at once. Instead of performing operations element-wise, you apply operations directly to the entire array. It significantly speeds up numerical computations because it takes advantage of low-level optimizations provided by libraries like NumPy.

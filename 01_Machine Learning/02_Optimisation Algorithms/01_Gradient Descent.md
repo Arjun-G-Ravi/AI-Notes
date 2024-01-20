@@ -28,3 +28,9 @@ Linear regression for 1 dimension has a closed form solution. That means that gr
 Gradient descent is also slow for large datasets. Minibatch stochastic gradient descent (minibatch SGD) is a version of the algorithm that speeds up the computation by approximating the gradient using smaller batches (subsets) of the training data. 
 
 Adagrad is a version of SGD that scales α for each parameter according to the history of gradients. As a result, α is reduced for very large gradients and vice-versa. Momentum is a method that helps accelerate SGD by orienting the gradient descent in the relevant direction and reducing oscillations. In neural network training, variants of SGD such as RMSprop and Adam, are very frequently used.
+
+## Gradiend Descent vs Stochastic Gradient descent
+
+In gradient descent, the cost is calculated by taking the avg of all the losses(or by any similar means). The partial derivative of this cost is used to optimise the function. This can be slow for larger datasets, as each step happens only after the whole dataset. 
+
+But in Stochastic gradient descent, the cost is calculated after each data point( or a small batch of datapoints) are evaluated. Then the optimisation step is performed. This can make the optimisation faster, but will introduce noise to the data. 

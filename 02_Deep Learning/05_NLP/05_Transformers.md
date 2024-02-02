@@ -105,7 +105,7 @@ ghdf
 # Transformers
 ![Alt text](<Screenshot from 2023-11-08 21-38-39.png>)
 
-![Alt text](1_BHzGVskWGS_3jEcYYi6miQ.png)
+![Alt text](BHzGVskWGS_3jEcYYi6miQ.png)
 
 
 # Credits

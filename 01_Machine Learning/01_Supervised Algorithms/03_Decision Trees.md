@@ -10,10 +10,11 @@ The picture shows how the data is split into sections, for the tree to split.
 ![Alt text](<Screenshot from 2023-12-14 12-56-48.png>)
 
 ### Notes:
-- A decision tree can be converted to a set of IF-THEN rules that are easily understandable. For this reason, decision trees are very popular and sometimes preferred over more accurate but less interpretable
-methods.
+- Ensemble based tree models like Random forest and XGBoost are really good.
+  
+- A decision tree can be converted to a set of IF-THEN rules that are easily understandable. For this reason, decision trees are very popular and sometimes preferred over more accurate but less interpretable methods.
 
-- Decision Trees are non parametric in nature. Non-parametric models make fewer assumptions about the underlying data distribution and aim to capture patterns directly from the data. These models can adapt to more complex relationships without assuming a specific functional form. They often require storing the entire training dataset, making them memory-intensive. ```They don’t create a compressed model that can be used to perform inference(like linear regression finding w* and b*).```
+- Decision Trees are **non parametric** in nature. Non-parametric models make fewer assumptions about the underlying data distribution and aim to capture patterns directly from the data. These models can adapt to more complex relationships without assuming a specific functional form. They often require storing the entire training dataset, making them memory-intensive. ```They don’t create a compressed model that can be used to perform inference(like linear regression finding w* and b*).```
 
 - As each feature is processed separately, and the possible splits of the data don’t depend on scaling. No preprocessing like normalization or standardization of features is needed for decision tree algorithms.
 
@@ -62,4 +63,4 @@ The decision tree we discussed until now have hard decision nodes that is, we ta
 In a soft decision tree, however, we take all the branches but with diﬀerent probabilities, and we follow in parallel all the paths and reach all the leaves, but with diﬀerent probabilities. The output is the weighted average of all the outputs in all the leaves where the weights correspond to the probabilities accumulated over the paths
 
 ## Random Forest
-Uses an ensemble of trees to make prediction. More about random forest and gradient boosting in the Ensemble section ...
+Uses an ensemble of trees to make prediction. More about random forest and gradient boosting in the Ensemble section.

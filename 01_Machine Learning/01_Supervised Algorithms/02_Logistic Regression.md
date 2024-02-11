@@ -15,7 +15,7 @@ So,
 
 f(x) = 1/1+e-z, where z = w.x + b
 
-i.e, ```f(x) = 1/1+e-(w.x + b)```
+i.e, ```f(x) = 1/ 1 + e ^ (-(w @ x + b))```
 
 ![Alt text](image-5.png)
 
@@ -24,7 +24,7 @@ We now need to define a cost function, which is to be optimised for finding the 
 
 So, we use binary cross entropy loss function, which is defined as:
 
-		        - log(f(x))	 if  y == 1
+		        - log(f(x))	 		  if  y == 1
 	Loss = 	
 		        - log(1 – f(x))       if y == 0
 

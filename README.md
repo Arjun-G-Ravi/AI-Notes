@@ -4,4 +4,5 @@
 # Credits
  - 100 pg ML book
  - Andrew Ng ML, DL Courses - Coursera
-   and a lot more books and websites that I may have forgotten
+
+...and a lot more books and websites that I may have forgotten

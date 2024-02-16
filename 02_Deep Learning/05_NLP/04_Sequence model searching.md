@@ -46,6 +46,7 @@ It is used in NLP situations where multiple answers can be correct like translat
 
 ## 7. Attention models
 Normal encoder decoder architecture's performance on NLP tasks starts to go down as the length of the input sentence increases. Attention mechanisms aim to address this limitation by allowing the model to focus on specific parts of the input data, giving more weight to relevant information and less weight to irrelevant information.
+
 Lets say that we are using attention mechanism on a bidirectional RNN. Just like earlier, we would have to put in each word, train the model to output the highest probable word. In attention model, there is an additional parameter - the context. This contains the attention weights. This is the 'attention' to be given to each word in the sentence before giving an output. 
 
 ![Alt text](<Screenshot from 2023-11-08 19-32-04.png>)

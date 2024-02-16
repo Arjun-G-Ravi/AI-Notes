@@ -1,8 +1,19 @@
-# One-hot word embedding
+# Representation of Text as numerical vectors
+
+# 1. Statistical  representation
+
+## Bag of words representaion
+A vocabulory is formed and an index is allocated to each word. The vector representation of a sentence indicate if that word is present in that sentence. If so, the index corresponding to the word is marked as '1'.
+
+![alt text](image-1.png)
+
+## One-hot word encoding
+
 In a one-hot representation, each word in the vocabulary is uniquely encoded as a binary vector where all values are zero except for one, which is set to one. 
 One disadvantage of this is that it treats a word as itself, and doesn't let an algorithm generalize the meaning of one word to another.
 This is because the inner product between any two vectors in this representation is zero.
 Inner product measures how much of vector A lies in the direction of vector B - the alignment of two vectors.
+It also doesn't take into account of the position of the words
 
 # Word Embeddings
 Word embeddings are distributed representations of words in a vector space, where words with similar meanings are represented by similar vectors. These vector representations are used to capture the semantic and syntactic relationships between words and are a fundamental concept in NLP. These embeddings can be learned by eating up a large corpus of text data.

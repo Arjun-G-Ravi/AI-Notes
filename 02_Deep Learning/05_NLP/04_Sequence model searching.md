@@ -1,4 +1,4 @@
-# Sequence models
+# Sequence model searching
 Lets say that we have a model (say, a RNN) that does machine translation. How do we ensure that the best possible translation is done?
 
 ## 1. Searching every possibility (in vocabulory)
@@ -40,8 +40,9 @@ To figure out if we have faulty RNN or faulty (beam) search algorithm.
 BLEU (Bilingual Evaluation Understudy) is a metric used to evaluate the quality of machine-generated translations, primarily in the context of machine translation tasks. It was developed as a way to measure the similarity between a machine-generated translation and one or more human reference translations.
 The BLEU score is a number between 0 and 1, with 1 being a perfect match to the human reference translations. It measures the precision of the machine-generated translation by comparing the n-grams (contiguous sequences of words or characters) in the generated text to those in the reference text. The more n-grams that match, the higher the BLEU score.
 
-![Alt text](<Screenshot from 2023-10-28 20-58-18.png>)
 It is used in NLP situations where multiple answers can be correct like translation. Speech-to-text shouldnot use bleu score, as we always expect a one-on-one correct answer.
+
+![Alt text](<Screenshot from 2023-10-28 20-58-18.png>)
 
 ## 7. Attention models
 Normal encoder decoder architecture's performance on NLP tasks starts to go down as the length of the input sentence increases. Attention mechanisms aim to address this limitation by allowing the model to focus on specific parts of the input data, giving more weight to relevant information and less weight to irrelevant information.

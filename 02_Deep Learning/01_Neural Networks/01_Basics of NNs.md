@@ -27,7 +27,7 @@ This whole process where the input propogates through the different layers to th
 
 If we want to solve a regression or a classification problem discussed in previous chapters, the last (the rightmost) layer of a neural network usually contains only one unit. If the activation function  of the last unit is linear, then the neural network is a regression model. If it is a logistic function, the neural network is a binary classification model.
 
-## Backward propogation
+## Backpropogation 
 Training is the process by which a neural network eats the data, and updates its parameters such that the cost function is reduced. Backpropagation is the algorithm used to compute the gradients of the loss function with respect to the model's parameters, and these gradients are subsequently used by gradient descent for parameter updates.
 
 In neural networks, it is essential to initialize the weights and biases as random numbers, as vice versa will lead to equal gradients for all features. This lead to the no convergence, regardless of the number of epochs.

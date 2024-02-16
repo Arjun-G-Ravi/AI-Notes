@@ -13,6 +13,10 @@ Tokenization is the process of breaking down a sequence of text into smaller uni
 ## Encoding
 Encoding refers to the process of converting text data, typically in the form of tokens, into numerical representations that can be used as input for machine learning models. Tokens are usually words, subwords, or characters, depending on the level of granularity chosen for tokenization. Tokenization is a crucial preprocessing step in NLP that helps convert raw text into a format suitable for analysis and further processing. 
 
+- **Encoding:** This is the process of converting categorical variables into numerical values. The goal is to represent each category with a unique number so that algorithms can understand them. 
+
+- **Vectorization:** This is the process of transforming textual data into numerical vectors. Text data needs to be converted into numerical form before it can be fed into machine learning models.
+
 ## Vocabulory
 Vocabulary refers to the set of unique words, tokens, or subword units that a language model is designed to understand and work with. Vocabulory can be character level or word level.
 

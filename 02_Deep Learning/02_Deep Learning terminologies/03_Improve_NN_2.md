@@ -11,7 +11,7 @@ Bias correction can be implemented in this to make this more accurate.
 # Gradient Descent with momentum
 The basic idea is to `compute an exponentially weighted average of your gradients, and then use that gradient to update your weights`.
 
-This is helpful if the gradient has to go slow in one direction and fast in the other.So, we can use a larger lr, and be fine with it. It can be seen in the diagram below.
+This is helpful if the gradient has to go slow in one direction and fast in the other, as it creates a kind of "momentum" from the previous weight update. So, we can use a larger lr, and be fine with it. It can be seen in the diagram below.
 
 ![Alt text](<Screenshot from 2023-10-12 21-11-00.png>)
 

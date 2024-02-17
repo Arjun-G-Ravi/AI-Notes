@@ -6,7 +6,7 @@ In neural networks, it is essential to initialize the weights and biases as rand
 The backpropagation algorithm works as follows:
  1. **Forward pass:** The network propagates the input data forward through the network, calculating the output of neural network. The error between the network's prediction and the target is used to form a loss function, and eventually a cost function. During actual implementation, we cache w[l], b[l] and z[l] for every layer, so that they are readily available for back propogation.
 
- 2. **Gradient Calculation:** This partial derivative of the cost function is calculated with respect to each parameter. The negative gradient of the cost function points in the direction of steepest descent, which helps to minimize the cost function.
+ 2. **Loss definition and Gradient Calculation:** The loss function is defined with the help of y and y_pred. Then the partial derivative of the loss is calculated with respect to each parameter. The negative gradient of the cost function points in the direction of steepest descent, which helps to minimize the cost function.
 
  3. **Backward Pass**: The network's parameters are updated using the corresponding gradients. The learning rate, a hyperparameter, is multiplied by the gradient to determine the step size. This step size controls the rate at which the parameters are adjusted. One iteration of backpropagation involves updating the parameters based on the calculated gradients for the given batch of data. An epoch consists of multiple iterations, where each iteration updates the parameters using a different batch of data.
    

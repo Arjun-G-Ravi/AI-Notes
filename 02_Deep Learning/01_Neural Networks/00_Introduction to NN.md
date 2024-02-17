@@ -15,4 +15,4 @@ The output from previous layers is added together after multipling with the weig
    1. LSTM: Improved RNN
    2. GRU: Simpler LSTM
 4. Transformers
-5. GANs
+5. GANs 

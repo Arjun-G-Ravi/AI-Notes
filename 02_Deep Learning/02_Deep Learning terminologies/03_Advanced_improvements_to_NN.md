@@ -1,6 +1,3 @@
-# Batching the dataset
-Instead of training the whole dataset in one go, we split up dataset as batches. This vastly speeds up the training process, as each epoch takes way less time. After this, we can implement mini batch gradient descent for optimisation.
-
 # Exponentially weighted average
 Exponentially weighted average is a statistical technique that give `more weight to recent data points, while diminishing the influence of older data points`. This is used in ML to update paramters based on influence from earlier parameters.
 
@@ -11,7 +8,15 @@ Bias correction can be implemented in this to make this more accurate.
 # Gradient Descent with momentum
 The basic idea is to `compute an exponentially weighted average of your gradients, and then use that gradient to update your weights`.
 
-This is helpful if the gradient has to go slow in one direction and fast in the other, as it creates a kind of "momentum" from the previous weight update. So, we can use a larger lr, and be fine with it. It can be seen in the diagram below.
+- This is helpful if the gradient has to go slow in one direction and fast in the other, as it creates a kind of "momentum" from the previous weight update. 
+- We can use a larger lr, and converge faster. 
+- May help avoid local minimas
+- Makes the choice of lr obselete.
+- Loss may go up and down, during training
+
+For momentum, the weight gets updated as:
+
+    w(t) -> w(t-1) - dJ_dw(t)*lr + alpha * w(t-1)
 
 ![Alt text](<Screenshot from 2023-10-12 21-11-00.png>)
 

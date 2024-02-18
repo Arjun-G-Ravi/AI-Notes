@@ -20,7 +20,6 @@ In neural networks, besides L0 and L2 regularization, you can use neural network
   
 - Batch normalization (which rather has to be called batch standardization) is a technique that consists of standardizing the outputs of each layer before the units of the subsequent layer receive them as input. In practice, batch normalization results in faster and more stable training, as well as some regularization effect.
 
-
 # Gradient checking
 Gradient checking is a technique used to verify the correctness of the gradients computed during the training of machine learning models, especially in the context of gradient-based optimization algorithms like stochastic gradient descent (SGD). It helps ensure that the analytical or numerical gradients calculated for the model's parameters (weights and biases) are consistent with the gradients computed using a finite difference approximation.
 
@@ -41,3 +40,6 @@ Gradient checking is a technique used to verify the correctness of the gradients
 
 5. After checking all parameters, if all gradients are correct (i.e., their absolute differences with numerical gradients are smaller than epsilon), you can be more confident that your gradient calculations are accurate.
 ```
+
+# Batching the dataset
+Instead of training the whole dataset in one go, we split up dataset as batches. This vastly speeds up the training process, as each epoch takes way less time. After this, we can implement mini batch gradient descent for optimisation.`

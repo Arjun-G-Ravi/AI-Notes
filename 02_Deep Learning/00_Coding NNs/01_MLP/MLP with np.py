@@ -9,7 +9,7 @@ class MLP:
         self.layers = layers
         self.num_layers = len(layers)
         self.weight = [] # weight.shape = (num_layers X num_neurons_per_layer X num_feature in a neuron )
-        self.bias = [] # bias.shape = (num_layers X num_neurons_per_layer X 1 in a neuron )
+        # self.bias = [] # bias.shape = (num_layers X num_neurons_per_layer X 1 in a neuron )
         
 
     def fit(self, X, y):

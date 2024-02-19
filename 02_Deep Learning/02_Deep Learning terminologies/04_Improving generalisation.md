@@ -9,4 +9,5 @@ To improve generalisation we can
 - early stopping
 - regularisation
   - drop out NN
-- 
+- Training with noisy data
+- Providing other heuristics to aid the model

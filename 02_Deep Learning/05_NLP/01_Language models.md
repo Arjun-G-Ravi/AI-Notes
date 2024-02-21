@@ -12,7 +12,7 @@ An n-gram model is a type of probabilistic language model used in natural langua
 Eg: bigram(n-gram model with n=2), trigram(n=3), etc
 
 - We use MLE to estimate the probability of words.
-- We always represent and compute language model probabilities in log format as log probabilities. Since probabilities are small numbers, multiplying enough n-grams together would result in numerical underflow. We can just add up the log probabilities.
+- We always represent and compute language model probabilities in log format as log probabilities. Since probabilities are small numbers, multiplying enough n-grams together would result in numerical underflow. We can just add up the log probabilities, as:
 ![alt text](image-4.png)
 
 ### Markov Assumption
@@ -29,6 +29,21 @@ They learn complex patterns and representations from large amounts of text data,
 The best way to evaluate the performance of a language model is to embed it in an application and measure how much the application improves. Such end-to-end evaluation is called extrinsic evaluation.
 
 ## Intrinstic
-An intrinstic way to evaluate the probability is by using perplexity. The perplexity (sometimes abbreviated as PP or PPL) of a language model on a test set is the inverse probability of the test set (one over the probability of the test set), normalized by the number of words. For this reason it’s sometimes called the per-word perplexity.
+Intrinstic ways to evaluate the performance of a language model are:
+- Perplexity
+- BLEU (Bilingual Evaluation Understudy) score
+- ROUGE (Recall-Oriented Understudy for Gisting Evaluation) score
+- Word Error Rate (WER)
+- F1 score
 
-The lower the perplexity of a model on the data, the better the model, and minimizing perplexity is equivalent to maximizing the test set probability according to the language model.
+### 1. Perplexity
+The perplexity (sometimes abbreviated as PP or PPL) of a language model on a test set is the inverse probability of the test set (one over the probability of the test set), normalized by the number of words(root is taken of the number of words). For this reason it’s sometimes called the per-word perplexity.
+
+![alt text](image-5.png)
+
+The lower the perplexity of a model on the data, the better the model, and minimizing perplexity is equivalent to maximizing the test set probability according to the language model.It turns out that perplexity can also be thought of as the weighted average branching factor of a language. The branching factor of a language is the number of possible next words that can follow any word.
+
+An (intrinsic) improvement in perplexity does not guarantee an (extrinsic) improvement in the performance of a language processing task like speech recognition or machine translation. Nonetheless, because perplexity usually correlates with task improvements, it is commonly used as a convenient evaluation metric. Still, when possible a model’s improvement in perplexity should be confirmed by an end-to-end evaluation on a real task.
+
+# Dealing with Out Of Vocabulory(OOV) words
+One way to create an open vocabulary system is to model potential unknown words in the test set by adding a pseudo-word called `<UNK>`.

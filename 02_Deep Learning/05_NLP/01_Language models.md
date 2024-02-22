@@ -47,3 +47,13 @@ An (intrinsic) improvement in perplexity does not guarantee an (extrinsic) impro
 
 # Dealing with Out Of Vocabulory(OOV) words
 One way to create an open vocabulary system is to model potential unknown words in the test set by adding a pseudo-word called `<UNK>`.
+
+# Smoothing
+
+## 1. Laplace Smoothing
+The simplest way to do smoothing is to add one to all the n-gram counts, before we normalize them into probabilities. Laplace smoothing does not perform well enough to be used in modern n-gram models, but it gives a useful baseline, and is also a practical smoothing algorithm for other tasks like text classification
+
+## 2. Add-k smoothing
+Add a small number like 0.5 or 0.01
+
+## 3. Backoff and Interpolation

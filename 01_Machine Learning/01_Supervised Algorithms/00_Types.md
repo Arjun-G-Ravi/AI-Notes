@@ -1,5 +1,6 @@
-# Supervised Algorithms
+There are two types of ML algorithms: Supervised and Unsupervised.
 
+# Supervised Algorithms
 Supervised algorithms are a type of machine learning algorithm that learn from labeled training data to make predictions or decisions. They are of two types - Regression and Classification.
 
 ## Regression

@@ -19,3 +19,6 @@ Eg: Naive bayes, Gaussian Discriminant Analysis, Hidden Markov Models, etc.
 `Discriminative classifiers focus on finding decision boundaries that separate the classes.` They tend to perform better than generative classifiers in terms of prediction accuracy, especially when dealing with high-dimensional data or complex relationships between variables.
 Eg: Logistic regression, SVM, trees, NN, etc
 
+# 2. Unsupervised Algorithms
+
+They are ML algorithms where the model is not trained with labelled dataset.Unsupervised algorithms are given in next section.

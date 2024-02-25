@@ -1,3 +1,5 @@
+# Basic NLP
+
 ## Text normalization
 Text normalization in Natural Language Processing (NLP) refers to the process of converting a piece of text into a standardized form. This involves correcting spelling errors, expanding abbreviations and contractions, removing punctuation marks, converting all characters to lowercase or uppercase, and applying other transformations that make the text easier to analyze and compare.
 

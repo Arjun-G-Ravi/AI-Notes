@@ -20,6 +20,3 @@ Formally, a regular expression is an algebraic notation for characterizing a set
 
 # Edit distance
 Edit distance gives us a way to quantify both of these intuitions about string similarity. More formally, the minimum edit distance between two strings is defined as the minimum number of editing operations (operations like insertion, deletion, substitution) needed to transform one string into another.
-
-
-

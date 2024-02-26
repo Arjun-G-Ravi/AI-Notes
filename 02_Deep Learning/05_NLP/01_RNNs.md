@@ -1,4 +1,4 @@
-# Recurrent Neural Networks
+# Recurrent Neural Networks (RNNs)
 RNNs are used to classify or generate sequencial data – data where the order of the data have importance. Also, RNNs are able to handle (sequencial) input of varying length. Because of this, RNNs can be used in text processing.
 
 RNNs are able to handle sequencial data because they take in input as a sequential format, and not ‘all in one go’. They are able to keep track of the sequence because of the feedback loop present in it - thus RNNs are not feed forward NNs. These feedback loops allow them to maintain a hidden state representing information from previous time steps in the sequence. Thus RNNs have memory, and can use that to process a sequence. 

@@ -18,7 +18,7 @@ In a one-hot representation, each word in the vocabulary is uniquely encoded as 
   
 ![alt text](image-3.png)
 
-# 2. Distriutional Vector Representation
+# 2. Distributional Vector Representation
 Here, we use neural network to learn a way to represent words as vectors. Here, we use various features to represent the words.
 
 ## Word Embeddings
@@ -44,7 +44,7 @@ We can solve this by subtracting embeddings of (Man and Woman) and finding a emb
 It is a matrix that contains the word embeddings for all the words in a vocabulary. To get the word embeddings of a word, we matmul the embedding matrix with the one hot encoding vector of the word, whose word embedding is needed.
 
 # Word2vec
-Word2Vec is a specific algorithm for learning word embeddings from a large corpus of text. It was developed by google. There are two types of word2vec representation:
+`Word2Vec is a specific algorithm for learning word embeddings from a large corpus of text.` It was developed by google. There are two types of word2vec representation:
  - Skip-gram model
  - Continuous bag of words(CBOW)
 
@@ -78,4 +78,4 @@ GloVe is a another word embedding model that works by learning continuous vector
 
 It aims to capture the semantic relationships between words in a corpus of text by learning vector representations of words based on the co-occurrence statistics of words in the corpus.
 
-- Stats instead of NNs
+- Statistics instead of NNs

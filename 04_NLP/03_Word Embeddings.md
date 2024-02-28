@@ -28,7 +28,7 @@ Word embeddings are distributed representations of words in a vector space, wher
 
 - It refers to the process of representing categorical data, such as words, as continuous vectors in a lower-dimensional space.
 - Visualising this on an n-dimensional graph will reveal that similar items will be grouped together.
-
+- The revolutionary intuition here is that we can just use running text as implicitly supervised training data for such a classifier. This method, often called `self-supervision`, avoids the need for any sort of hand-labeled supervision signal.
 ![Alt text](<Screenshot from 2023-10-20 20-29-14.png>)
 
 ## Feature Enginnering

@@ -22,7 +22,9 @@ In a one-hot representation, each word in the vocabulary is uniquely encoded as 
 Here, we use neural network to learn a way to represent words as vectors. Here, we use various features to represent the words.
 
 ## Word Embeddings
-Word embeddings are distributed representations of words in a vector space, where words with similar meanings are represented by similar vectors. These vector representations are used to capture the semantic and syntactic relationships between words. These embeddings can be learned by eating up a large corpus of text data.
+In Natural Language Processing (NLP), embeddings are vector representations of words or tokens that capture their semantic and syntactic properties. Instead of treating words as discrete symbols, embeddings allow us to manipulate them as continuous vectors in a high-dimensional space, revealing hidden patterns and relationships.
+
+Word embeddings are distributed representations of words in a vector space, where words with similar meanings are represented by similar vectors. These embeddings can be learned by eating up a large corpus of text data.
 
 - It refers to the process of representing categorical data, such as words, as continuous vectors in a lower-dimensional space.
 - Visualising this on an n-dimensional graph will reveal that similar items will be grouped together.

@@ -1,5 +1,8 @@
+# Sequence Models
+Sequence models are a type of machine learning model used for tasks involving sequences of data, where the order and dependencies between elements in the sequence matter. They are used for natural language processing.
+
 # Language models
-Language models are computational models that are designed to understand, generate, and process human language in a way that mimics human-like understanding and production. They do this by trying to predict the next word from the previous words(context). 
+A language model is a type of sequence model that is designed to understand and generate human language. They are computational models that are designed to understand, generate, and process human language in a way that mimics human-like understanding and production. They do this by trying to predict the next word from the previous words(context). 
 
 - The term "large language model" typically refers to language models that have a vast number of parameters and are trained on massive datasets. 
 

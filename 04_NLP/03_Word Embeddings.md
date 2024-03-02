@@ -1,7 +1,6 @@
 # Representation of Text as numerical vectors
 
 # 1. Statistical  representation
-
 ## Bag of words representaion
 A vocabulory is formed and an index is allocated to each word. The vector representation of a sentence indicate if that word is present in that sentence. If so, the index corresponding to the word is marked as '1'.
 - Gives no context of the sentence.

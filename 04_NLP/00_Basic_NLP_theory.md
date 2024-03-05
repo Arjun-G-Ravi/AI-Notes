@@ -58,9 +58,13 @@ If x is a word and y be a context word, then
     PMI(x, y) = log2[p(x, y)/(p(x)*p(y))]
 The numerator tells us how often we observed the two words together and the denominator tells us how often we would expect the two words to co-occur assuming they each occurred independently.
 
+## 11. Sequence Labelling
+Sequence labeling is a fundamental task  where the goal is to assign labels to each wordin a given sequence of text.Eg: POS tagging, NER 
+
 ### POS tagging
 Parts of speech tagging is done to tag the parts of speech in a sentence.
 
-## NER
-Named entity recognition is done to find out proper nouns, etc which are usually not found in the vocabulory. Eg: Tony, Mumbai, 
+### Named Entity Recognition(NER)
+Named entity recognition is done to find out proper nouns like names, location, etc. which are usually not found in the vocabulory.
+Eg: Tony, Mumbai, 
 

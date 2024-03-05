@@ -48,7 +48,7 @@ NLP models comes in three types:
 `Ensemble` and `stacking` of models can almost always lead to better performing models
 
 ## 6. Evaluation
-- Can be intristic or extensic
+- Can be intristic or extensic. Explained in language models section.
 ## 7. Deployment
 - Cloud services can be used
 ## 8. Monitoring and updating

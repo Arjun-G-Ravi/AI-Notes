@@ -2,6 +2,7 @@
 Natural Language Processing is a field of study focused on the interaction between computers and human (natural) languages. The ultimate objective of NLP is to read, decipher, understand, and make sense of the human language in a valuable way.
 
 # NLP CONCEPTS
+
 ## 1. Text normalization
 Text normalization in Natural Language Processing (NLP) refers to the process of converting a piece of text into a standardized form. This involves correcting spelling errors, expanding abbreviations and contractions, removing punctuation marks, converting all characters to lowercase or uppercase, and applying other transformations that make the text easier to analyze and compare.
 
@@ -50,10 +51,16 @@ TF-IDF (Term Frequency-Inverse Document Frequency) is a numerical `statistic use
 `TF-IDF Score(for a word in document d1) = TF(word, d1) * IDF(word)`
 
 ## 10. PMI
-An alternative weighting function to tf-idf, PPMI (positive pointwise mutual information), is used for term-term-matrices, when the vector dimensions correspond to words rather than documents. PPMI draws on the intuition that the best way to weigh the association between two words is to ask how much more the two words co-occur in our corpus than we would have a priori expected them to appear by chance.
+An `alternative weighting function to tf-idf`, PPMI (positive pointwise mutual information), is used for term-term-matrices, when the vector dimensions correspond to words rather than documents. PPMI draws on the intuition that the best way to weigh the association between two words is to ask how much more the two words co-occur in our corpus than we would have a priori expected them to appear by chance.
 
-If x is a word and y be a context word, then `PMI(x, y) = log2[p(x, y)/(p(x)*p(y))].`The numerator tells us how often we observed the two words together and the denominator tells us how often we would expect the two words to co-occur assuming they each occurred independently.
+If x is a word and y be a context word, then 
 
+    PMI(x, y) = log2[p(x, y)/(p(x)*p(y))]
+The numerator tells us how often we observed the two words together and the denominator tells us how often we would expect the two words to co-occur assuming they each occurred independently.
 
+### POS tagging
+Parts of speech tagging is done to tag the parts of speech in a sentence.
 
+## NER
+Named entity recognition is done to find out proper nouns, etc which are usually not found in the vocabulory. Eg: Tony, Mumbai, 
 

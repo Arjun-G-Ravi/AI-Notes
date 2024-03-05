@@ -1,21 +1,4 @@
-# NLP
-Natural Language Processing is a field of study focused on the interaction between computers and human (natural) languages. The ultimate objective of NLP is to read, decipher, understand, and make sense of the human language in a valuable way.
-
 # NLP CONCEPTS
-
-## 1. Text normalization
-Text normalization in Natural Language Processing (NLP) refers to the process of converting a piece of text into a standardized form. This involves correcting spelling errors, expanding abbreviations and contractions, removing punctuation marks, converting all characters to lowercase or uppercase, and applying other transformations that make the text easier to analyze and compare.
-
-## 2. Tokenisation
-Converting text data into tokens.
-- Should "New York" be considered as one token or two? Should punctuations be considered to be separate tokens? etc. all depends on the application. 
-
-## 3. Stemming
-Reducing words to their base or root form, by chopping off parts of words.
-Eg: SnowBallStemmer(violent stemmer), PorterStemmer(simple stemmer)
-
-## 4. Lemmatization
-It is stemming performed by consulting the context of the text
 
 ## 5. Regular Expression
 Formally, a regular expression is an algebraic notation for characterizing a set of strings. Regular expressions are particularly useful for `searching in texts, when we have a pattern to search for` and a corpus of texts to search through.
@@ -30,7 +13,6 @@ Encoding refers to the process of converting text data, typically in the form of
 - **Encoding:** This is the process of converting categorical variables into numerical values. The goal is to represent each category with a unique number so that algorithms can understand them. 
 
 - **Vectorization:** This is the process of transforming textual data into numerical vectors. Text data needs to be converted into numerical form before it can be fed into machine learning models.
-
 
 ### Encoder
 `The encoder component converts the preprocessed text into embeddings.`It processes the input sequence element by element, utilizing either recurrent layers or self-attention mechanisms to create this representation. The encoder's output serves as a rich contextual representation that can be harnessed for numerous downstream tasks.

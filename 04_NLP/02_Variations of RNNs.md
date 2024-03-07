@@ -1,10 +1,5 @@
 # Modifications to RNN s
 
-## 1. RNN
-Classic RNNs.
-
-![Alt text](<Screenshot from 2023-10-19 20-36-38.png>)
-
 ## 2. LSTM 
 Long Short-Term Memory networks were specifically designed to address both the exploding and vanishing gradient problems as well as the long-term dependencies issue, making them a significant improvement over vanilla RNNs in these aspects.
 
@@ -33,11 +28,6 @@ Read later: http://colah.github.io/posts/2015-08-Understanding-LSTMs/
 GRU (Gated Recurrent Unit) is a type of RNN architecture used in the field of NLP, designed to address some of the limitations of traditional RNNs, such as the vanishing gradient problem and the difficulty of capturing long-range dependencies in sequences.
 GRUs help RNNs capture and remember important information, by having a memory of the past while also allowing them to adapt to new data as it comes in. `GRUs are actually a simplified LSTM model.`
 
-## 4. Bidirectional RNNs
-They are RNNs, designed to capture information from both past and future time steps when processing a sequence of data, which can be beneficial for tasks that require a deeper understanding of context.
-This can be done not just to RNNs, but also GRUs or LSTMs.
-
-![Alt text](<Screenshot from 2023-10-20 19-54-39.png>)
 
 ## 5. Deep RNNs
 Instead of recurring over a cell, we can recurr over a small NN. This creates deep RNNs.

@@ -21,11 +21,11 @@ For eg,
 For predicting a word(y1), the RNN takes in the current word(x1) and the hidden state of the previously predicted word(h0) to create the hidden state h1. This is done by matmul h0 with U and x1 with W. Here, U and W are learned parameters from training. Once we have obtained h1, h1 is matmul with V(the weight for next layer). This goes through a softmax, and y1 is obtained. The same this unrolled for predicting each word, as shown above.
 
 # Training RNNs
-RNNs use a variation of backpropagation called `Backpropagation Through Time` (BPTT) to update the model's weights and biases.
+RNNs use a variation of backpropagation called `Backpropagation Through Time` (BPTT) to update the model's weights and biases. To do that, we do self-supervision to predict the next word, given the earlier one.
 
 ![alt text](image-9.png)
 
-- We do inference for each word in the text and calculate the loss.
+- We do inference for each word in the text and calculate the loss. The cross-entropy loss for language modeling is determined by the probability the model assigns to the correct next word.
 - This loss is used to calculate the gradient for each learnable parameter in the model.
 - Then the weights are updated with the gradient.
 

@@ -15,7 +15,7 @@ LSTM networks have two kinds of memory – short and long term memory. Each LSTM
 In each gate, the sigmoid activation function determines how much of the data is to be remembered.
 
 ### Forget gate
-This gate decides how much of the data is to be remembered in the long term memory. The forget gate takes in the weighted sum of the input vector from tth and (t-1)th state, and pass them through a sigmoid function. This gives an output between 0 and 1, which will be multiplied with the long term memory. 
+This gate decides how much of the data is to be remembered in the long term memory. The forget gate takes in the weighted sum of the input vector from (t)th and (t-1)th state, and pass them through a sigmoid function. This gives an output between 0 and 1, which will be multiplied with the long term memory. 
 
 ### Input gate
 It inserts new memory to the long term memory. It takes in the weighted sum of the input vector from tth and (t-1)th state, and pass them through a sigmoid function and a tanh function. Then those two values are multiplied and added to the long term memory.

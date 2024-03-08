@@ -6,17 +6,3 @@ A bidirectional RNN combines two independent RNNs, one where the input is proces
 This can be done not just to RNNs, but also GRUs or LSTMs.
 ![Alt text](<Screenshot from 2023-10-20 19-54-39.png>)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-

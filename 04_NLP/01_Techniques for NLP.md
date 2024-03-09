@@ -1,3 +1,4 @@
+# NLP Techniques
 
 ## Teacher Forcing
 Teacher forcing is a common training strategy for recurrent neural networks (RNNs) and other sequence-to-sequence models. In teacher forcing, the model is trained using the true previous inputs (or "history sequence") rather than its own previous outputs. This allows the model to learn the correct mapping between input sequences and output sequences, and can lead to faster and more stable convergence during training.

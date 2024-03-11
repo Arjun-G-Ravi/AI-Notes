@@ -1,4 +1,6 @@
 # Encoder-Decoder Model
+    Converts input to a fixed length numeric representation, which will be used to compute the result.
+
 The Encoder-Decoder model is a type of artificial neural network architecture consisting of two main components: an encoder and a decoder.
 
 ![alt text](image-13.png)
@@ -7,17 +9,4 @@ The Encoder-Decoder model is a type of artificial neural network architecture co
 
 The following image shows a simplified encoder-decoder model.
 ![alt text](image-14.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
 

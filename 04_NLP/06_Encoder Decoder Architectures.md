@@ -16,5 +16,7 @@ The encoder generates the context. The simplest version of the decoder network w
 In this version, the context is given, as a whole, to all of the decoder cell.
 
 # Training
-The training data is paired string of the form (source, target). 
+The training data is paired string of the form (source, target).
+
+Forward pass is performed, and loss is calculated for each word. The total loss will be the average of all the individual losses. Then backprop is done. Usually teacher forcing is done during backprop.
 

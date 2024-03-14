@@ -12,5 +12,5 @@ The concept of attention involves generating a single fixed-length vector(contex
 ## Dot-product attention
 It is the most simple attention mechanism. It implements attention as by measuring how similar the decoder hidden state is to an encoder hidden state, by computing the dot product between them.The score that results from this dot product is a scalar that reflects the degree of similarity between the two vectors.
 
-# Learning attention
+# Learning attention using Neural Networks
 Another way to calculate attention is to define a set of weights, which learns during training about how to give attention for each of the encoder tokens, given a decoder token. This is superior to the dot product attention mechanism.

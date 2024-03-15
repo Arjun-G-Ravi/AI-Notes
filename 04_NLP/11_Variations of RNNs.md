@@ -1,4 +1,3 @@
-# Modifications to RNN s
 
 ## 3. Gated Recurrent Unit
 ![Alt text](<Screenshot from 2023-10-19 20-51-19.png>)
@@ -10,5 +9,3 @@ GRUs help RNNs capture and remember important information, by having a memory of
 ## 5. Deep RNNs
 Instead of recurring over a cell, we can recurr over a small NN. This creates deep RNNs.
 ![Alt text](<Screenshot from 2023-10-20 20-00-00.png>)
-
-

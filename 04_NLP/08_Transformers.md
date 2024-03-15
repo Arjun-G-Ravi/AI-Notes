@@ -6,6 +6,11 @@ Transformers, a revolutionary neural network architecture, introduce a `self-att
 Notably, transformers exhibit scalability, efficiently handling long-range dependencies and large datasets, making them versatile for a range of applications in natural language processing and beyond. Another advantage of transformers over RNNs is that it computes the input data parallely, while generating the output sequentially. 
 
 ## Self Attention
+
+Self-attention is a mechanism in NLP models that allows the model to consider the context of a word in a sentence when encoding it as a numeric vector. In a self-attention layer, the model computes a weighted sum of the embeddings of all the words in a sentence, where the weights are determined by the attention scores assigned to each word. These attention scores reflect the importance of each word in the context of the current word being encoded
+
+
+
 The key innovation of transformers is their self-attention mechanism, which enables transformers to `capture long-range dependencies in data`, making them well-suited for tasks involving sequences.
 
 `Self-attention mechanism enables the model to weigh the importance of different elements in a sequence dynamically.` By computing attention weights for each element in the input sequence relative to others, the self-attention mechanism effectively captures the relationships among those elements. Consequently, the model becomes sensitive to subtle variations in the input sequence, leading to improved understanding and interpretation of the underlying meaning or structure.

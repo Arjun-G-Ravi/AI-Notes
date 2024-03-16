@@ -18,6 +18,7 @@ For the following senteces, apple has the same vector representation in attentio
  - Steve Jobs is the CEO of apple.
  - An apple fell over Newton's head.
 
+
 # Query, Key, Value system for attention
 The Query, Key, Value (QKV) system is a fundamental component of the attention mechanism used in transformers. In this system, when processing a sequence of input data, each element (e.g., word) is associated with three vectors: a Query vector (Q), a Key vector (K), and a Value vector (V). Here's a brief overview of their roles:
 

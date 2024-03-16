@@ -6,38 +6,19 @@ Transformers, a revolutionary neural network architecture, introduce a `self-att
 Notably, transformers exhibit scalability, efficiently handling long-range dependencies and large datasets, making them versatile for a range of applications in natural language processing and beyond. Another advantage of transformers over RNNs is that it computes the input data parallely, while generating the output sequentially. 
 
 ## Self Attention
-
-Self-attention is a mechanism in NLP models that allows the model to consider the context of a word in a sentence when encoding it as a numeric vector. In a self-attention layer, the model computes a weighted sum of the embeddings of all the words in a sentence, where the weights are determined by the attention scores assigned to each word. These attention scores reflect the importance of each word in the context of the current word being encoded
-
-
-
 The key innovation of transformers is their self-attention mechanism, which enables transformers to `capture long-range dependencies in data`, making them well-suited for tasks involving sequences.
 
-`Self-attention mechanism enables the model to weigh the importance of different elements in a sequence dynamically.` By computing attention weights for each element in the input sequence relative to others, the self-attention mechanism effectively captures the relationships among those elements. Consequently, the model becomes sensitive to subtle variations in the input sequence, leading to improved understanding and interpretation of the underlying meaning or structure.
+Self-attention is a mechanism in NLP models that allows the model to consider the context(the words around that word) of a word in a sentence when encoding it as a numeric vector. During self-attention, the model computes a weighted sum of the embeddings of all the words in a sentence, where the weights are determined by the attention scores assigned to each word. These attention scores reflect the importance of each word in the context of the current word being encoded. Thus the embedding for each word is calculated dynamically with the help of the words around it.
 
 This self-attention mechanism can be extended to multi-head attention, allowing the network to jointly attend to multiple positions in the input sequence simultaneously. 
 
-## Attention:
-- Basic Idea: `Attention mechanisms allow a model to focus on different parts of the input sequence when processing a particular element.`
-- Usage: In a general attention mechanism, the model considers the entire input sequence and assigns different weights to different elements based on their relevance to the current element being processed.
-- Components: There are typically three components in attention: a query, a set of key-value pairs, and a mechanism to compute attention scores and weight the values based on these scores.
-Attention is learned during training period.
-
-## Self-Attention (or Intra-Attention):
-- Basic Idea: `Self-attention is a specific type of attention where the elements of the input sequence attend to each other.`
-- Usage: In self-attention, the input sequence is used as the set of key-value pairs, and each element in the sequence attends to all other elements, including itself.
-- Components: Self-attention mechanisms have a query, key, and value derived from the same input sequence. The attention scores are computed based on the similarity between the query and key, and the values are weighted accordingly.
-
-### The way self-attention is done in transformers
-The context of words is generated from in transformers during inference and it is used by the model, instead of word embeddings. This representation is different from normal word2vec model as they learn the word embedding from a large text corpus, and store them in a matrix-to be used. 
-
-Learning this context uses the self attention mechanism. This lets us have a rich representation of the word - allowing the model to perform better as it allows the model to focus on different parts of the input sequence differently for each position. This is used along with the normal word embedding for a really good representation.
+Learning this context using the self attention mechanism lets us have a rich representation of the word - allowing the model to perform better as it allows the model to focus on different parts of the input sequence differently for each position. This is used along with the normal word embedding for a really good representation.
 
 For the following senteces, apple has the same vector representation in attention mechanism(like using word2vec), but very different representation if self attention is used.
  - Steve Jobs is the CEO of apple.
  - An apple fell over Newton's head.
 
-### Query, Key, Value system for attention
+# Query, Key, Value system for attention
 The Query, Key, Value (QKV) system is a fundamental component of the attention mechanism used in transformers. In this system, when processing a sequence of input data, each element (e.g., word) is associated with three vectors: a Query vector (Q), a Key vector (K), and a Value vector (V). Here's a brief overview of their roles:
 
 1. Query (Q): This vector represents the `element that is used to inquire about the other elements in the sequence`. In the context of attention mechanisms, the query is used to calculate the attention scores indicating how much focus each element should receive. This is obtained from the generated part of the output.

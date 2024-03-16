@@ -14,3 +14,9 @@ It is the most simple attention mechanism. It implements attention as by measuri
 
 # Learning attention using Neural Networks
 Another way to calculate attention is to define a set of weights, which learns during training about how to give attention for each of the encoder tokens, given a decoder token. This is superior to the dot product attention mechanism.
+
+## Attention:
+- Basic Idea: `Attention mechanisms allow a model to focus on different parts of the encoder sequence when processing a particular element in the decoder part.`
+
+## Self-Attention (or Intra-Attention):
+- Basic Idea: `Self-attention is a specific type of attention where the elements of the endoder sequence attend to each other.`

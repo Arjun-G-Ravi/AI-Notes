@@ -3,7 +3,7 @@ Transformers, a revolutionary neural network architecture, introduce a `self-att
 
 ![Alt text](BHzGVskWGS_3jEcYYi6miQ.png)
 
-Notably, transformers exhibit scalability, efficiently handling long-range dependencies and large datasets, making them versatile for a range of applications in natural language processing and beyond. Another advantage of transformers over RNNs is that it computes the input data parallely, while generating the output sequentially. 
+Notably, transformers exhibit scalability, efficiently handling long-range dependencies and large datasets, making them versatile for a range of applications in NLP, Computer Vision and beyond. Another advantage of transformers over RNNs is that it computes the input data parallely, while generating the output sequentially. 
 
 ## Self Attention
 The key innovation of transformers is their self-attention mechanism, which enables transformers to `capture long-range dependencies in data`, making them well-suited for tasks involving sequences.
@@ -17,7 +17,6 @@ Learning this context using the self attention mechanism lets us have a rich rep
 For the following senteces, apple has the same vector representation in attention mechanism(like using word2vec), but very different representation if self attention is used.
  - Steve Jobs is the CEO of apple.
  - An apple fell over Newton's head.
-
 
 # Query, Key, Value system for attention
 The Query, Key, Value (QKV) system is a fundamental component of the attention mechanism used in transformers. In this system, when processing a sequence of input data, each element (e.g., word) is associated with three vectors: a Query vector (Q), a Key vector (K), and a Value vector (V). Here's a brief overview of their roles:

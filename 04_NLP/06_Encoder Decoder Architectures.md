@@ -1,5 +1,5 @@
 # Encoder-Decoder Model
-    Converts input to a fixed length numeric representation(context), which will be used to compute the result.
+    Converts input to a fixed length numeric representation(called context), which will be used to compute the result.
 
 The Encoder-Decoder model is a type of artificial neural network architecture consisting of two main components: an encoder and a decoder.
 

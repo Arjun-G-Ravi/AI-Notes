@@ -3,20 +3,12 @@ Transformers, a revolutionary neural network architecture, introduce a `self-att
 
 ![Alt text](BHzGVskWGS_3jEcYYi6miQ.png)
 
-Notably, transformers exhibit scalability, efficiently handling long-range dependencies and large datasets, making them versatile for a range of applications in NLP, Computer Vision and beyond. Another advantage of transformers over RNNs is that it computes the input data parallely, while generating the output sequentially. 
+Another advantage of transformers over RNNs is that it computes the input data parallely, while generating the output sequentially. 
 
 ## Self Attention
 The key innovation of transformers is their self-attention mechanism, which enables transformers to `capture long-range dependencies in data`, making them well-suited for tasks involving sequences.
 
-Self-attention is a mechanism in NLP models that allows the model to consider the context(the words around that word) of a word in a sentence when encoding it as a numeric vector. During self-attention, the model computes a weighted sum of the embeddings of all the words in a sentence, where the weights are determined by the attention scores assigned to each word. These attention scores reflect the importance of each word in the context of the current word being encoded. Thus the embedding for each word is calculated dynamically with the help of the words around it.
-
-This self-attention mechanism can be extended to multi-head attention, allowing the network to jointly attend to multiple positions in the input sequence simultaneously. 
-
-Learning this context using the self attention mechanism lets us have a rich representation of the word - allowing the model to perform better as it allows the model to focus on different parts of the input sequence differently for each position. This is used along with the normal word embedding for a really good representation.
-
-For the following senteces, apple has the same vector representation in attention mechanism(like using word2vec), but very different representation if self attention is used.
- - Steve Jobs is the CEO of apple.
- - An apple fell over Newton's head.
+Self-attention is a mechanism in NLP models that `allows the model to consider the context(the words around that word) of a word in a sentence when encoding it as a numeric vector.` During self-attention, the model computes a weighted sum of the embeddings of all the words in a sentence, where the weights are determined by the attention scores assigned to each word. These attention scores reflect the importance of each word in the context of the current word being encoded. Thus the embedding for each word is calculated dynamically with the help of the words around it.
 
 # Query, Key, Value system for attention
 The Query, Key, Value (QKV) system is a fundamental component of the attention mechanism used in transformers. In this system, when processing a sequence of input data, each element (e.g., word) is associated with three vectors: a Query vector (Q), a Key vector (K), and a Value vector (V). Here's a brief overview of their roles:
@@ -56,8 +48,7 @@ The most basic part of the transformers is shown here:
 
 In short,transformer architecture can be summarised as:
 
-    1. Input Representation:
-        Embedding: Convert input words into vectors (embeddings).
+    1. Input Representation: Convert input words into vectors (embeddings).
 
     2. Positional Encoding:
         Add Positional Information: Since Transformers don't inherently understand the order of words in a sequence, positional encodings are added to the input embeddings to give the model information about the position of each word.
@@ -91,7 +82,7 @@ In short,transformer architecture can be summarised as:
 There are certain things that can vastly improve the performance of transformer models
 
 ## 1. Positional Encodings
-The position of the words can play a major role in its meaning. So we encode the postion of the words also. This will shift the word in the vector space along a particular dimension, closer to other words with the same index. This will let the model have a better understanding of the context. This shift should not be too large, or else the positional similarity will overwrite the semantics similarity with other words.So, we encode the position as sine and cosine wave .
+The position of the words can play a major role in its meaning. So we encode the postion of the words also. This will shift the word in the vector space along a particular dimension, closer to other words with the same index. This will let the model have a better understanding of the context. This shift should not be too large, or else the positional similarity will overwrite the semantics similarity with other words.So, we encode the position as sine and cosine waves.
 
 ![Alt text](<Screenshot from 2023-11-08 21-33-22.png>)
 
@@ -100,9 +91,6 @@ Just like resnet, we create connections that add earlier part of the network to 
 
 ## 3. Batch normalisation
 For faster convergence.
-ghdf
-# Transformers
-![Alt text](<Screenshot from 2023-11-08 21-38-39.png>)
 
 # Credits
 1. Andrew Ng deep learning

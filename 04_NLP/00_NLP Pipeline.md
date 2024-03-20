@@ -1,6 +1,3 @@
-# Test
-# test 2
-
 # NLP
 Natural Language Processing is a field of study focused on the interaction between computers and human (natural) languages. The ultimate objective of NLP is to read, decipher, understand, and make sense of the human language in a valuable way.
 
@@ -14,7 +11,7 @@ Natural Language Processing is a field of study focused on the interaction betwe
 - Using regex to extract only necessary sections
 - Correcting spelling mistakes
 
-## 3. Text preprocessinggit 
+## 3. Text preprocessing 
 - `Tokenisation:`Converting text data into tokens. Should "New York" be considered as one token or two? Should punctuations be considered to be separate tokens? etc. all depends on the application. 
 
 - `Lower casing`: To reduce randomness. Most words mean the same after lower casing.

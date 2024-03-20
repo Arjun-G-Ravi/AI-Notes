@@ -98,3 +98,13 @@ For faster convergence.
 3. https://www.youtube.com/watch?v=4Bdc55j80l8&t=1s&ab_channel=TheA.I.Hacker-MichaelPhi
 4. https://www.youtube.com/watch?v=kCc8FmEb1nY&t=4s&ab_channel=AndrejKarpathy
 5. https://towardsdatascience.com/transformers-141e32e69591  
+
+
+
+
+
+
+# Walkthrough
+
+1. Takes in the tokenised words as input
+2. Goal of the encoder is to provide a VERY good representation of the input text. We add positional embedding to give positional information, and self-attention to generate embedding for each word wrt the word's context.

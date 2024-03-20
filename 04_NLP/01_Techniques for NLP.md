@@ -9,6 +9,4 @@ However, teacher forcing can also lead to a discrepancy between training and inf
 For "professor forcing" or "scheduled sampling", the model is trained using a mixture of true previous inputs and its own previous outputs. This can help the model to learn to recover from its own errors and improve its performance at inference time.
 
 ## Weight Tying
-Weight tying is a technique used in some neural network architectures to reduce the number of parameters and improve the generalization performance of the model. In weight tying, the weights of two or more layers in the network are constrained to be identical, so that they share the same set of parameters.
-
-One common application of weight tying is in sequence-to-sequence models, such as encoder-decoder architectures. In these models, the weights of the encoder and decoder networks are often tied together, so that the same set of weights is used for both encoding the input sequence and decoding the output sequence. This is known as "weight tying" or "parameter sharing" between the encoder and decoder.
+Weight tying is a technique used in some neural network architectures to reduce the number of parameters and improve the generalization performance of the model. In weight tying, the weights of two or more layers in the network are constrained to be identical, so that they share the same set of parameters. Often used in encoder-decoder systems.

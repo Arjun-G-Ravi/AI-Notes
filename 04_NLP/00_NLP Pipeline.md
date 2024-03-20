@@ -39,6 +39,7 @@ NLP models comes in three types:
 1. `Heuristic model` 
    - Rule based
    - good with small data
+   - Can be difficult to come up with rules
 2. `ML based model`
    - With a moderately large dataset
 3. `Deep learning based model`

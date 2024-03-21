@@ -3,7 +3,9 @@ Transformers, a revolutionary neural network architecture, introduce a `self-att
 
 ![Alt text](BHzGVskWGS_3jEcYYi6miQ.png)
 
-Another advantage of transformers over RNNs is that it computes the input data parallely, while generating the output sequentially. 
+## Advantages of Transformers (over RNNs) 
+- Parallel computation -> faster
+- Better context -> better performance
 
 ## Self Attention
 The key innovation of transformers is their self-attention mechanism, which enables transformers to `capture long-range dependencies in data`, making them well-suited for tasks involving sequences.

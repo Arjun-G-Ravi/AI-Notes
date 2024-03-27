@@ -7,7 +7,7 @@ Transformers, a revolutionary neural network architecture, introduce a `self-att
 - Parallel computation -> faster
 - Higher context -> better performance
 
-## Self Attentionz
+## Self Attention
 The key innovation of transformers is their self-attention mechanism, which enables transformers to `capture long-range dependencies in data`, making them well-suited for tasks involving sequences.
 
 Self-attention is a mechanism in NLP models that `allows the model to consider the context(the words around that word) of a word in a sentence when encoding it as a numeric vector.` During self-attention, the model computes a weighted sum of the embeddings of all the words in a sentence, where the weights are determined by the attention scores assigned to each word. These attention scores reflect the importance of each word in the context of the current word being encoded. Thus the embedding for each word is calculated dynamically with the help of the words around it.

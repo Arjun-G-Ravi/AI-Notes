@@ -98,3 +98,5 @@ For faster convergence.
 
 1. Takes in the tokenised words as input
 2. Goal of the encoder is to provide a VERY good representation of the input text. We add positional embedding to give positional information, and self-attention to generate embedding for each word wrt the word's context.
+
+

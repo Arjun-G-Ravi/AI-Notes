@@ -2,7 +2,9 @@
 
 # 1. Statistical  representation
 ## Bag of words representaion
-A vocabulory is formed and an index is allocated to each word. The vector representation of a sentence indicate if that word is present in that sentence. If so, the index corresponding to the word is marked as '1'.
+A vocabulory is formed and an index is allocated to each word. There are two approaches:
+1. If the word is present in the sentence, we put 1. Otherwise, we represent the word with 0.
+2. We put the word count in the index of the word.
 - Gives no context of the sentence.
 - It also doesn't take into account of the position of the words
 
@@ -10,7 +12,7 @@ A vocabulory is formed and an index is allocated to each word. The vector repres
 
 ## One-hot word encoding
 
-In a one-hot representation, each word in the vocabulary is uniquely encoded as a binary vector where all values are zero except for one, which is set to one. 
+In a one-hot representation, each word in the vocabulary is uniquely encoded as a `binary vector` where all values are zero except for one, which is set to one. 
 
 - Gives no context of the sentence. This is because the inner product between any two vectors in this representation is zero.
 - It also doesn't take into account of the position of the words
@@ -18,7 +20,7 @@ In a one-hot representation, each word in the vocabulary is uniquely encoded as 
 ![alt text](image-3.png)
 
 # 2. Distributional Vector Representation
-Here, we use neural network to learn a way to represent words as vectors. Here, we use various features to represent the words.
+We use `neural networks` to learn a way to represent words as vectors. Here, we use various features to represent the words.
 
 ## Word Embeddings
 In Natural Language Processing (NLP), embeddings are vector representations of words or tokens that capture their semantic and syntactic properties. Instead of treating words as discrete symbols, embeddings allow us to manipulate them as continuous vectors in a high-dimensional space, revealing hidden patterns and relationships.

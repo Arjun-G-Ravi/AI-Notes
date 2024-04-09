@@ -10,3 +10,14 @@ For "professor forcing" or "scheduled sampling", the model is trained using a mi
 
 ## 3. Weight Tying
 Weight tying is a technique used in some neural network architectures to reduce the number of parameters and improve the generalization performance of the model. In weight tying, the weights of two or more layers in the network are constrained to be identical, so that they share the same set of parameters. Often used in encoder-decoder systems.
+
+## 4. Negative Sampling
+Negative sampling is a technique used during the training of word embedding models, such as Skip-gram, to make the training process more efficient and manageable. During training, we choose the correct context and word pair, and many other 'wrong'(negative) words with the context. Then we train a supervised learning algorithm with the dataset. 
+
+![Alt text](<Screenshot from 2023-10-25 21-33-19.png>)
+
+Thus instead of training a whole softmax layer for predicting for the whole vocabulory, we train on multiple k-1 number of negative sample and 1 positive sample. This leads to lowered computational cost, with comparable performance. 
+
+Thus one 10K-way softmax -> 10K k-way binary classification.
+
+The selection of the negative samples is not random, but based on a huristic value.

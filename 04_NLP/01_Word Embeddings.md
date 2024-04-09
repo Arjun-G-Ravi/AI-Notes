@@ -52,9 +52,9 @@ It is a matrix that contains the word embeddings for all the words in a vocabula
  - Continuous bag of words(CBOW)
 
 ## 1. Skip gram - a Word2Vec embedding
-Skip-gram is a type of word embedding model used in natural language processing and natural language understanding tasks. Skip-gram is part of the word2vec family of models, which aims to capture the semantic relationships between words in continuous vector spaces.
+Skip-gram is a type of word embedding model used in NLP tasks. It aims to capture the semantic relationships between words in continuous vector spaces.
 
-- The skip-gram model starts by being fed a large dataset of text. 
+- The skip-gram model is fed a large corpus of text. 
 - As the model processes the text, it uses a sliding context window that moves along the text. This context window is like a spotlight that focuses on a small portion of the text at a time.
 - At each position where the context window stops, the model selects a single target word from the center of the window. This word is the one the model wants to understand better and create an embedding for.
 - The model's goal is to predict the surrounding words within the context window. These surrounding words are referred to as "context words." The model is trained to guess which words are likely to appear in the context of the chosen target word.
@@ -64,18 +64,7 @@ Skip-gram is a type of word embedding model used in natural language processing 
 ## 2. Continuous bag of words(CBOW) - a Word2Vec embedding
 It is another word2vec embedding just like skip-gram, except we try to predict a word from the surrounding words.
 
-# Negative Sampling
-Negative sampling is a technique used during the training of word embedding models, such as Skip-gram, to make the training process more efficient and manageable. During training, we choose the correct context and word pair, and many other 'wrong'(negative) words with the context. Then we train a supervised learning algorithm with the dataset. 
-
-![Alt text](<Screenshot from 2023-10-25 21-33-19.png>)
-
-Thus instead of training a whole softmax layer for predicting for the whole vocabulory, we train on multiple k-1 number of negative sample and 1 positive sample. This leads to lowered computational cost, with comparable performance. 
-
-Thus one 10K-way softmax -> 10K k-way binary classification.
-
-The selection of the negative samples is not random, but based on a huristic value.
-
-## GloVe (Global vectors for word representations)
+# GloVe (Global vectors for word representations)
 
 GloVe is a another word embedding model that works by learning continuous vector representations for words. 
 

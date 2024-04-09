@@ -14,7 +14,7 @@ There are two types of language models:
 Statistical language models are a type of model that use statistical patterns in the data to make predictions about the likelihood of specific sequences of words. A basic approach to building a probabilistic language model is to calculate n-gram probabilities.
 
 An n-gram model is a type of probabilistic language model used in natural language processing and computational linguistics. It predicts the likelihood of a word given the previous (n-1) words. The model calculates the probability of a word occurring based on the frequency of its n-gram in the training data. They estimate the probability of a word given its context using counts of occurrences of words or sequences of words in a training corpus. The probability distribution is calculated based on observed frequencies in the training data.
-Eg: bigram(n-gram model with n=2), trigram(n=3), etc
+Eg: bigram(n-gram model with n=2), trigram(n=3), etc.
 
 - We use MLE to estimate the probability of words.
 - We always represent and compute language model probabilities in log format as log probabilities. Since probabilities are small numbers, multiplying enough n-grams together would result in numerical underflow. We can just add up the log probabilities, as:
@@ -48,7 +48,7 @@ The perplexity (sometimes abbreviated as PP or PPL) of a language model on a tes
 
 The lower the perplexity of a model on the data, the better the model, and minimizing perplexity is equivalent to maximizing the test set probability according to the language model.It turns out that perplexity can also be thought of as the weighted average branching factor of a language. The branching factor of a language is the number of possible next words that can follow any word.
 
-An (intrinsic) improvement in perplexity does not guarantee an (extrinsic) improvement in the performance of a language processing task like speech recognition or machine translation. Nonetheless, because perplexity usually correlates with task improvements, it is commonly used as a convenient evaluation metric. Still, when possible a model’s improvement in perplexity should be confirmed by an end-to-end evaluation on a real task.
+`An intrinsic improvement in perplexity does not guarantee an extrinsic improvement in the performance of a language processing task` like speech recognition or machine translation. Nonetheless, because perplexity usually correlates with task improvements, it is commonly used as a convenient evaluation metric. Still, when possible a model’s improvement in perplexity should be confirmed by an end-to-end evaluation on a real task.
 
 # Dealing with Out Of Vocabulory(OOV) words
 One way to create an open vocabulary system is to model potential unknown words in the test set by adding a pseudo-word called `<UNK>`.

@@ -1,27 +1,50 @@
 # Transformers
-Transformers, a revolutionary neural network architecture, introduce a `self-attention mechanism` that enables the model to weigh the importance of different elements in a sequence dynamically Incorporating `positional embedding`, transformers capture the sequential order of input data. The architecture comprises an `encoder-decoder structure`, where the encoder processes input information, and the decoder generates output. `Multi-head attention` enhances the model's ability to capture diverse relationships by employing parallel attention mechanisms. `Layer normalization` and `residual connections` contribute to stable and effective training. Feedforward neural networks further refine information extracted through attention mechanisms. 
+Transformers, a revolutionary neural network architecture, introduce `self-attention mechanism` that enables the model to weigh the importance of different elements in a sequence dynamically Incorporating `positional embedding`, transformers capture the sequential order of input data. The architecture comprises an `encoder-decoder structure`, where the encoder processes input information, and the decoder generates output. `Multi-head attention` enhances the model's ability to capture diverse relationships by employing parallel attention mechanisms. `Layer normalization` and `residual connections` contribute to stable and effective training. Feedforward neural networks further refine information extracted through attention mechanisms. 
 
-![Alt text](BHzGVskWGS_3jEcYYi6miQ.png)
+## Use cases
+- It was initially used to process text data
+- Now it is extended to perform all kinds of sequential data
 
 ## Advantages of Transformers (over RNNs) 
 - Parallel computation -> faster
 - Higher context -> better performance
+- Better understanding -> better quality
 
-## Self Attention
-The key innovation of transformers is their self-attention mechanism, which enables transformers to `capture long-range dependencies in data`, making them well-suited for tasks involving sequences.
+# The Transformers Architecture
+- It has an encoder decoder architecture
+- Positional encoding
+- The context of the input is captured using self attention mechanism with QKV system
+- The self-attention is performed parallaly as multi-head attention
+- The feed forward layers helps processes the outputs of the self-attention layer independently for each position in the sequence
+- Masking is done during the training
+- Further optimisation for stability and performance
+  - Layer normalisation
+  - Residual connections
+  
+![Alt text](BHzGVskWGS_3jEcYYi6miQ.png)
 
-It is used as a way to compute representations of a word at a given layer by integrating information from words at the previous layer.
+# 1. Self Attention
+The key innovation of transformers is their self-attention mechanism, which enables transformers to `capture long-range dependencies in data`, making them well-suited for tasks involving sequences. It is a mechanism that `allows the model to consider the context(the words around that word) of a word in a sentence when encoding it as a numeric vector.` 
 
-Self-attention is a mechanism in NLP models that `allows the model to consider the context(the words around that word) of a word in a sentence when encoding it as a numeric vector.` During self-attention, the model computes a weighted sum of the embeddings of all the words in a sentence, where the weights are determined by the attention scores assigned to each word. These attention scores reflect the importance of each word in the context of the current word being encoded. Thus the embedding for each word is calculated dynamically with the help of the words around it.
+During self-attention, the model computes a weighted sum of the embeddings of all the words in a sentence, where the weights are determined by the attention scores assigned to each word. These attention scores reflect the importance of each word in the context of the current word being encoded. Thus the embedding for each word is calculated dynamically with the help of the words around it.
 
-# Query, Key, Value system for attention
-The Query, Key, Value (QKV) system is a fundamental component of the attention mechanism used in transformers. In this system, when processing a sequence of input data, each element (e.g., word) is associated with three vectors: a Query vector (Q), a Key vector (K), and a Value vector (V). Here's a brief overview of their roles:
+- Each input word is vectorised using techniques like word2vec. Thus the word would be rich in context but will lack contextual information.
+- This goes into the seqence of encoder blocks, which will use the QKV system to add this context meaning.
 
-1. Query (Q): This vector represents the `element that is used to inquire about the other elements in the sequence`. In the context of attention mechanisms, the query is used to calculate the attention scores indicating how much focus each element should receive. This is obtained from the generated part of the output.
+## Query, Key, Value system for self-attention
+(The below things happen in a head of the multi-head attention. More about it below.)
+
+Each token in the input will be associated with a Q,K and V vectors. These contain trainable parameters. These are used to update each of the word embedding with the contextual information. 
+
+Consider the sentence: `Jane visits Africa in September.`
+
+1. Query (Q): This vector represents the `asks a question to every other tokens in the context`. The query may ask 'Who visits?'. (Each head of the multi-head asks different question.)
    
-2. Key (K): The key vector is associated with the element being considered for attention. The key helps `determine the relevance of this element to the query`. `The dot product of the query and key vectors is used to calculate the attention scores`.
+2. Key (K): The key vector `answers the question asked by the query vector`. The key vector that is closest to the query vector will be given more attention.The dot product of the query and key vectors is used to calculate the attention scores.
 
-3. Value (V): The value vector contains `information about the element being considered`. The attention scores (derived from the query-key interaction) are used to weight the values. The final weighted sum of values forms the output of the attention mechanism for that particular element.
+3. Value (V): The value vector contains `information about the element being considered`. 
+4. 
+5. The attention scores (derived from the query-key interaction) are used to weight the values. The final weighted sum of values forms the output of the attention mechanism for that particular element.
    
 ``` A = softmax(Q @ K.T) @ V ```
 

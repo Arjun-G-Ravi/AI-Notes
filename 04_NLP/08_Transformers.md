@@ -51,11 +51,10 @@ This weighted sum is added to the previous embedding of the words. This will giv
    
 The QKV system is crucial in the attention mechanism's ability to `selectively focus on different parts of the input sequence`, allowing transformers to capture complex relationships and dependencies within the data. 
 
-## Multi-headed attention
-`The QKV mechanism is typically used in multiple heads, in parallel, to enhance the model's capacity to learn diverse patterns and representations.`
-At each head, a different query is asked. 
+# 2. Multi-headed attention
+`The QKV mechanism is typically used in multiple heads, in parallel, to enhance the model's capacity to learn diverse patterns and representations.`Each head have a separate Q, K and V matrix(obtained by training). 
 
-For eg: 
+Essentially, each head asks a different query. The weighted attention score with the value will be added to the embedding. Each head will learn something different, giving the model better representation power.
 
 To translate: `Jane visits Africa in September.`
 - Query1: Do what with Africa?  # High attention to visits
@@ -63,64 +62,25 @@ To translate: `Jane visits Africa in September.`
 - Query3: Who visits Africa?  # Jane
 - Query4: Where does Jane visit?  # Africa
 - . . . h heads
-  
-![Alt text](<Screenshot from 2023-11-08 21-14-51.png>)
 
-In theory, `each head will learn something different, giving the model better representation power.`The concatenation of the representation of all the heads is used for final prediction.
+# 3. Positional Embedding:
+(This happens right after converting the text to its embedding.)
 
-# The transformer Architecture
-The most basic part of the transformers is shown here:
-![Alt text](<Screenshot from 2023-11-08 21-23-09.png>)
+Since Transformers don't inherently understand the order of words in a sequence, positional encodings are added to the input embeddings to give the model information about the position of each word. An additional dimension will be added to the embedding which will represent the position. This is called positional embedding.
 
-In short,transformer architecture can be summarised as:
+# 4. Encoder decoder Architecture
+(I dont talk about Layer normalisation and Residual connections here.)
 
-    1. Input Representation: Convert input words into vectors (embeddings).
+### Encoder
+As shown in the image, the input(positional embedding) goes into a sequence of N encoders. These encoders do multi-head attention and pass the output through feed-forward neural networks. All of these will give a pretty good representation of the input text. 
 
-    2. Positional Encoding:
-        Add Positional Information: Since Transformers don't inherently understand the order of words in a sequence, positional encodings are added to the input embeddings to give the model information about the position of each word.
+### Decoder
+later.
 
-    3. Encoder: The input sequence is passed through multiple identical layers of the encoder. The first few layers will pick up the raw properties of the sentence, while the later layers will pick up more complex properties. 
-    Each encoder layer has two sub-layers:
+# 5. Layer Normalization and Residual Connections:
+Both of these make transformers stable and increases its performance.
+- `Layer Normalization`: Each sub-layer output is normalized to stabilize and speed up training.
+- `Residual Connections`: Original inputs to a sub-layer are combined with its output, helping with the flow of gradients during training.
 
-        - Self-Attention Layer: Allows the model to weigh different parts of the input sequence differently when making predictions.
-        - Feedforward Neural Network: Applies a set of transformations to the outputs of the self-attention layer.
-        The output from the encoder is a numerical representation of the the input, with attention information. This lets the decoder focus on relevant information. 
-
-    4. Decoder: Similar to the encoder but with an additional layer:
-        - Self attention layer        - 
-        - Masked Self-Attention (Encoder-Decoder attention)layer: Ensures that each position in the decoder can only attend to positions before it. This prevents information flow from future tokens during training.
-        - Feed forward NN layer
-    
-    5. Attention Mechanism:
-        - Scaled Dot-Product Attention: Calculates attention scores by taking a weighted sum of values, where the weights are determined by the compatibility (dot product) between a query and keys.
-
-    6. Layer Normalization and Residual Connections:
-        - Normalization: Each sub-layer output is normalized to stabilize and speed up training.
-        - Residual Connections: Original inputs to a sub-layer are combined with its output, helping with the flow of gradients during training.
-
-    7. Multi-Head Attention:
-        - Parallel Attention Mechanisms: The attention mechanism is applied multiple times in parallel, each with different learned weights. The outputs are then concatenated and linearly transformed.
-    
-    8. Final Linear and Softmax Layers:
-    The output of the decoder is transformed into the final output vocabulary size through a linear layer. Softmax is applied to get probabilities.
-
-
-There are certain things that can vastly improve the performance of transformer models
-
-## 1. Positional Encodings
-The position of the words can play a major role in its meaning. So we encode the postion of the words also. This will shift the word in the vector space along a particular dimension, closer to other words with the same index. This will let the model have a better understanding of the context. This shift should not be too large, or else the positional similarity will overwrite the semantics similarity with other words.So, we encode the position as sine and cosine waves.
-
-![Alt text](<Screenshot from 2023-11-08 21-33-22.png>)
-
-## 2. Residual Networks
-Just like resnet, we create connections that add earlier part of the network to the later parts. This will vastly improve transformer's ability to remember context for a longer period of time.
-
-## 3. Batch normalisation
-For faster convergence.
-
-# Walkthrough
-
-1. Takes in the tokenised words as input
-2. Goal of the encoder is to provide a VERY good representation of the input text. We add positional embedding to give positional information, and self-attention to generate embedding for each word wrt the word's context.
 
 

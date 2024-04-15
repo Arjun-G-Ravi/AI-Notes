@@ -5,7 +5,7 @@ Transformers, a revolutionary neural network architecture, introduce `self-atten
 - It was initially used to process text data
 - Now it is extended to perform all kinds of sequential data
 
-## Advantages of Transformers (over RNNs) 
+## Advantages of Transformers (over RNNs and other sequential models) 
 - Parallel computation -> faster
 - Higher context -> better performance
 - Better understanding -> better quality
@@ -34,22 +34,21 @@ During self-attention, the model computes a weighted sum of the embeddings of al
 ## Query, Key, Value system for self-attention
 (The below things happen in a head of the multi-head attention. More about it below.)
 
-Each token in the input will be associated with a Q,K and V vectors. These contain trainable parameters. These are used to update each of the word embedding with the contextual information. 
+Each token in the input will be associated with a Q,K and V vectors. These contain trainable parameters. These are used to update each of the word embedding with the contextual information. Queries, Keys and value vectors are obtained by multiplying the query, key abd value matrix with the embedding of the corresponding token.
 
 Consider the sentence: `Jane visits Africa in September.`
 
 1. Query (Q): This vector represents the `asks a question to every other tokens in the context`. The query may ask 'Who visits?'. (Each head of the multi-head asks different question.)
    
-2. Key (K): The key vector `answers the question asked by the query vector`. The key vector that is closest to the query vector will be given more attention.The dot product of the query and key vectors is used to calculate the attention scores.
+2. Key (K): The key vector `answers the question asked by the query vector`. The key vector that is closest to the query vector will be given more attention.The dot product of the query and key vectors is used to calculate the attention scores. 
 
-3. Value (V): The value vector contains `information about the element being considered`. 
-4. 
-5. The attention scores (derived from the query-key interaction) are used to weight the values. The final weighted sum of values forms the output of the attention mechanism for that particular element.
-   
+3. Value (V): The value vector contains `information about the token being considered`. The attention scores (derived from the query-key interaction) are used to weight the values. The final weighted sum of values forms the output of the attention mechanism for that particular element. 
+
 ``` A = softmax(Q @ K.T) @ V ```
 
-    The query looks at the already generated part of the output and asks a question. This is matmul-ed with the query value to generate a matrix. A higher value on this matrix means more attention. This matrix is matmul-ed with the value vector to get a one dimensional vector that marks the attention to be given to each word in the input for that particular query.
 
+This weighted sum is added to the previous embedding of the words. This will give the embedding contextual meaning regarding the query asked. (This is done with various questions in multi-head.)
+   
 The QKV system is crucial in the attention mechanism's ability to `selectively focus on different parts of the input sequence`, allowing transformers to capture complex relationships and dependencies within the data. 
 
 ## Multi-headed attention

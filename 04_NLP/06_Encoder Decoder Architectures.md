@@ -1,7 +1,7 @@
 # Encoder-Decoder Model
     Converts input to a fixed length numeric representation(called context), which will be used to compute the result.
 
-The Encoder-Decoder model is a type of artificial neural network architecture consisting of two main components: an encoder and a decoder.
+The Encoder-Decoder model is a type of neural network architecture consisting of two main components: an encoder and a decoder.
 
 ![alt text](image-13.png)
 - The `encoder` takes in a sequence of input data, such as a sentence in one language, and maps it to a fixed-length vector representation (often called context). This vector captures the essential meaning of the input sequence and is passed as input to the decoder.
@@ -19,4 +19,3 @@ In this version, the context is given, as a whole, to all of the decoder cell.
 The training data is paired string of the form (source, target).
 
 Forward pass is performed, and loss is calculated for each word. The total loss will be the average of all the individual losses. Then backprop is done. Usually teacher forcing is done during backprop.
-

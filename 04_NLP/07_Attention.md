@@ -5,7 +5,7 @@ In a normal encoder-decoder setup, the context must represent absolutely everyth
 The attention mechanism is a solution to the bottleneck problem - `a way of allowing the decoder to get information from all the hidden states of the encoder, not just the last hidden state.`
 
 # Attention
-The concept of attention involves generating a single fixed-length vector(context), which is obtained by computing a weighted sum of all encoder hidden states. The weights applied during this process determine the focus or attention on a specific portion of the source text that is most associated with the token being produced by the decoder at any given time. In contrast to the static context vector, `attention provides a dynamic vector that is derived from the encoder hidden states, with a unique version calculated for each decoding token.`
+The concept of attention involves generating a single fixed-length vector(context) for each token in the decoder, which is obtained by computing a weighted sum of all encoder hidden states. The weights applied during this process determine the focus or attention on a specific portion of the source text that is most associated with the token being produced by the decoder at any given time. In contrast to the static context vector, `attention provides a dynamic vector that is derived from the encoder hidden states, with a unique version calculated for each decoding token.`
 
 ![alt text](image-17.png)
 

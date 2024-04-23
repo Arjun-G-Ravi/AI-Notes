@@ -7,7 +7,7 @@ Transformers, a revolutionary neural network architecture, introduce `self-atten
 
 ## Advantages of Transformers (over RNNs and other sequential models) 
 - Parallel computation -> faster
-- Higher context -> better performance
+- Higher context -> handles bigger data 
 - Better understanding -> better quality
 
 # The Transformers Architecture
@@ -24,7 +24,9 @@ Transformers, a revolutionary neural network architecture, introduce `self-atten
 ![Alt text](BHzGVskWGS_3jEcYYi6miQ.png)
 
 # 1. Self Attention
-The key innovation of transformers is their self-attention mechanism, which enables transformers to `capture long-range dependencies in data`, making them well-suited for tasks involving sequences. It is a mechanism that `allows the model to consider the context(the words around that word) of a word in a sentence when encoding it as a numeric vector.` 
+(It is used to update embedding of input words, inorder to include the context.)
+
+The key innovation of transformers is their self-attention mechanism, which enables transformers to `capture long-range dependencies in data`, making them well-suited for tasks involving sequences. It is a mechanism that `update the embedding of input words inorder to allows the model to consider the context(the words around that word) of a word in a sentence when encoding it as a numeric vector.` 
 
 During self-attention, the model computes a weighted sum of the embeddings of all the words in a sentence, where the weights are determined by the attention scores assigned to each word. These attention scores reflect the importance of each word in the context of the current word being encoded. Thus the embedding for each word is calculated dynamically with the help of the words around it.
 
@@ -32,22 +34,23 @@ During self-attention, the model computes a weighted sum of the embeddings of al
 - This goes into the seqence of encoder blocks, which will use the QKV system to add this context meaning.
 
 ## Query, Key, Value system for self-attention
-(The below things happen in a head of the multi-head attention. More about it below.)
+(The below things happen in one head of the multi-head attention. More about it below.)
 
-Each token in the input will be associated with a Q,K and V vectors. These contain trainable parameters. These are used to update each of the word embedding with the contextual information. Queries, Keys and value vectors are obtained by multiplying the query, key abd value matrix with the embedding of the corresponding token.
+`Each token in the input will be associated with a Q,K and V vectors.` They are all stored in the Q, K, V matrix of that head. These matrices are trainable parameters used to update each of the word embedding with the contextual information. 
+
+Queries, Keys and value vectors are obtained by multiplying the query, key and value matrix with the embedding of the corresponding token.
 
 Consider the sentence: `Jane visits Africa in September.`
 
 1. Query (Q): This vector represents the `asks a question to every other tokens in the context`. The query may ask 'Who visits?'. (Each head of the multi-head asks different question.)
    
-2. Key (K): The key vector `answers the question asked by the query vector`. The key vector that is closest to the query vector will be given more attention.The dot product of the query and key vectors is used to calculate the attention scores. 
+2. Key (K): The key vector `answers the question asked by the query vector`. The key vector that is closest to the query vector will be given more attention. The dot product of the query and key vectors is used to calculate the attention scores.
 
 3. Value (V): The value vector contains `information about the token being considered`. The attention scores (derived from the query-key interaction) are used to weight the values. The final weighted sum of values forms the output of the attention mechanism for that particular element. 
 
 ``` A = softmax(Q @ K.T) @ V ```
 
-
-This weighted sum is added to the previous embedding of the words. This will give the embedding contextual meaning regarding the query asked. (This is done with various questions in multi-head.)
+`This weighted sum is added to the previous embedding of the words to get the context-added embedding vectors.` This will give the embedding contextual meaning regarding the query asked. (This is done with various queries, in parallel, in multiple heads.)
    
 The QKV system is crucial in the attention mechanism's ability to `selectively focus on different parts of the input sequence`, allowing transformers to capture complex relationships and dependencies within the data. 
 
@@ -69,7 +72,7 @@ To translate: `Jane visits Africa in September.`
 Since Transformers don't inherently understand the order of words in a sequence, positional encodings are added to the input embeddings to give the model information about the position of each word. An additional dimension will be added to the embedding which will represent the position. This is called positional embedding.
 
 # 4. Encoder decoder Architecture
-(I dont talk about Layer normalisation and Residual connections here.)
+(I dont talk about Layer normalisation and Residual connections here to avoid additional complications.)
 
 ### Encoder
 As shown in the image, the input(positional embedding) goes into a sequence of N encoders. These encoders do multi-head attention and pass the output through feed-forward neural networks. All of these will give a pretty good representation of the input text. 
@@ -84,3 +87,4 @@ Both of these make transformers stable and increases its performance.
 
 
 
+test

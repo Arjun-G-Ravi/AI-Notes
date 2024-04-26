@@ -11,6 +11,7 @@ Transformers, a revolutionary neural network architecture, introduce `self-atten
 - Better understanding -> better quality
 
 # The Transformers Architecture
+- Input text is tokenized by methods like Byte Pair Encoding
 - It has an encoder decoder architecture
 - Positional encoding
 - The context of the input is captured using self attention mechanism with QKV system

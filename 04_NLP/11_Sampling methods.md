@@ -1,18 +1,17 @@
 # Autoregressive Generation 
 Decoding from a language model in a left-to-right manner and thus repeatedly choosing the next word conditioned on our previous choices is called `autoregressive generation` or `Causal LM generation.` Here, the model is trained to generate text by considering the dependencies and relationships between the words generated before.
 
-
-# Decoding 
-Selecting words form softmax layer for autoregression is called decoding.
-
-## Sampling
-This refers to the process of selecting words according to the probability from softmax layer.
+# Decoding
+Selecting the best word form softmax layer for autoregression is called decoding. It is essential to ensure that the best word is selected. There are many methods to do so:
 
 ## Greedy decoding
 At the softmax layer, the most likely word is chosen given the context. This is called greedy decoding because it makes a locally optimal choice at each time step, even though that maynot be the case in the long run.
 
 - But we dont use it as it gives in a very repetitive answer
 - So we use other sampling techniques like beam search.
+
+## Sampling
+This refers to the process of selecting words according to the probability from softmax layer.
 
 ## Top-k sampling
 

@@ -3,7 +3,7 @@ Transformers, a revolutionary neural network architecture, introduce `self-atten
 
 ## Use cases
 - It was initially used to process text data
-- Now it is extended to perform all kinds of sequential data
+- Now it is extended to perform on all kinds of data, even images.
 
 ## Advantages of Transformers (over RNNs and other sequential models) 
 - Parallel computation -> faster
@@ -19,8 +19,8 @@ Transformers, a revolutionary neural network architecture, introduce `self-atten
 - The feed forward layers helps processes the outputs of the self-attention layer independently for each position in the sequence
 - Masking is done during the training
 - Further optimisation for stability and performance
-  - Layer normalisation
-  - Residual connections
+- Layer normalisation
+- Residual connections
   
 ![Alt text](BHzGVskWGS_3jEcYYi6miQ.png)
 
@@ -49,11 +49,14 @@ Consider the sentence: `Jane visits Africa in September.`
 
 3. Value (V): The value vector contains `information about the token being considered`. The attention scores (derived from the query-key interaction) are used to weight the values. The final weighted sum of values forms the output of the attention mechanism for that particular element. 
 
-``` A = softmax(Q @ K.T) @ V ```
+``` A = softmax((Q @ K.T)/sqrt(dim(Q))) @ V ```
 
 `This weighted sum is added to the previous embedding of the words to get the context-added embedding vectors.` This will give the embedding contextual meaning regarding the query asked. (This is done with various queries, in parallel, in multiple heads.)
    
 The QKV system is crucial in the attention mechanism's ability to `selectively focus on different parts of the input sequence`, allowing transformers to capture complex relationships and dependencies within the data. 
+
+Internally, this is how Q, K and V are obtained from input X. After multihead attention, all the heads are added up and is projected to a different dimension.
+![alt text](<Screenshot from 2024-04-27 05-53-58.png>)
 
 # 2. Multi-headed attention
 `The QKV mechanism is typically used in multiple heads, in parallel, to enhance the model's capacity to learn diverse patterns and representations.`Each head have a separate Q, K and V matrix(obtained by training). 

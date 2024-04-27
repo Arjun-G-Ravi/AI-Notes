@@ -86,8 +86,10 @@ The output text(which would be < start > token in the beginning, and gets update
 
 The query and key from the encoder generated embedding and value from decoder generated embedding is bought together in the next self attention layer. `Here, the input embedding is used to provide attention to nomalised output embedding.` The output from this goes to a feed forward layer.
 
-### Softmax layer
+### Softmax layer (Transformer head)
 The output of the decoder goes to a linear layer, and then into a softmax layer, which gives out the probability of the next token. A token is selected and goes into the beginning of the decoder for generating the next token. This goes on till < stop > token is generated from the decoder.
+
+Before it goes into the softmax layer,
 
 # 5. Layer Normalization and Residual Connections:
 Both of these make transformers stable and increases its performance.

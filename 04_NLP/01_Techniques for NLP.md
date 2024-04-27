@@ -21,3 +21,11 @@ Thus instead of training a whole softmax layer for predicting for the whole voca
 Thus one 10K-way softmax -> 10K k-way binary classification.
 
 The selection of the negative samples is not random, but based on a huristic value.
+
+# Logit Lens
+
+The Logit Lens is a method that allows you to take any vector from any layer of the transformer model and pretend that it's the pre-final embedding. Then, you multiply it by the unembedding layer to get logits, and finally, you compute a softmax to see the distribution over words that that vector might be representing.
+
+- The Logit Lens is specifically designed for transformer-based models. It lets us understand the understanding of the diffrerent layers of a model.
+
+- The model wasn't trained to produce these internal representations, so the Logit Lens may not always work perfectly. However, it can still be a useful trick for gaining insights into the model's behavior.

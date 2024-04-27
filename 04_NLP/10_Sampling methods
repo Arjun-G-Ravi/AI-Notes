@@ -2,7 +2,8 @@
 Decoding from a language model in a left-to-right manner and thus repeatedly choosing the next word conditioned on our previous choices is called `autoregressive generation` or `Causal LM generation.` Here, the model is trained to generate text by considering the dependencies and relationships between the words generated before.
 
 
-# Selecting words form softmax
+# Decoding 
+Selecting words form softmax layer for autoregression is called decoding.
 
 ## Sampling
 This refers to the process of selecting words according to the probability from softmax layer.
@@ -12,6 +13,15 @@ At the softmax layer, the most likely word is chosen given the context. This is 
 
 - But we dont use it as it gives in a very repetitive answer
 - So we use other sampling techniques like beam search.
-# 
 
+## Top-k sampling
 
+Top-k sampling is a simple generalization of greedy decoding. Instead of choosing the single most probable word to generate, we first truncate the distribution to the `top k most likely words`, renormalize to produce a legitimate probability distribution, and then randomly sample from within these k words according to their renormalized probabilities
+
+## Top-p sampling(nucleus sampling)
+It keeps not the top k words, but the `top p percent of the probability mass`. The goal is to truncate the distribution to remove the very unlikely words. 
+
+## Temperature sampling
+In temperature sampling, we don’t truncate the distribution, but instead reshape it with the help of a temperature value. 
+
+and...

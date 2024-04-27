@@ -1,9 +1,5 @@
 # NLP CONCEPTS
 
-## Regular Expression
-Formally, a regular expression is an algebraic notation for characterizing a set of strings. Regular expressions are particularly useful for `searching in texts, when we have a pattern to search for` and a corpus of texts to search through.
-- To perform regex, we can use the 're' library in python.
-
 ## Edit distance
 Edit distance gives us a way to quantify both of these intuitions about string similarity. More formally, the minimum edit distance between two strings is defined as the minimum number of editing operations (operations like insertion, deletion, substitution) needed to transform one string into another.
 
@@ -22,6 +18,10 @@ The decoder takes this fixed-size representation(generally numerical) generated 
 
 ## Vocabulory
 Vocabulary refers to the set of unique words, tokens, or subword units that a language model is designed to understand and work with. Vocabulory can be character level or word level.
+
+## Regular Expression
+Formally, a regular expression is an algebraic notation for characterizing a set of strings. Regular expressions are particularly useful for `searching in texts, when we have a pattern to search for` and a corpus of texts to search through.
+- To perform regex, we can use the 're' library in python.
 
 ## TF-IDF Score
 TF-IDF (Term Frequency-Inverse Document Frequency) is a numerical `statistic used to reflect how important a word is to a document in a collection fo documents.` It is often used in information retrieval and text mining to estimate the relevance of a document to a given search query.

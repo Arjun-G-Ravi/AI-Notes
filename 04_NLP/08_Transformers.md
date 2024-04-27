@@ -76,19 +76,20 @@ To translate: `Jane visits Africa in September.`
 Since Transformers don't inherently understand the order of words in a sequence, positional encodings are added to the input embeddings to give the model information about the position of each word. An additional dimension will be added to the embedding which will represent the position. This is called positional embedding.
 
 # 4. Encoder decoder Architecture
-(I dont talk about Layer normalisation and Residual connections here to avoid additional complications.)
+`(I dont talk about Layer normalisation and Residual connections here to avoid distractions.)`
 
 ### Encoder
 As shown in the image, the input(positional embedding) goes into a sequence of N encoders. These encoders do multi-head attention and pass the output through feed-forward neural networks. All of these will give a pretty good representation of the input text. 
 
 ### Decoder
-later.
+The output text(which would be < start > token in the beginning, and gets updated as the decoder outputs more tokens) is passed into a masked-multi-head-attention layer. Here, self attention happens for the current token with every past tokens(future tokens are masked off), and embedding is created.
+
+The query and key from the encoder generated embedding and value from decoder generated embedding is bought together in the next self attention layer. `Here, the input embedding is used to provide attention to nomalised output embedding.` The output from this goes to a feed forward layer.
+
+### Softmax layer
+The output of the decoder goes to a linear layer, and then into a softmax layer, which gives out the probability of the next token. A token is selected and goes into the beginning of the decoder for generating the next token. This goes on till < stop > token is generated from the decoder.
 
 # 5. Layer Normalization and Residual Connections:
 Both of these make transformers stable and increases its performance.
 - `Layer Normalization`: Each sub-layer output is normalized to stabilize and speed up training.
 - `Residual Connections`: Original inputs to a sub-layer are combined with its output, helping with the flow of gradients during training.
-
-
-
-test

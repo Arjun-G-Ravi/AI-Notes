@@ -32,3 +32,5 @@ BERT is trained to preict if two sentences come after the other. This will let B
 
 ## Fine tuning
 Thus it will have a pretty good understanding of the language. Then it is fine tuned on the text it is supposed to excel such as text completion, masked-word prediction, classification, named entitiy recognition, etc.
+
+Pg 246

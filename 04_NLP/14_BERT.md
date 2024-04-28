@@ -7,6 +7,8 @@ The key innovation of BERT is its use of a bidirectional transformer architectur
 - By adding one more layer on bert and fine-tuning, BERT could be used for even text generation. 
 - It is an encoder only model
 
+![alt text](<Screenshot from 2024-04-28 14-19-22.png>)
+
 # Training
 BERT has two stages in its training.
 1. Pre-training
@@ -28,7 +30,8 @@ BERT is trained to preict if two sentences come after the other. This will let B
 
 ![alt text](<Screenshot from 2024-04-28 14-13-30.png>)
 
-
-
 ## Fine tuning
-Thus it will have a pretty good understanding of the language. Then it is fine tuned on the text it is supposed to excel.
+Thus it will have a pretty good understanding of the language. Then it is fine tuned on the text it is supposed to excel such as text completion, masked-word prediction, classification, named entitiy recognition, etc.
+
+
+

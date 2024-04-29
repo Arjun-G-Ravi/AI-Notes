@@ -13,3 +13,6 @@ The key architecture difference is in bidirectional models we don’t mask the f
 
 The tradeoff is that this architecture cannot be used for real-time, auto-regressive text generation, since the model requires the full input sequence to make predictions.
 ```
+
+# Training
+Training is done by predicting randomly masked words and next sentence prediction. (Explained better in BERT section, coming next.)

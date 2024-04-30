@@ -2,7 +2,6 @@
 Fine-tuning is the process of adjusting the parameters of a pre-trained model to fit a specific task or dataset. The goal is to `adapt the model to the specific task or dataset`, while leveraging the knowledge and features learned from the pre-training process. Typically, this training will either freeze or make only `minimal adjustments to the pretrained language model parameters`.
 
 - This lets us take pretrained models good at general things, and make them super good on a domain of interest.
-- 
 
 # Classification
 To fine tune a model to do classification, `we add a classifier head` to the very end of the model. We also add some prompt to ensure that the model knows that it classification is to be done.

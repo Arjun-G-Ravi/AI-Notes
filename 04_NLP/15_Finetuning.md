@@ -16,3 +16,6 @@ Another type of problem where we give two sequences and is required to do classi
 
 ## 3. Sequence Labelling
 Label every sequence. Eg: POS tagging
+
+## 4. Span-based language model
+It involves selecting a span of text, masking all the words within that span, and then training the model to predict the original words in the span.

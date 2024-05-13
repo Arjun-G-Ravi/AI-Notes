@@ -25,7 +25,7 @@ Transformers, a revolutionary neural network architecture, introduce `self-atten
 ![Alt text](BHzGVskWGS_3jEcYYi6miQ.png)
 
 # 1. Self Attention
-(It is used to update embedding of input words, inorder to include the context.)
+(It is used to update embedding of input words, inorder to include the context. It is done in multiple heads as Q, K, V system.)
 
 The key innovation of transformers is their self-attention mechanism, which enables transformers to `capture long-range dependencies in data`, making them well-suited for tasks involving sequences. It is a mechanism that `update the embedding of input words inorder to allows the model to consider the context(the words around that word) of a word in a sentence when encoding it as a numeric vector.` 
 
@@ -71,18 +71,18 @@ To translate: `Jane visits Africa in September.`
 - . . . h heads
 
 # 3. Positional Embedding:
-(This happens right after converting the text to its embedding.)
+(This happens right after converting the text to its embedding, before self-attention.)
 
 Since Transformers don't inherently understand the order of words in a sequence, positional encodings are added to the input embeddings to give the model information about the position of each word. An additional dimension will be added to the embedding which will represent the position. This is called positional embedding.
 
 # 4. Encoder decoder Architecture
-`(I dont talk about Layer normalisation and Residual connections here to avoid distractions.)`
+(I dont talk about Layer normalisation and Residual connections here to focus on the encoder-decoder part.)
 
 ### Encoder
 As shown in the image, the input(positional embedding) goes into a sequence of N encoders. These encoders do multi-head attention and pass the output through feed-forward neural networks. All of these will give a pretty good representation of the input text. 
 
 ### Decoder
-The output text(which would be < start > token in the beginning, and gets updated as the decoder outputs more tokens) is passed into a masked-multi-head-attention layer. Here, self attention happens for the current token with every past tokens(future tokens are masked off), and embedding is created.
+The output text(which would be < start > token in the beginning, and gets updated as the decoder generates more tokens) is passed into a masked-multi-head-attention layer. Here, self attention happens for the current token with every past tokens(future tokens are masked off), and embedding is created.
 
 The query and key from the encoder generated embedding and value from decoder generated embedding is bought together in the next self attention layer. `Here, the input embedding is used to provide attention to nomalised output embedding.` The output from this goes to a feed forward layer.
 

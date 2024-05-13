@@ -26,7 +26,7 @@ Eg: SnowBallStemmer(violent stemmer), PorterStemmer(simple stemmer)
 - `Sequence Labelling: `Sequence labeling is a fundamental task  where the goal is to assign labels to each word in a given sequence of text. Eg: POS tagging, NER 
   - `POS tagging:`Parts of speech tagging is done to tag the parts of speech in a sentence.
   - `Named Entity recognition:` Named entity recognition is done to find out proper nouns like names, location, etc. which are usually not found in the vocabulory. Eg: Tony, Mumbai
-- `Relationship extraction`
+- `Relationship extraction`: Sequence labelling and relationship extraction plays a pivotal role in it.
 - `Coreference resolution`
 
 ## 4. Feature Enginnering

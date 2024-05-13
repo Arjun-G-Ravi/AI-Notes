@@ -24,9 +24,15 @@ Eg: bigram(n-gram model with n=2), trigram(n=3), etc.
 The assumption that the `probability of a word depends only on the previous word` is called a Markov assumption. Markov models are the class of probabilistic models that assume we can predict the probability of some future unit without looking too far into the past.
 
 ## 2. Neural network based language models
-Neural language models use neural networks to predict the likelihood of a sequence of words. These models are trained on a large corpus of text data and are capable of learning the underlying structure of the language. They typically use NNs like RNNs, LSTMs and transformers.
+Neural language models use neural networks to predict the likelihood of a sequence of words. These models are trained on a large corpus of text data and are capable of learning the underlying structure of the language.
 
 They learn complex patterns and representations from large amounts of text data, allowing them to capture long-range dependencies and semantic relationships between words.
+
+Some of them are:
+ - RNN
+ - GRU
+ - LSTM
+ - Transformers
 
 # Evaluating Language models
 

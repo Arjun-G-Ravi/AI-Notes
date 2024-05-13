@@ -29,7 +29,7 @@ Word embeddings are distributed representations of words in a vector space, wher
 
 - It refers to the process of representing categorical data, such as words, as continuous vectors in a lower-dimensional space.
 - Visualising this on an n-dimensional graph will reveal that similar items will be grouped together.
-- The revolutionary intuition here is that we can just use running text as implicitly supervised training data for such a classifier. This method, often called `self-supervision`, avoids the need for any sort of hand-labeled supervision signal.
+- The revolutionary intuition here is that we can just use running text as implicitly supervised training data for such a classifier. This unsupervised learning method, often called `self-supervision`, avoids the need for any sort of hand-labeled supervision signal. 
 ![Alt text](<Screenshot from 2023-10-20 20-29-14.png>)
 
 ## Feature Enginnering
@@ -57,12 +57,12 @@ Skip-gram is a type of word embedding model used in NLP tasks. It aims to captur
 - The skip-gram model is fed a large corpus of text. 
 - As the model processes the text, it uses a sliding context window that moves along the text. This context window is like a spotlight that focuses on a small portion of the text at a time.
 - At each position where the context window stops, the model selects a single target word from the center of the window. This word is the one the model wants to understand better and create an embedding for.
-- The model's goal is to predict the surrounding words within the context window. These surrounding words are referred to as "context words." The model is trained to guess which words are likely to appear in the context of the chosen target word.
+- The model's goal is to predict the surrounding words within the context window. These surrounding words are referred to as "context words." The model is trained to guess which words are likely to appear in the context of the chosen target word. Thus, `the model predicts the context, given a word.`
 - The training process involves adjusting the model's parameters (weights) to maximize the likelihood that it predicts the context words correctly given the target word. In essence, it learns to understand the relationships between words by observing how they co-occur in the training data.
 - The result of this training process is a set of word embeddings. These embeddings capture the meaning and context of words based on their co-occurrence patterns in the text.
 
 ## 2. Continuous bag of words(CBOW) - a Word2Vec embedding
-It is another word2vec embedding just like skip-gram, except we try to predict a word from the surrounding words.
+It is another word2vec embedding just like skip-gram, except we `try to predict a word from the surrounding words`.
 
 # GloVe (Global vectors for word representations)
 
@@ -74,9 +74,8 @@ It aims to capture the semantic relationships between words in a corpus of text 
 
 # Problems
 
-- These are fine, but don't have contextual understanding. Therefore we use contextual embeddings. Eg: Transformers use contextual embedding using self-attention.
+- These are fine, but don't have contextual and positional understanding. Therefore we use better representation.
 
 - For taking similarity, cosine similarity is bad
   - All vectors tend to point to one direction - anisotropy. So we have to standardise(z-score) these vectors.
   - Another problem that is not solved by standardization is that cosine tends to underestimate human judgments on similarity of word meaning for very  requent words.
-  - 

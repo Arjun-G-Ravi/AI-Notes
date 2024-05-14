@@ -2,7 +2,7 @@
 Decoding from a language model in a left-to-right manner and thus repeatedly choosing the next word conditioned on our previous choices is called `autoregressive generation` or `Causal LM generation.` Here, the model is trained to generate text by considering the dependencies and relationships between the words generated before.
 
 # Sequence model searching
-Selecting the best word form softmax layer for autoregression is called sequcence model searching or decoding. It is essential to ensure that the best word is selected. There are many methods to do so:
+Selecting the best word from softmax layer for autoregression is called sequcence model searching or decoding. It is essential to ensure that the best word is selected. There are many methods to do so:
 
 ## Greedy search 
 At the softmax layer, the most likely word is chosen given the context. This is called greedy decoding because it makes a locally optimal choice at each time step, even though that maynot be the case in the long run.
@@ -33,14 +33,15 @@ Temperature:
 Beam search algorithm is an extension of the more basic greedy search method and is designed to find the most likely sequence of tokens in a probabilistic model, considering a broader range of possibilities by using a heuristic. It maintains a "beam width" parameter, which limits the number of candidate sequences to consider at each step. Beam width of one is the greedy algorithm
 
 ![Alt text](<Screenshot from 2023-10-28 20-35-08.png>)
-
-- Start with an initial sequence and create a set of candidate sequences (the "beam") with a limited size (the beam width).
-- At each step, generate possible next tokens for each sequence in the beam. Calculate the probability of each candidate sequence by multiplying token probabilities along the path.
-- Keep only the top k sequences (where k is the beam width) based on their probabilities. This step narrows down the search space to prevent exponential growth.
-- If any sequence in the beam generates the end token, it's considered a completed sequence.
-- Continue generating tokens until a maximum length is reached or no sequences remain.
-- Select the highest-scoring completed sequence as the output. This represents the most likely sequence according to the model's probabilities.
-
+#### Algorithm
+---
+1. Start with an initial sequence and create a set of candidate sequences (the "beam") with a limited size (the beam width).
+2. At each step, generate possible next tokens for each sequence in the beam. Calculate the probability of each candidate sequence by multiplying token probabilities along the path.
+3. Keep only the top k sequences (where k is the beam width) based on their probabilities. This step narrows down the search space to prevent exponential growth.
+4. If any sequence in the beam generates the end token, it's considered a completed sequence.
+5. Continue generating tokens until a maximum length is reached or no sequences remain.
+6. Select the highest-scoring completed sequence as the output. This represents the most likely sequence according to the model's probabilities.
+---
 ```
 Beam width is BIG: Better results, more RAM, slower 
 Beam width is SMALL: Worse results, less RAM, faster

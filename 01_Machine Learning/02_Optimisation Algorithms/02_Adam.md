@@ -3,4 +3,4 @@ Adam, short for "Adaptive Moment Estimation," is an optimization algorithm commo
 
 It takes two huge techniques: RMSProp and momentum and add them to Gradient descent. This makes Adam superior to Gradient Descent.
 
-This is explained in Deep Learning section.
+More about this is explained in Deep Learning section.

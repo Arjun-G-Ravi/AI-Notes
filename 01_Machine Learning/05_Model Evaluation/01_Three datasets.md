@@ -9,4 +9,3 @@ For model evaluation, we create three separate sets of our dataset:
 
 - High bias – A model that fits both the same, but is very bad. It is underfitting both dataset.
 Note that a model can have both high varience and high bias. This typically happens for higher dimensional models, where it underfits in one dimension and overfits in another.
-

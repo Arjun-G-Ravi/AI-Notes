@@ -24,22 +24,21 @@ ML models are never meant to be perfect. They are meant to be 'good enough' to b
 
 # Basic ML workflow
     1) Data collection
-    2) Data preprocessing, splitting and feature engineering
+    2) Data preprocessing, splitting, analysis and feature engineering
     3) Model selection 
-    		a) Linear regression, Polynomial regression, Regression trees - Regression 
-    		b) Logistic regression, Decision trees, SVM, K-nearest neighbours – Classfication
-   			c) PCA – Dimensionality reduction
-    		d) K-means – Clustering
-    		e) NNs – pretty much everything 
+    		a) Regression - Linear regression, Polynomial regression, Regression trees  
+    		b) Classfication - Logistic regression, Decision trees, SVM, K-nearest neighbours
+   			c) Dimensionality reduction - PCA
+    		d) Clustering - K-means
+    		e) General(pretty much everything) - NNs 
     4) Model training
     	• Perform forward prop and compare it with the target to obtain an error measurement
     	• Use this error measurement to define loss function
     	• Extend loss function to entire dataset to get the cost function – the objective function
-    	• Choose any optimisation algorithm (like  Gradient Descent) for optimising the objective function
+    	• Choose any optimisation algorithm (like  Gradient Descent) for optimising the objective function, inorder to reduce the loss/cost. 
     	• Repeat for any number of epoch you want
     5) Model evaluation - errors, accuracy, precision, recall, F1-score, etc.
     6) Model deployment/ monitoring/ maintainance
-
 
 # Reinforcement Learning
 Reinforcement learning (RL) is a type of machine learning paradigm where an agent learns how to behave in an environment by performing actions and receiving feedback in the form of rewards or punishments. The goal of the agent is to maximize the cumulative reward over time by discovering a strategy, or policy, that maps from states of the environment to actions.

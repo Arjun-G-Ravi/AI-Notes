@@ -6,6 +6,6 @@
 5. https://towardsdatascience.com/transformers-141e32e69591
 6. https://livebook.manning.com/book/build-a-large-language-model-from-scratch
 7. Speech and Language Processing
-8. 
-
+8. ML: A probabilistic perspective 1, 2
+9. Deep Learning: Ian Goodfellow
  and a lot lot more

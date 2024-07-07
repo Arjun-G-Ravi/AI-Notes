@@ -20,3 +20,6 @@ MLE is a statistical framework that assumes a specific probability distribution 
 - Regression: They are considered as MLE
 - Neural Networks: Use methods related to MLE for training but do not assume a specific data distribution.
 - Decision Trees: Do not assume a specific probability distribution and are not typically considered MLE models. Instead, they use a non-parametric approach based on data splitting criteria.
+
+# No free lunch theorem
+There is no single best model that works optimally for all kinds of problems — this is sometimes called the no free lunch theorem. The reason is that a set of assumptions (also called inductive bias) that works well in one domain may work poorly in another.

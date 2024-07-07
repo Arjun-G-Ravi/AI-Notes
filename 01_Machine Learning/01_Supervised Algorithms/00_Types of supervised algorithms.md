@@ -5,10 +5,10 @@ There are two types of ML algorithms: Supervised and Unsupervised.
 Supervised algorithms are a type of machine learning algorithm that learn from labeled training data to make predictions or decisions. They are of two types - Regression and Classification.
 
 ## a. Regression
-Regression algorithms are used when the target variable we want to predict is continuous.
+Regression algorithms are used when the target variable we want to predict is continuous. A commmon loss function is sqared error loss.
 
 ## b. Classification
-Classification algorithms are used when the target variable we want to predict is discrete or categorical. 
+Classification algorithms are used when the target variable we want to predict is discrete or categorical. A common loss fn used is negative log likelihood loss.
 
 ### Generative and Discriminative Classifiers
 Classification algorithms are of two types - Generative and Discriminative. 

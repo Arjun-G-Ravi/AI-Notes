@@ -16,7 +16,7 @@
     	• Repeat for any number of epoch you want
     6) Model evaluation - errors, accuracy, precision, recall, F1-score, etc.
     7) Model deployment/ monitoring/ maintainance
-
+# Notes
 ## Exploratory data analysis
 Before tackling a problem with ML, it is usually a good idea to perform exploratory data analysis, to see if there are any obvious patterns (which might give hints on what method to choose), or any obvious problems with the data (e.g., label noise or outliers).
 

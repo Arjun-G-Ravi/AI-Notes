@@ -6,9 +6,11 @@ Supervised algorithms are a type of machine learning algorithm that learn from l
 
 ## a. Regression
 Regression algorithms are used when the target variable we want to predict is continuous. A commmon loss function is sqared error loss.
+Eg: Linear Regression, Regression Trees, etc.
 
 ## b. Classification
 Classification algorithms are used when the target variable we want to predict is discrete or categorical. A common loss fn used is negative log likelihood loss.
+Eg: KNn, Logistic Regression, SVM, etc.
 
 ### Generative and Discriminative Classifiers
 Classification algorithms are of two types - Generative and Discriminative. 

@@ -1,5 +1,3 @@
-# REGRESSION ALGORITHMS
-
 # 1. Linear Regression
 Linear regression is a ML algorithm through which we develop a linear model of the data, and use it to perform prediction.
 
@@ -26,11 +24,8 @@ Here, the symbol ‘.’ (dot) represents dot product between w and x.
 
 ![Alt text](image-2.png)
 
-## 1. Defining model
-The equation of linear model, used in simple linear regression is  
-```f(x) = w.x + b```
 
-## 2. Define optimisation function
+## Loss function for Linear Regression
 The cost function is the function which is being optimised(minimised) inorder to get the optimal values w* and b*. For linear regression, the most common loss function is the Mean Squared Error (MSE). The MSE is a measure of the average squared difference between the predicted values and the actual target values for all the data points in your dataset. It's calculated as:
 
 ```Cost, J = (1/N) * Σ [ f(x) – y ]2```
@@ -42,15 +37,12 @@ The reason why we use squared error loss function is:
 - The loss function should be easily derivable
 - The graph should be smooth for GD to converge fast
   
-## 3. Training
-Training is the process of optimising the parameters to reach a goal (like reducing cost). One common optimisation method used for minimising the objective function is Gradient Descent,finding the optimal values of w(weights) and b(biases), denoted as w* and b*.
-
-## 4. Evaluation
-Involves using MSE, etc. for regression and precision, recall, accuracy, etc. for classification tasks.
+## Training a linear regression model
+Training is the process of optimising the parameters to reach a goal (like reducing cost). One common optimisation method used for minimising the objective function is `Gradient Descent`,finding the optimal values of w(weights) and b(biases), denoted as w* and b*.
 
 # 2. Polynomial Regression
-Polynomial Regression is a form of regression in which the relationship between the independent variable x and dependent variable y is modeled as an nth-degree polynomial. It  involves using polynomial functions to model the relationship between the feature variable(s) and the target variable. While the basic idea is similar to linear regression, the model is extended to capture non-linear relationships.
+Polynomial Regression is a form of regression in which the relationship between the independent variable x and dependent variable y is modeled as an nth-degree polynomial. While the basic idea is similar to linear regression, the model is extended to capture non-linear relationships.
 
 ```f(x) = w1.x + w2.x^2 + . . . +wn.x^n + b ```
 
-Higher-degree polynomials can fit more complex curves but might also lead to overfitting. Here, the relationship between the independent variable and the dependent variable is modeled as an nth-degree polynomial.
+Higher-degree polynomials can fit more complex curves but might also lead to overfitting.

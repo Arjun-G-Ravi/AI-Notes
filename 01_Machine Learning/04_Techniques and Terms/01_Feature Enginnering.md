@@ -1,5 +1,5 @@
 # Feature Engineering
-A feature vector is an ordered list of numerical properties of an observed phenomenon. It represents input features to a machine learning model that makes a prediction. The process of transforming raw data into a dataset that can be used by a ML model is called feature engineering.
+A feature vector is an ordered list of numerical properties of an observed phenomenon. It represents input features to a machine learning model that makes a prediction. `The process of transforming raw data into a dataset that  are more suitable for modeling and machine learning is called feature engineering.`
 
 ## 1. One-Hot Encoding
 Some learning algorithms only work with numerical feature vectors. So we reperesent each class in  a feature as a separate feature and assign that feature to have 0 or 1.

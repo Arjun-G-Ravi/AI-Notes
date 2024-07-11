@@ -1,7 +1,8 @@
 # Representation of Text as numerical vectors
+Inorder for any ML model to work, the input data have to be converted into numeric format.
 
 # 1. Statistical  representation
-## Bag of words representaion
+## a. Bag of words representaion
 A vocabulory is formed and an index is allocated to each word. There are two approaches:
 1. If the word is present in the sentence, we put 1. Otherwise, we represent the word with 0.
 2. We put the word count in the index of the word.
@@ -10,13 +11,13 @@ A vocabulory is formed and an index is allocated to each word. There are two app
 
 ![alt text](image-1.png)
 
-## One-hot word encoding
+## b. One-hot word encoding
 
 In a one-hot representation, each word in the vocabulary is uniquely encoded as a `binary vector` where all values are zero except for one, which is set to one. 
 
 - Gives no context of the sentence. This is because the inner product between any two vectors in this representation is zero.
 - It also doesn't take into account of the position of the words
-  
+- `Here, each word is a vector.`
 ![alt text](image-3.png)
 
 # 2. Distributional Vector Representation

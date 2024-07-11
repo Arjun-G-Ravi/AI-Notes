@@ -30,7 +30,7 @@ Eg: SnowBallStemmer(violent stemmer), PorterStemmer(simple stemmer)
 - `Coreference resolution`
 
 ## 4. Feature Enginnering
-- Lets us extract meaningful information from raw data
+- Lets us extract meaningful information from raw data. This will empower the model to learn more from the same data
 - Better data -> Better model
 
 ## 5. Model Building
@@ -50,8 +50,10 @@ NLP models comes in three types:
 ## 6. Evaluation
 - Very hard
 - Can be intristic or extensic. Explained in language models section.
+
 ## 7. Deployment
 - Cloud services can be used
+  
 ## 8. Monitoring and updating
 - Update model with recent data
 - Remove model's mistakes and biases

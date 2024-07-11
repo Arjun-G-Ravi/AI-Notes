@@ -28,7 +28,7 @@ Neural language models use neural networks to predict the likelihood of a sequen
 
 They learn complex patterns and representations from large amounts of text data, allowing them to capture long-range dependencies and semantic relationships between words.
 
-Some of them are:
+Some of the popular architectures to build LLM are:
  - RNN
  - GRU
  - LSTM

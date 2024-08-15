@@ -47,6 +47,8 @@ Intrinstic ways to evaluate the performance of a language model are:
 - Word Error Rate (WER)
 - F1 score
 
+`An intrinsic improvement in perplexity does not guarantee an extrinsic improvement in the performance of a language processing task` like speech recognition or machine translation. Nonetheless, because perplexity usually correlates with task improvements, it is commonly used as a convenient evaluation metric. Still, when possible a model’s improvement in perplexity should be confirmed by an end-to-end evaluation on a real task.
+
 ### 1. Perplexity
 The perplexity (sometimes abbreviated as PP or PPL) of a language model on a test set is the inverse probability of the test set (one over the probability of the test set), normalized by the number of words(root is taken of the number of words). For this reason it’s sometimes called the per-word perplexity.
 
@@ -54,10 +56,10 @@ The perplexity (sometimes abbreviated as PP or PPL) of a language model on a tes
 
 The lower the perplexity of a model on the data, the better the model, and minimizing perplexity is equivalent to maximizing the test set probability according to the language model.It turns out that perplexity can also be thought of as the weighted average branching factor of a language. The branching factor of a language is the number of possible next words that can follow any word.
 
-`An intrinsic improvement in perplexity does not guarantee an extrinsic improvement in the performance of a language processing task` like speech recognition or machine translation. Nonetheless, because perplexity usually correlates with task improvements, it is commonly used as a convenient evaluation metric. Still, when possible a model’s improvement in perplexity should be confirmed by an end-to-end evaluation on a real task.
+
 ### 2. Bleu Score
 
-BLEU (Bilingual Evaluation Understudy) is a metric used to evaluate the quality of machine-generated translations, primarily in the context of machine translation tasks. 
+BLEU (Bilingual Evaluation Understudy) is a metric used to evaluate the quality of machine-generated translations, `primarily in the context of machine translation tasks`. 
 The BLEU score is a number between 0 and 1, with 1 being a perfect match to the human reference translations. It measures the precision of the machine-generated translation by comparing the n-grams (contiguous sequences of words or characters) in the generated text to those in the reference text. The more n-grams that match, the higher the BLEU score.
 
 It is used in NLP situations where multiple answers can be correct like translation. Tasks like speech-to-text should not use bleu score, as we always expect a one-on-one correct answer.

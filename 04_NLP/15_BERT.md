@@ -3,9 +3,9 @@ BERT (Bidirectional Encoder Representations from Transformers) is a language mod
 
 The key innovation of BERT is its use of a `bidirectional transformer architecture`, which allows the model to capture both the forward and backward contextual relationships between words in the text. This allows the model to better understand the meaning of the text and make more accurate predictions.
 
-- BERT is supposed to demonstrate the importance of bidirectional pre-training for language representations.
-- By adding one more layer on bert and fine-tuning, BERT could be used for even text generation. But it can't be used for Causal text generation in an autoregressive manner(You'd need GPT for that). 
 - It is an `encoder only model`
+- BERT is supposed to demonstrate the importance of bidirectional pre-training for language representations.
+- By adding one more layer on bert and fine-tuning, BERT could be used for even text generation. But it can't be used for Causal text generation in an autoregressive manner(You'd need models like GPT for that). 
 
 ![alt text](<Screenshot from 2024-04-28 14-19-22.png>)
 

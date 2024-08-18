@@ -5,7 +5,7 @@ Fine-tuning is the process of adjusting the parameters of a pre-trained model to
 
 - This lets us take pretrained models good at general things, and make them super good on a domain of interest.
 - Fine tuned models can be better than bigger models in a small(fine tuned)domain.
-- Typically, `this training will either freeze or make only minimal adjustments to the pretrained language model parameters`.
+- Typically, `this training will either freeze(generally we dont freeze - we retrain the model) or make only minimal adjustments to the pretrained language model parameters`.
 
 ### 1. Classification
 To fine tune a model to do classification, `we add a classifier head` to the very end of the model. 

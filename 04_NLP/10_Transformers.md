@@ -15,7 +15,7 @@ Transformers, a revolutionary neural network architecture, introduce `self-atten
 - It has an encoder decoder architecture
 - Positional encoding
 - The context of the input is captured using self attention mechanism with QKV system
-- The self-attention is performed parallaly as multi-head attention
+- The self-attention is performed parallelly in multiple heads (multi-head attention)
 - The feed forward layers helps processes the outputs of the self-attention layer independently for each position in the sequence
 - Masking is done during the training
 - Further optimisation for stability and performance

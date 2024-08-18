@@ -18,5 +18,9 @@ Another way to calculate attention is to define a set of weights, which learns d
 ## Attention:
 - Basic Idea: `Attention mechanisms allow a model to focus on different parts of the encoder sequence when processing a particular element in the decoder part.`
 
+When we are auregressively moving through each of the tokens from the decoder. For each of the token, we look at the weighted encoder tokens, and using attention during this process.
+
 ## Self-Attention (or Intra-Attention):
-- Basic Idea: `Self-attention is a specific type of attention where the elements of the endoder sequence attend to each other. It is used in transformers.`
+- Basic Idea: `Self-attention is a specific type of attention where the elements of the endoder sequence attend to each other. The embedding in the transformers are being updated dynamically using the surrounding tokens.`
+
+This modifies the positional embeddings for each token in the encoder by looking at the neighbouring tokens from the encoder, and using attention during this process.

@@ -10,9 +10,11 @@ The Encoder-Decoder model is a type of neural network architecture consisting of
 The following image shows a simplified encoder-decoder model.
 
 ![alt text](image-14.png)
+
 The encoder generates the context. The simplest version of the decoder network would takes this state and use it just to initialize the first hidden state of the decoder. The decoder would then autoregressively generates a sequence of outputs, an element at a time, until an end-of-sequence marker is generated. Each hidden state is conditioned on the previous hidden state and the output generated in the previous state.
 
 ![alt text](image-15.png)
+
 In this version, the context is given, as a whole, to all of the decoder cell.
 
 # Training

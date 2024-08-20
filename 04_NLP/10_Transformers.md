@@ -95,3 +95,5 @@ Before it goes into the softmax layer,
 Both of these make transformers stable and increases its performance.
 - `Layer Normalization`: Each sub-layer output is normalized to stabilize and speed up training.
 - `Residual Connections`: Original inputs to a sub-layer are combined with its output, helping with the flow of gradients during training.
+
+Read my summary on the original transformer     paper: https://github.com/Arjun-G-Ravi/replicating_research_papers/blob/main/01_Attention_is_all_you_need/_summary.md

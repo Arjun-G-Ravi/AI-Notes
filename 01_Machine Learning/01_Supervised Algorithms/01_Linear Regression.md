@@ -20,17 +20,17 @@ The model is represented as
 
 or as ```f(x) = W . X + b```, where W is n x m dimensional and b is n x 1 dimensional vectors. 
 
-Here, the symbol ‘.’ (dot) represents dot product between w and x.
+Here, the symbol `.` (dot) represents dot product between w and x.
 
 ![Alt text](image-2.png)
 
 
-## Loss function for Linear Regression
+## Cost function for Linear Regression
 The cost function is the function which is being optimised(minimised) inorder to get the optimal values w* and b*. For linear regression, the most common loss function is the Mean Squared Error (MSE). The MSE is a measure of the average squared difference between the predicted values and the actual target values for all the data points in your dataset. It's calculated as:
 
 ```Cost, J = (1/N) * Σ [ f(x) – y ]2```
 
-This is the objective function. Here the loss function is (f(x) – y)^2, for one data point (x,y). The cost function is a term often used interchangeably with the loss function. The distinction between them can be subtle but generally, the loss function computes the error for a single data point, while the cost function calculates the overall error for the entire dataset, often as the average or sum of the individual losses.
+This is the objective function. Here the loss function is (f(x) – y)^2, for one data point (x,y). The cost function is a term often used interchangeably with the loss function. The distinction between them can be subtle but generally, `the loss function computes the error for a single data point, while the cost function calculates the overall error for the entire dataset`, often as the average or sum of the individual losses.
 
 The reason why we use squared error loss function is:
 - The loss have to be positive. 

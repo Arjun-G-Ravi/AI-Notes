@@ -13,4 +13,3 @@ The quality and nature of the training data are critical components of a learned
 1. IMDB movie review dataset (Sentiment analysis)
 2. Workshop on Machine Translation(WMT) dataset (Machine Translation)
 3. SQuAD (question answering)
-4. 

@@ -1,5 +1,7 @@
 # Exponentially weighted average
-Exponentially weighted average is a statistical technique that give `more weight to recent data points, while diminishing the influence of older data points`. This is used in ML to update paramters based on influence from earlier parameters.
+Exponentially weighted average is a statistical technique that give `more weight to recent data points, while diminishing the influence of older data points`.
+
+This is a technique that can be used in DL optimisation to update paramters based on influence from earlier parameters. -> `used in momentum`
 
 y(t) = beta*y(t-1) + (1-beta)*f(x)
 
@@ -46,5 +48,5 @@ This works, because we might want a large lr at the start, and smaller ones as w
 # Data Augmentation
 Data augmentation is a technique used in machine learning, particularly in computer vision and natural language processing, to artificially increase the size of a training dataset by applying various transformations to the existing data.
 It includes:
- - Rotation, Mirroring, Random cropping, etc.
+ - Rotation, Mirroring, Random cropping(5-crop, etc.), etc.
  - Color shifting (shift RGB values by a small value)

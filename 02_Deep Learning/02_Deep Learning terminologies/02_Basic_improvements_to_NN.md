@@ -17,6 +17,8 @@ In neural networks, besides L0 and L2 regularization, you can use neural network
 - Dropout: Each time you run a training example through the network, you temporarily exclude at random some units from the computation. The higher the percentage of units excluded the higher the regularization effect.
   
 - Early stopping: It works by monitoring a model's performance on a held-out validation set, and stopping training when the model's performance on the validation set starts to degrade.
+
+- L1 & L2 regularisation
   
 - Batch normalization (which rather has to be called batch standardization) is a technique that consists of standardizing the outputs of each layer before the units of the subsequent layer receive them as input. In practice, batch normalization results in faster and more stable training, as well as some regularization effect.
 

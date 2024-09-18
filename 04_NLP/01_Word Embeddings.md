@@ -80,4 +80,4 @@ It aims to capture the semantic relationships between words in a corpus of text 
 
 - For taking similarity, cosine similarity is bad
   - All vectors tend to point to one direction - anisotropy. So we have to standardise(z-score) these vectors.
-  - Another problem that is not solved by standardization is that cosine tends to underestimate human judgments on similarity of word meaning for very  requent words.
+  - Another problem that is not solved by standardization is that cosine tends to underestimate human judgments on similarity of word meaning for very frequent words.

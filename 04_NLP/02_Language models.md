@@ -54,7 +54,7 @@ The perplexity (sometimes abbreviated as PP or PPL) of a language model on a tes
 
 ![alt text](image-5.png)
 
-The lower the perplexity of a model on the data, the better the model, and minimizing perplexity is equivalent to maximizing the test set probability according to the language model.It turns out that perplexity can also be thought of as the weighted average branching factor of a language. The branching factor of a language is the number of possible next words that can follow any word.
+The lower the perplexity of a model on the data, the better the model, and minimizing perplexity is equivalent to maximizing the test set probability according to the language model. It turns out that perplexity can also be thought of as the weighted average branching factor of a language. The branching factor of a language is the number of possible next words that can follow any word.
 
 
 ### 2. Bleu Score

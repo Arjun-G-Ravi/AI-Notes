@@ -24,7 +24,9 @@ The selection of the negative samples is not random, but based on a huristic val
 
 ## 5. Logit Lens
 
-The Logit Lens is a method that allows you to take any vector from any layer of the transformer model and pretend that it's the pre-final embedding. Then, you multiply it by the unembedding layer to get logits, and finally, you compute a softmax to see the distribution over words that that vector might be representing.
+The Logit Lens is a method that allows you to take any vector from any layer of the transformer model and pretend that it's the pre-final embedding.
+Then, you multiply it by the unembedding layer to get logits, and finally, you compute a softmax to see the distribution over words that that vector might be representing.
+
 
 - The Logit Lens is specifically designed for transformer-based models. It lets us understand the understanding of the diffrerent layers of a model.
 

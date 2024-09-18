@@ -8,6 +8,7 @@ A vocabulory is formed and an index is allocated to each word. There are two app
 2. We put the word count in the index of the word.
 - Gives no context of the sentence.
 - It also doesn't take into account of the position of the words
+- The whole thing is one vector.
 
 ![alt text](image-1.png)
 

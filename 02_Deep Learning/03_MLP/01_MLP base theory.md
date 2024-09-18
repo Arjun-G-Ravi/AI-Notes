@@ -5,6 +5,5 @@ They are feedforward fully connected artificial neural networks. They are the mo
 
 # Notes
 - Usually we don't count the input layer as layer. So the image shows a 4 layered neural network. -
-- The perceptron learning algorithm is an algorithm that works only if the training data is linearly separable
+- The perceptron learning algorithm is the first optmisation algorithm for NNs. It works only if the training data is linearly separable
 - MLPs are universal approximators - can approximate any function
-- 

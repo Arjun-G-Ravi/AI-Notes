@@ -2,7 +2,8 @@
 Classifing the object in an image as one among a lot of classes.
 
 ## Object Localisation
-Image localization, often referred to as object localization, is a computer vision task that involves identifying and precisely locating one or more objects within an image. The goal is to determine the coordinates or bounding box that delineates the region of interest where the object(s) are located.
+Image localization, often referred to as object localization, is a computer vision task that involves identifying and precisely locating one or more objects within an image.
+The goal is to determine the coordinates or bounding box that delineates the region of interest where the object(s) are located.
 
 ## Landmark Detection
 Detecting various important landmark in an image. Eg: Posture of a man

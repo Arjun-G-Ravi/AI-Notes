@@ -97,3 +97,5 @@ Both of these make transformers stable and increases its performance.
 - `Residual Connections`: Original inputs to a sub-layer are combined with its output, helping with the flow of gradients during training.
 
 Read my summary on the original transformer     paper: https://github.com/Arjun-G-Ravi/replicating_research_papers/blob/main/01_Attention_is_all_you_need/_summary.md
+
+

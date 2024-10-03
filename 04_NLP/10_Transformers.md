@@ -97,9 +97,6 @@ Layer Normalization (LN), along with residual connection, is considered as a mec
 - `Layer Normalization`: Each sub-layer output is normalized to stabilize and speed up training.
 - `Residual Connections`: Original inputs to a sub-layer are combined with its output, helping with the flow of gradients during training.
 
-
-
-
-Learn more:
+### Learn more:
 - Original Transformer paper summary: https://github.com/Arjun-G-Ravi/replicating_research_papers/blob/main/01_Attention_is_all_you_need/_summary.md
 - A good survey paper on transformers summary: https://github.com/Arjun-G-Ravi/replicating_research_papers/tree/main/17_A%20survey%20on%20transformers

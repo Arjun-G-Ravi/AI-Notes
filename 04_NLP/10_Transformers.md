@@ -92,7 +92,8 @@ The output of the decoder goes to a linear layer, and then into a softmax layer,
 Before it goes into the softmax layer,
 
 # 5. Layer Normalization and Residual Connections:
-Both of these make transformers stable and increases its performance.
+
+Layer Normalization (LN), along with residual connection, is considered as a mechanism to stabilizing training of deep networks (e.g., alleviating ill-posed gradients and model degeneration). 
 - `Layer Normalization`: Each sub-layer output is normalized to stabilize and speed up training.
 - `Residual Connections`: Original inputs to a sub-layer are combined with its output, helping with the flow of gradients during training.
 

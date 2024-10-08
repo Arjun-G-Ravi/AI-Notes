@@ -16,10 +16,24 @@ The different ways to constrain the network are: –
 ## Types of Autoencoders
 
 ###  Denoising Autoencoder
+- works on a partially corrupted input and trains to recover the original undistorted image.
+- can be used as a form of data augmentatio
+
 ###  Sparse Autoencoder
+- contains more hidden units than the input but only a few are allowed to be active at once. This property is called the sparsity of the network.
+- The sparsity of the network can be controlled by either manually zeroing the required hidden units, tuning the activation functions or by adding a loss term to the cost function.
+- These autoencoders often learn important and meaningful features due to their emphasis on sparse activations.
+- increases computational complexity.
+- highly used in interpretability field of neural networks
 
 ###  Variational Autoencoder
+- used to generate new data points that resemble the original training data
+- uses the Stochastic Gradient Variational Bayes estimator in the training process
+- useful in detecting anomalies and data exploration.
 
 ###  Convolutional Autoencoder
+- use convolutional neural networks as their building blocks.
+-  The decoder is the mirror image of the encoder it deconvolves the compressed representation and tries to reconstruct the original image.
 
 ## Implementation of Autoencoders
+- 

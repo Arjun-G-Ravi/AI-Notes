@@ -24,7 +24,7 @@
 
 - Optimising the training process
   - Parameter initialization
-  - Batch normalisation
+  - Layer/ Batch normalisation
   - Residual connections
   - Regularisation
     - Dropout

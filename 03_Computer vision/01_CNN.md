@@ -79,6 +79,14 @@ Neurons in this layer have full connectivity with all neurons in the preceding a
 It takes the product about a point, for all the channels. Thus, it is a fully connected neural network that applies to each of the depth of channels at different positions. This can carry out a pretty non-trivial computation on your input volume.
 This is widely used to reduce the number of channels in a NN.
 
+# Calcualting shape
+
+## 1. Convolution Layer Formula
+Output = ((Input - Kernel + 2*Padding)/Stride) + 1
+
+## 2. Pooling Layer Formula
+Output = ((Input - Pool_size)/Stride) + 1
+
 # Popular CNNs
  - LeNet-5
  - Alex Network

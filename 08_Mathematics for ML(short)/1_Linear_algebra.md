@@ -1,0 +1,44 @@
+# Linear Algebra
+
+- Basics
+  - Scalars, matrices, tensors
+    - Transpose
+    - Types of matrices
+  - `Multiplication`
+    - Matrix multiplication
+    - Element-wise product(Hadamard product)
+  - Inverse of a matrix
+  - `Linear Dependence and Independence`
+    - Linear combination
+  - `Span`: The span represents the set of all vectors that can be reached by scaling and adding the given vectors.
+  - `Norm`: It generalizes the concept of "distance from the origin" to higher-dimensional spaces.
+    - L2 norm is euclidian distance
+    - L1 norm, L (inf) norm 
+  - `Eigendecomposition`: Decompose a matrix to eigenvalues and eigenvectors
+    - An eigenvector of a square matrix AA is a non-zero vector vv that only gets scaled (not  otherwise transformed) when A is matmul-ed to it. 
+    - Formally, vv satisfies the equation: `Av=λv`. Here v is eigenvector and λ is the eigenvalue for that eigenvector.
+    - Eigenvector represents the factor by which the eigenvector is stretched or compressed during the transformation.
+    -  Geometric Intuition
+       -  Eigenvectors indicate the directions in which the transformation A acts as simple scaling (no change in direction).
+       -  Eigenvalues specify how much the scaling occurs along these directions.
+    - Why do it?
+      - Eigen decomposition helps explain how a matrix transforms vectors. 
+      - PCA uses it for dimensionality reduction
+- `Singular Value Decomposition`
+  - powerful matrix factorization technique
+  - generalizes eigen decomposition to all matrices, including non-square ones.
+- `Moore-Penrose Pseudoinverse`
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 

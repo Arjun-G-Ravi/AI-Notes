@@ -27,9 +27,13 @@
 - `Singular Value Decomposition`
   - powerful matrix factorization technique
   - generalizes eigen decomposition to all matrices, including non-square ones.
-- `Moore-Penrose Pseudoinverse`
-- 
-- 
+- `Moore-Penrose Pseudoinverse`: Solving linear systems when AA is not invertible or over/under-determined
+- `Trace`: sum of diagonals
+- `Determinant`: a function that maps real vectors to scalars
+    - Product of eigen values
+    - can be thought of as how multiplying with this matrix expands/ compresses the original vector
+    - det = 1: mul preserves volume
+    - det = 0: no volume; space contracted completely
 - 
 - 
 - 

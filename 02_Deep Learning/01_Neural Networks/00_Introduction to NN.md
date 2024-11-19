@@ -10,9 +10,12 @@ The output from previous layers is added together after multipling with the weig
 
 # Types of Neural Networks
 1. Multilayer Perceptrons
-2. Convolutional Neural Network
-3. Recurrent Neural Networks
-   1. LSTM: Improved RNN
-   2. GRU: Simpler LSTM
-4. Transformers
-5. GANs 
+2. For image processing
+   1. Convolutional Neural Network
+3. For sequntial data processing
+   1. Recurrent Neural Networks
+      1. LSTM: Improved RNN
+      2. GRU: Simpler LSTM
+   2. Transformers
+4. GANs
+5. Auto encoder Neural Networks

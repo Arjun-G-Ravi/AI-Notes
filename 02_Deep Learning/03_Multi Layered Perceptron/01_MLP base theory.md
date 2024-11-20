@@ -1,5 +1,6 @@
 # MLP
-They are feedforward fully connected artificial neural networks. They are the most basic NN architecture.
+They are feedforward fully connected artificial neural networks. 
+They are the most basic NN architecture.
 
 ![Alt text](image-5.png)
 

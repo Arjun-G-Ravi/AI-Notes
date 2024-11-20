@@ -6,7 +6,7 @@ For each layer L ,if g is the activation function,
 
                 f(X) = g( W.X + b )
 
-So, the whole NN would look like: ``` fnn(X) = f1(f2(f3(X))) ``` 
+So, the whole NN would look like: ```fnn(X) = f1(f2(f3(X)))``` 
 
 i.e, a NN is a nested function where each layer acts as a function.
 

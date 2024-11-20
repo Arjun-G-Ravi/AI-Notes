@@ -1,0 +1,26 @@
+# Probability and Information Theory
+
+- 2 ways of viewing probability
+  - a way to analyse past events - frequentist perspective
+  - a way to predict future - bayesian perspective
+- Probability distribution
+  - PMF
+  - PDF
+  - Common distributions
+    - Bernoulli
+    - Multinoulli
+    - Gaussian
+    - Exponenctial
+    - Laplace
+    - Dirac
+    - Empirical
+    - Mixture of Distributions
+- Marginal Probability
+- Conditional Probability
+  - Chain rule
+- Expectation(mean), Varience, Covarience, Std deviation, Correlation
+- Sigmoid function, Softmax function
+- Bayes Rule
+- Information Theory
+  - Quantifying how much information is present in a signal
+- Structured Probabilistic models

@@ -10,5 +10,5 @@
 9. Deep Learning: Ian Goodfellow
 10. Geek for geeks
 11. wikipedia
-12. 
+12. Andrej Karpathy
  and a lot lot more

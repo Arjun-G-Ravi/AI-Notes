@@ -1,4 +1,4 @@
-# Neural Networks for Image processing (CNNs)
+# Neural Networks for Image processing (CNN)
 
 Whenever we are working with image data, we end up having a lot of features. This makes the nn very hard to train and prone to overfitting, because of the sheer volume of parameters. A good way to solve this problem is by using CNNs.
 

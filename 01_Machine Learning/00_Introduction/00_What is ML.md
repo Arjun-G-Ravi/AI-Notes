@@ -2,6 +2,8 @@
 
 Machine Learning (ML) is a field of artificial intelligence focused on the development of algorithms and models that enable computers to learn from data and improve their performance on specific tasks. Instead of being explicitly programmed, these algorithms use statistical techniques to identify patterns, relationships, and trends within the data.
 
+`Mitchell's definition of machine learning is as follows: A computer program is said to learn from experience E with respect to some task T and performance measure P, if its performance at task T, as measured by P, improves with experience E`
+
 ML models are never meant to be perfect. They are meant to be 'good enough' to be used as an approximation.
 
 	“ML is data compression” – Another thought.

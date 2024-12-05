@@ -1,8 +1,8 @@
 # Probability and Information Theory
 
 - 2 ways of viewing probability
-  - a way to analyse past events - frequentist perspective
-  - a way to predict future - bayesian perspective
+  - a way to analyse past events - frequentist perspective(30% bulbs are fused)
+  - a way to predict future - bayesian perspective(30% chance to rain)
 - Probability distribution
   - PMF
   - PDF
@@ -10,7 +10,7 @@
     - Bernoulli
     - Multinoulli
     - Gaussian
-    - Exponenctial
+    - Exponential
     - Laplace
     - Dirac
     - Empirical

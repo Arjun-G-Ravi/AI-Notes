@@ -1,11 +1,11 @@
 # Numerical Computation
 
-- Terms
+- Numerical computation problem
   - Overflow
   - Underflow
-  - Conditionsing
+- Poor Conditioning
 - Gradient based optimisations
   - Gradient Descent
-  - Jacobian, Hessian matrices
+  - Jacobian matrix(a matrix containing the partial deriviatives to all directions), Hessian matrices(just like jacobian, but with second degree partial derivatives)
 - Constrained optimisations
 - Linear Least Squares

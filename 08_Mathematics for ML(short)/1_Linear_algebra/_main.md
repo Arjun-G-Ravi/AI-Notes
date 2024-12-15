@@ -11,5 +11,19 @@ vectors are mathematical objects that represent a quantity with both magnitude a
 
 - A@x is the combinations of the columns of A.
 
+## Elimination method for solving system of linear eqns
+- Using pivots, make the coefficient matrix upper triangular
+- 0 cant be pivots, then exchange row
+
+## Back substitution
+- Take augmented matrix and do elimination to make it upper triangular
+- Put them back in the original eqn to check
+- Solve for the variables
+
+# Note
+- A matix @ vector -> linear combination of columns of matrix
+- A vector @ matrix -> linear combination of rows of matrix
+
 # Reference
 https://mml-book.github.io/
+MIT Gilbert Strang class

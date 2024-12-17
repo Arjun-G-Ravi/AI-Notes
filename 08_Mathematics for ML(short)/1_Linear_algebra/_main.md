@@ -25,5 +25,5 @@ vectors are mathematical objects that represent a quantity with both magnitude a
 - A vector @ matrix -> linear combination of rows of matrix
 
 # Reference
-https://mml-book.github.io/
-MIT Gilbert Strang class
+- MIT Gilbert Strang class
+- https://mml-book.github.io/

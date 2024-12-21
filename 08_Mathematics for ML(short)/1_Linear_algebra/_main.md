@@ -1,3 +1,5 @@
+# MIT Gilbert Strang class notes
+---
 # Linear Algebra
 Study of vectors and rules to manipulate them
 

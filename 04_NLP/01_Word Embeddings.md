@@ -25,16 +25,16 @@ In a one-hot representation, each word in the vocabulary is uniquely encoded as 
 We use `neural networks` to learn a way to represent words as vectors. Here, we use various features to represent the words.
 
 ## Word Embeddings
-In Natural Language Processing (NLP), embeddings are vector representations of words or tokens that capture their semantic and syntactic properties. Instead of treating words as discrete symbols, embeddings allow us to manipulate them as continuous vectors in a high-dimensional space, revealing hidden patterns and relationships.
+In Natural Language Processing (NLP), embeddings are vector representations of words or tokens that capture their semantic and syntactic properties. `Instead of treating words as discrete symbols, embeddings allow us to manipulate them as continuous vectors in a high-dimensional space, revealing hidden patterns and relationships.`
 
-Word embeddings are distributed representations of words in a vector space, where words with similar meanings are represented by similar vectors. These embeddings can be learned by eating up a large corpus of text data.
+Word embeddings are distributed representations of words in a vector space, where words with similar meanings are represented by closer vectors. These embeddings can be learned by eating up a large corpus of text data.
 
 - It refers to the process of representing categorical data, such as words, as continuous vectors in a lower-dimensional space.
 - Visualising this on an n-dimensional graph will reveal that similar items will be grouped together.
 - The revolutionary intuition here is that we can just use running text as implicitly supervised training data for such a classifier. This unsupervised learning method, often called `self-supervision`, avoids the need for any sort of hand-labeled supervision signal. 
 ![Alt text](<Screenshot from 2023-10-20 20-29-14.png>)
 
-## Feature Enginnering
+## Feature Engineering
 Featurized representations of word embeddings, often referred to as feature engineering, involve extracting or creating additional features from word embeddings to enhance their utility for specific NLP tasks.
 
 ## Extracting relationships from word embeddings
@@ -75,9 +75,7 @@ It aims to capture the semantic relationships between words in a corpus of text 
 - Statistics instead of NNs
 
 # Problems
-
-- These are fine, but don't have contextual and positional understanding. Therefore we use better representation.
-
+- They don't have contextual and positional understanding. Therefore we use better representation.
 - For taking similarity, cosine similarity is bad
   - All vectors tend to point to one direction - anisotropy. So we have to standardise(z-score) these vectors.
   - Another problem that is not solved by standardization is that cosine tends to underestimate human judgments on similarity of word meaning for very frequent words.

@@ -62,7 +62,7 @@ The lower the perplexity of a model on the data, the better the model, and minim
 BLEU (Bilingual Evaluation Understudy) is a metric used to evaluate the quality of machine-generated translations, `primarily in the context of machine translation tasks`. 
 The BLEU score is a number between 0 and 1, with 1 being a perfect match to the human reference translations. It measures the precision of the machine-generated translation by comparing the n-grams (contiguous sequences of words or characters) in the generated text to those in the reference text. The more n-grams that match, the higher the BLEU score.
 
-It is used in NLP situations where multiple answers can be correct like translation. Tasks like speech-to-text should not use bleu score, as we always expect a one-on-one correct answer.
+It is used in NLP situations where multiple answers can be correct like translation. `Tasks like speech-to-text should not use bleu score, as we always expect a one-on-one correct answer.`
 
 ![Alt text](<Screenshot from 2023-10-28 20-58-18.png>)
 

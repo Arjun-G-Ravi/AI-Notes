@@ -23,7 +23,7 @@ For momentum, the weight gets updated as:
 ![Alt text](<Screenshot from 2023-10-12 21-11-00.png>)
 
 # RMSprop
-Just like Grad desc with moementum, with a small algorithmic change.
+Just like Grad desc with moementum, with a small algorithmic change,
 RMSprop, which stands for Root Mean Square Propagation, is an optimization algorithm commonly used in training machine learning models, particularly deep neural networks.
 Traditional gradient descent methods use a fixed learning rate for all parameters, which may lead to slow convergence or divergence in some cases. `RMSprop adjusts the learning rates based on the historical gradient information for each parameter`.
 

@@ -8,7 +8,7 @@ Transformers, a revolutionary neural network architecture, introduce `self-atten
 ## Advantages of Transformers (over RNNs and other sequential models) 
 - Parallel computation -> faster
 - Higher context -> handles bigger data 
-- Better understanding -> better quality
+- Better understanding of data -> better quality of model
 
 # The Transformers Architecture
 - Input text is tokenized by methods like Byte Pair Encoding
@@ -25,19 +25,19 @@ Transformers, a revolutionary neural network architecture, introduce `self-atten
 ![Alt text](BHzGVskWGS_3jEcYYi6miQ.png)
 
 # 1. Self Attention
-(It is used to update embedding of input words, inorder to include the context. It is done in multiple heads as Q, K, V system.)
+(It is used to update embedding of input tokens, inorder to include the context. It is done in multiple heads as Q, K, V system.)
 
 The key innovation of transformers is their self-attention mechanism, which enables transformers to `capture long-range dependencies in data`, making them well-suited for tasks involving sequences. It is a mechanism that `update the embedding of input words inorder to allows the model to consider the context(the words around that word) of a word in a sentence when encoding it as a numeric vector.` 
 
 During self-attention, the model computes a weighted sum of the embeddings of all the words in a sentence, where the weights are determined by the attention scores assigned to each word. These attention scores reflect the importance of each word in the context of the current word being encoded. Thus the embedding for each word is calculated dynamically with the help of the words around it.
 
-- Each input word is vectorised using techniques like word2vec. Thus the word would be rich in context but will lack contextual information.
-- This goes into the seqence of encoder blocks, which will use the QKV system to add this context meaning.
+- Each input token is vectorised using techniques like word2vec. Thus the tokens will be rich in context but will lack contextual information.
+- This goes into the seqence of encoder blocks, which will use the QKV system to add this contextual meaning.
 
 ## Query, Key, Value system for self-attention
-(The below things happen in one head of the multi-head attention. More about it below.)
+(The below things happen in one head of the multi-head attention)
 
-`Each token in the input will be associated with a Q,K and V vectors.` They are all stored in the Q, K, V matrix of that head. These matrices are trainable parameters used to update each of the word embedding with the contextual information. 
+`Each token in the input will be associated with a Q,K and V vectors.` These vectors are derived through learnable linear transformations applied to the input embeddings. They are all stored in the Q, K, V matrix of that head. These matrices are trainable parameters used to update each of the word embedding with the contextual information. 
 
 Queries, Keys and value vectors are obtained by multiplying the query, key and value matrix with the embedding of the corresponding token.
 
@@ -70,7 +70,7 @@ To translate: `Jane visits Africa in September.`
 - Query4: Where does Jane visit?  # Africa
 - . . . h heads
 
-# 3. Positional Embedding:
+# 3. Positional Embedding
 (This happens right after converting the text to its embedding, before self-attention.)
 
 Since Transformers don't inherently understand the order of words in a sequence, positional encodings are added to the input embeddings to give the model information about the position of each word. An additional dimension will be added to the embedding which will represent the position. This is called positional embedding.
@@ -91,10 +91,11 @@ The output of the decoder goes to a linear layer, and then into a softmax layer,
 
 Before it goes into the softmax layer,
 
-# 5. Layer Normalization and Residual Connections:
+# 5. Layer Normalization and Residual Connections
 
 Layer Normalization (LN), along with residual connection, is considered as a mechanism to stabilizing training of deep networks (e.g., alleviating ill-posed gradients and model degeneration). 
 - `Layer Normalization`: Each sub-layer output is normalized to stabilize and speed up training.
+
 - `Residual Connections`: Original inputs to a sub-layer are combined with its output, helping with the flow of gradients during training.
 
 ### Learn more:

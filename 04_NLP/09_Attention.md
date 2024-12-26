@@ -12,8 +12,10 @@ The concept of attention involves generating a single fixed-length vector(contex
 ## Dot-product attention
 It is the most simple attention mechanism. It implements attention as by measuring how similar the decoder hidden state is to an encoder hidden state, by computing the dot product between them.The score that results from this dot product is a scalar that reflects the degree of similarity between the two vectors.
 
-# Learning attention using Neural Networks
+## Learning attention scores using Neural Networks
 Another way to calculate attention is to define a set of weights, which learns during training about how to give attention for each of the encoder tokens, given a decoder token. This is superior to the dot product attention mechanism.
+
+# Attention vs Self-attention
 
 ## Attention:
 - Basic Idea: `Attention mechanisms allow a model to focus on different parts of the encoder sequence when processing a particular element in the decoder part.`
@@ -21,6 +23,6 @@ Another way to calculate attention is to define a set of weights, which learns d
 When we are auregressively moving through each of the tokens from the decoder. For each of the token, we look at the weighted encoder tokens, and using attention during this process.
 
 ## Self-Attention (or Intra-Attention):
-- Basic Idea: `Self-attention is a specific type of attention where the elements of the endoder sequence attend to each other. The embedding in the transformers are being updated dynamically using the surrounding tokens.`
+- Basic Idea: `Self-attention is a specific type of attention where the elements of the encoder sequence attend to each other. The embedding in the transformers are being updated dynamically using the surrounding tokens.`
 
-This modifies the positional embeddings for each token in the encoder by looking at the neighbouring tokens from the encoder, and using attention during this process.
+This modifies the embeddings for each token in the encoder by looking at the neighbouring tokens from the encoder, and using attention during this process.

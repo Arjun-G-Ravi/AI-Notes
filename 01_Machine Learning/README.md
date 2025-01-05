@@ -89,11 +89,16 @@
 - online learning
 - generative models
 - Feature Selection and Generation
+- sampling methods
+- Continuous Latent Variables
+- 
 
 ## Advanced concepts: 
 - ![alt text](image.png)
 
 
 ## Books
-- Understanding Machine Learning: From theories to algorithsm
-- Pattern Recognition and Machine Learning, Bishop
+- (most of the order in the tutorial)Understanding Machine Learning: From theories to algorithms
+- (very popular book) Pattern Recognition and Machine Learning, Bishop
+- Probabilistic Machine Learning: An Introduction, Kevin P. Murphy
+- Probabilistic Machine Learning: Part 2, Kevin P. Murphy

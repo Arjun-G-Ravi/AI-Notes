@@ -40,9 +40,6 @@ The likelihood function represents the probability of observing the given data u
 ### Log-Likelihood Function:
 Because likelihood values can become very small, it is common to work with the log-likelihood function instead. This doesn't change the position of the maximum likelihood estimates but simplifies computations.
 
-### MLE
-MLE involves finding the values of the model parameters that maximize the likelihood (or log-likelihood) function.
-
 # Correlation Matrix
 A correlation matrix is a table showing correlation coefficients between variables. Each cell in the table represents the correlation between two variables. Correlation measures the strength and direction of a **linear** relationship between two variables.
 

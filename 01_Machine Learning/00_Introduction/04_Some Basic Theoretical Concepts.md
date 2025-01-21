@@ -3,7 +3,7 @@ This contains some theoretical concepts.
 ### Hypothesis Space:
 The hypothesis space refers to the set of all possible hypotheses or candidate models that a machine learning algorithm can create to make predictions or classifications. 
 
-The purpose of ML is to select a hypothesis(model) from the hypothesis space that will approximate input to output.
+The purpose of ML is to select a hypothesis(the function that our model represents) from the hypothesis space that will approximate input to output.
 
 Eg: In linear regression, the hypothesis space consists of all possible linear functions that can be used to map input features to output labels.
 

@@ -3,13 +3,13 @@ The quality and nature of the training data are critical components of a learned
 
 # Common datasets
 
-## Small Image dataste
+## Image datasets
 1. MNIST (V. simple)
 2. Fashion-MNIST (Simple)
 3. CIFAR (A bit more complex)
 4. ImageNet (Complex)
 
-# Text
+# Text datasets
 1. IMDB movie review dataset (Sentiment analysis)
 2. Workshop on Machine Translation(WMT) dataset (Machine Translation)
 3. SQuAD (question answering)

@@ -23,3 +23,10 @@ MLE is a statistical framework that assumes a specific probability distribution 
 
 # No free lunch theorem
 There is no single best model that works optimally for all kinds of problems — this is sometimes called the no free lunch theorem. The reason is that a set of assumptions (also called inductive bias) that works well in one domain may work poorly in another.
+
+## Exploratory data analysis
+Before tackling a problem with ML, it is usually a good idea to perform exploratory data analysis, to see if there are any obvious patterns (which might give hints on what method to choose), or any obvious problems with the data (e.g., label noise or outliers).
+
+It can include:
+ - making a pair plot for each feature
+ - dimensionality reduction

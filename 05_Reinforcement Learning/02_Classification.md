@@ -22,3 +22,4 @@
     - What it is: A class of algorithms that learn a model of the environment's dynamics and use this model to plan or generate synthetic data for training.
     - Why it's important: Can be significantly more sample-efficient than model-free methods, requiring less interaction with the real environment.
     - Best for: Scenarios where interacting with the environment is expensive or slow (e.g., real-world robotics).
+

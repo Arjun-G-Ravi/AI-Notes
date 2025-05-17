@@ -2,6 +2,13 @@
 
 PPO is one of the most popular and widely used reinforcement learning algorithms today, known for its good balance of performance, implementation simplicity, and stability. It was introduced by John Schulman and team at OpenAI in 2017 as an improvement upon Trust Region Policy Optimization (TRPO).
 
+PPO has two networks(generally nerual networks): an actor and a critic. 
+- The actor network gives out the probabilty for each actions given a state.
+- The critic network evaluates how good each action is given a (state, all actions) pair. The output of the critic is called the q-value.
+
+Thus `Q-value` (Q(s_t, a_t)) is an estimate of the expected cumulative reward that the agent will receive by taking a specific action a_t in a given state s_t and then following the current policy thereafter.
+
+![alt text](image-3.png)
 # What is PPO?
 - Type: PPO is an on-policy, actor-critic reinforcement learning algorithm.
 - Goal: To train a policy network (the "actor") that maps states to actions, and often a value network (the "critic") that estimates the value of states, with the aim of maximizing the expected cumulative reward.
@@ -103,3 +110,7 @@ After collecting a batch of data:
 ### Cons
 - **Data Efficiency**: On-policy nature requires new data for each update, less efficient than off-policy methods.
 - **Hyperparameter Sensitivity**: Performance depends on tuning `clip_epsilon`, learning rates, and `epochs_per_update`.
+
+# References
+- Really good intro: https://www.youtube.com/watch?v=MVXdncpCbYE
+- 

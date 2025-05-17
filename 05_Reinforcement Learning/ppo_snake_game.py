@@ -131,15 +131,22 @@ class PolicyNetwork(nn.Module):
     def __init__(self):
         """Initialize neural network for policy and value estimation."""
         super(PolicyNetwork, self).__init__()
-        self.fc1 = nn.Linear(11, 64)  # Input: 11 state features, output: 64
-        self.fc2 = nn.Linear(64, 64)  # Hidden layer
+        self.fc1 = nn.Linear(11, 128)  # Input: 11 state features, output: 64
+        self.fc2 = nn.Linear(128, 128)  # Hidden layer
+        self.fc3 = nn.Linear(128, 64)  # Hidden layer
+        self.norm1 = nn.LayerNorm(128)
+        self.norm2 = nn.LayerNorm(128)
         self.fc_policy = nn.Linear(64, 3)  # Output: 3 actions (straight, left, right)
         self.fc_value = nn.Linear(64, 1)  # Output: state value
 
     def forward(self, x):
         """Forward pass to compute action probabilities and state value."""
-        x = F.relu(self.fc1(x))  # First hidden layer with ReLU
-        x = F.relu(self.fc2(x))  # Second hidden layer with ReLU
+        # x = F.relu(self.fc1(x))  # First hidden layer with ReLU
+        # x = F.relu(self.fc2(x))  # Second hidden layer with ReLU
+        x = self.norm1(F.relu(self.fc1(x)))
+        x = self.norm2(F.relu(self.fc2(x)))
+        x = F.relu(self.fc3(x))
+        
         policy = F.softmax(self.fc_policy(x), dim=-1)  # Action probabilities
         value = self.fc_value(x)  # State value
         return policy, value
@@ -212,7 +219,7 @@ class PPOAgent:
         self.memory.clear()  # Clear memory after training
 
 # Main Loop
-FPS = 1000  # Frames per second for rendering
+FPS = 3000  # Frames per second for rendering
 if __name__ == "__main__":
     """Run the training loop for the Snake game with PPO."""
     env = SnakeGame()  # Initialize game environment
@@ -220,6 +227,7 @@ if __name__ == "__main__":
     episodes = 1000  # Number of training episodes
     max_snake_steps = 0
     total_rewards = deque(maxlen=20)  # Track last 100 episode rewards
+    top_score = 0
     for episode in range(episodes):
         if episode % 20 == 0:
             max_snake_steps += 5
@@ -235,7 +243,8 @@ if __name__ == "__main__":
             agent.store(state, action, reward, next_state, done)  # Store experience
             state = next_state  # Update state
             episode_reward += reward
-            env.render()  # Render game
+            episode_reward = round(episode_reward, 3)
+            # env.render()  # Render game
             for event in pygame.event.get():  # Handle Pygame events
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -246,7 +255,8 @@ if __name__ == "__main__":
         agent.train()  # Train policy
         total_rewards.append(episode_reward)  # Track reward
         avg_reward = np.mean(total_rewards)  # Compute average reward
-        print(f"Episode {episode + 1}, Reward: {episode_reward}, Avg Reward: {avg_reward:.2f}")
-        if avg_reward > 50:  # Stop if average reward exceeds threshold
-            print("Training completed!")
-            break
+        top_score = max(top_score, env.score)
+        print(f"Episode {episode + 1}, Reward: {episode_reward}, Avg Reward: {avg_reward:.2f}, Score: {env.score}, Top score:{top_score}")
+        # if avg_reward > 50:  # Stop if average reward exceeds threshold
+        #     print("Training completed!")
+        #     break

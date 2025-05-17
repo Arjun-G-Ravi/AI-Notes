@@ -1,5 +1,3 @@
-import asyncio
-import platform
 import pygame
 import random
 import numpy as np
@@ -8,6 +6,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from collections import deque
 import sys
+import time
 
 # Snake Game Environment
 class SnakeGame:
@@ -68,17 +67,17 @@ class SnakeGame:
             new_head[1] < 0 or new_head[1] >= self.height or
             new_head in self.snake):
             self.done = True
-            reward = -1  # Penalty for dying
+            reward = -5  # Penalty for dying
         else:
             self.snake.insert(0, new_head)  # Add new head
             if new_head == self.food:  # If food is eaten
                 self.score += 1
                 self.food = self._place_food()  # Place new food
-                reward = 1  # Reward for eating
+                reward = 10  # Reward for eating
             else:
                 self.snake.pop()  # Remove tail if no food eaten
                 reward = -0.01  # Small penalty per step
-
+        # time.sleep(0.1)
         return self.get_state(), reward, self.done
 
     def get_state(self):
@@ -213,18 +212,24 @@ class PPOAgent:
         self.memory.clear()  # Clear memory after training
 
 # Main Loop
-FPS = 60  # Frames per second for rendering
+FPS = 1000  # Frames per second for rendering
 if __name__ == "__main__":
     """Run the training loop for the Snake game with PPO."""
     env = SnakeGame()  # Initialize game environment
     agent = PPOAgent()  # Initialize PPO agent
-    episodes = 100  # Number of training episodes
-    total_rewards = deque(maxlen=100)  # Track last 100 episode rewards
+    episodes = 1000  # Number of training episodes
+    max_snake_steps = 0
+    total_rewards = deque(maxlen=20)  # Track last 100 episode rewards
     for episode in range(episodes):
+        if episode % 20 == 0:
+            max_snake_steps += 5
+            print('Max steps updated to', max_snake_steps)
+        snake_steps = 0
         state = env.reset()  # Reset environment
         done = False
         episode_reward = 0
         while not done:
+            snake_steps += 1
             action = agent.act(state)  # Select action
             next_state, reward, done = env.step(action)  # Execute action
             agent.store(state, action, reward, next_state, done)  # Store experience
@@ -235,6 +240,8 @@ if __name__ == "__main__":
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+            if snake_steps >= max_snake_steps:
+                done = True
             env.clock.tick(FPS)  # Control frame rate
         agent.train()  # Train policy
         total_rewards.append(episode_reward)  # Track reward

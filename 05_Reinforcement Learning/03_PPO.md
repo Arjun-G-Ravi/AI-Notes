@@ -15,7 +15,7 @@ Thus `Q-value` (Q(s_t, a_t)) is an estimate of the expected cumulative reward th
 - Core Idea: To perform policy updates iteratively, similar to standard policy gradient methods, but with a mechanism that constrains the updates to be relatively small. This prevents the policy from changing too drastically in a single step, which can lead to catastrophic performance drops (a common issue in policy gradient methods).
 
 # Why PPO?
-- Vanilla Policy Gradient (VPG) / REINFORCE have a big issue to choosing the correct learning rate. (It is just like Gradient Descent)
+- Vanilla Policy Gradient (VPG) / REINFORCE have a big issue that we have to choose the correct learning rate. (It is just like Gradient Descent)
 - Trust Region Policy Optimization (TRPO) solves this issue but is computationally expensive and complex to implement.
 - PPO aims to achieve a similar effect as TRPO – constrained updates for stability – but with a simpler, first-order optimization approach. It does this primarily through a clipped surrogate objective function.
 
@@ -25,7 +25,7 @@ PPO uses a soft constraint (a penalty or modification of the objective function)
 ![alt text](image-1.png)
 
 ![alt text](image-2.png)
-
+Watch the video's PPO section for a better understanding of the above image: [PPO Algorithm](https://www.youtube.com/watch?v=MVXdncpCbYE)
 
 # Key Components & Concepts
 
@@ -102,6 +102,7 @@ After collecting a batch of data:
 # Pros and Cons of PPO
 
 ### Pros
+It generally works well.
 - **Performance**: Often matches or exceeds TRPO and other complex algorithms.
 - **Simplicity**: Easier to implement than TRPO, using first-order gradient methods.
 - **Stability**: Clipping mechanism ensures more stable updates compared to vanilla policy gradients.

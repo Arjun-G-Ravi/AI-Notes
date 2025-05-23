@@ -13,6 +13,7 @@ Thus `Q-value` (Q(s_t, a_t)) is an estimate of the expected cumulative reward th
 - Type: PPO is an on-policy, actor-critic reinforcement learning algorithm.
 - Goal: To train a policy network (the "actor") that maps states to actions, and often a value network (the "critic") that estimates the value of states, with the aim of maximizing the expected cumulative reward.
 - Core Idea: To perform policy updates iteratively, similar to standard policy gradient methods, but with a mechanism that constrains the updates to be relatively small. This prevents the policy from changing too drastically in a single step, which can lead to catastrophic performance drops (a common issue in policy gradient methods).
+- It uses a stochastic policy (not a deterministic one) - meaning that given a state, the policy outputs a probability distribution over actions, and actions are sampled from this distribution. It uses policy gradients to update the policy parameters based on the collected data. 
 
 # Why PPO?
 - Vanilla Policy Gradient (VPG) / REINFORCE have a big issue that we have to choose the correct learning rate. (It is just like Gradient Descent)

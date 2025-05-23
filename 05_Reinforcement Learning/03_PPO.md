@@ -115,3 +115,10 @@ It generally works well.
 
 # References
 - Really good intro: https://www.youtube.com/watch?v=MVXdncpCbYE
+
+# Note
+- In PPO, the policy update is based on advantage, which is `A(s,a)=Q(s,a)−V(s)`, where
+   - `Q(s,a)` (Action Value Function) is the expected return from taking action `a` in state `s`.
+   - `V(s)` (State Value Function) is the expected return from state `s` under the current policy.
+- But this advantage is difficult to compute. So, we use the GAE (Generalized Advantage Estimation) or TD(Temporal Difference) method to compute the advantage. This is: 
+   - `A(s,a)=r+γV(s′)−V(s)` where `s′` is the next state.

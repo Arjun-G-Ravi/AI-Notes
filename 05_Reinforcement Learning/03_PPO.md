@@ -122,3 +122,4 @@ It generally works well.
    - `V(s)` (State Value Function) is the expected return from state `s` under the current policy.
 - But this advantage is difficult to compute. So, we use the GAE (Generalized Advantage Estimation) or TD(Temporal Difference) method to compute the advantage. This is: 
    - `A(s,a)=r+γV(s′)−V(s)` where `s′` is the next state.
+- PPO is KL constrains added over TRPO.

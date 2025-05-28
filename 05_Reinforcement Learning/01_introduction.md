@@ -7,19 +7,21 @@
 
 ## Key components:
 - **Agent**: The AI or algorithm that learns and makes decisions.
-- **Environment**: The world or system the agent interacts with.
-- **State** (S): A snapshot of the current situation in the environment. It is a function of the history of the environment and the agent's actions. 
+- **Environment**: The world or system the agent interacts with. No information is hidden in this description.
+- **Observation**: The information the agent receives from the environment. It can be the full state or a partial observation of the state.
+- **State** (S): A snapshot of the environment which is given to the agent. It is a function of the history of the environment and the agent's actions. It is generally represented as a vector or matrix.
 - **Action** (A): A choice the agent can make in a given state.
-- **Reward** (R): Feedback from the environment. This tells the agent how good or bad its last action was in that state.
+- **Action Spaces** - The set of all possible actions the agent can take. It can be discrete (a finite set of actions) or continuous (an infinite set of actions). There are families of RL algorithms that will work only with one type of action space.
 - **Policy** (π): The agent's strategy or "brain." It's a function from states to actions – what action the agent should take in a particular state. The goal of RL is to find the optimal policy. It can be deterministic (always the same action for a state) or stochastic (probabilistic action selection, ie, gives the probability for taking each action, given a state).
+- **Episode**: A sequence of states, actions, and rewards that ends in a terminal state .
+- **Reward** (R): Feedback from the environment. This tells the agent how good or bad its last action was in that state.
+- **Return**: The total accumulated reward from a state until the end of an episode, discounted by a factor γ. It is one sample of the different possiblities from MDP.
 - **Value Function**: Predicts the expected future reward an agent can get from being in a particular state (V) or from taking a particular action in a particular state (Q). This helps the agent make long-term plans. RL agents which use these are called value-based agents.
     - **Q-value (Action-Value Function):** $Q(s, a)$ tells us the amount of reward we can expect starting from a specific state $s$ and picking a specific action $a$, and then following a particular policy thereafter. Finding the optimal q-value is the ultimate goal of RL.
     - **V-value (State-Value Function):** $V(s)$ tells us the amount of reward we can expect starting from a specific state $s$, and then following a particular policy thereafter. The optimal policy is found by selecting actions that have the highest Q-value for each state.
-- **Episode**: A sequence of states, actions, and rewards that ends in a terminal state .
-- **Return**: The total accumulated reward from a state until the end of an episode, discounted by a factor γ. It is one sample of the different possiblities from MDP.
 
 ## Important Concepts:
 - **Exploration vs. Exploitation**: The agent must balance exploring new actions to discover their rewards (exploration) and using known actions that yield high rewards (exploitation). This is a fundamental trade-off in RL.
 - **Discount Factor (γ)**: A value between 0 and 1 (generally between 0.9 and 0.99) that determines the importance of future rewards. A higher γ means the agent values future rewards more, while a lower γ focuses on immediate rewards.`The value of reward R after k steps is (γ^k)R`.
 - **Markov Decision Process (MDP)**: A mathematical framework for modeling decision-making, consisting of states, actions, rewards, and transition probabilities. It provides a formal structure for RL problems.
-- **Bellman Equation** provide a set of recursive relationships that define the value functions (𝑉(𝑠)V(s) for state-value and 𝑄(𝑠,𝑎)Q(s,a) for action-value) in terms of the values of successor states.
+- **Bellman Equation** provide a set of recursive relationships that `define the value functions` (𝑉(𝑠)V(s) for state-value and 𝑄(𝑠,𝑎)Q(s,a) for action-value) in terms of the values of successor states.

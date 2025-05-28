@@ -12,7 +12,9 @@
 - **Action** (A): A choice the agent can make in a given state.
 - **Reward** (R): Feedback from the environment. This tells the agent how good or bad its last action was in that state.
 - **Policy** (π): The agent's strategy or "brain." It's a function from states to actions – what action the agent should take in a particular state. The goal of RL is to find the optimal policy. It can be deterministic (always the same action for a state) or stochastic (probabilistic action selection, ie, gives the probability for taking each action, given a state).
-- **Value Function** (V or Q): Predicts the expected future reward an agent can get from being in a particular state (V) or from taking a particular action in a particular state (Q). This helps the agent make long-term plans. `Q is a function that tells us the amount of reward we can expect starting from a specific state and picking a specific action(and then follow a policy) whereas V tells us the amount of reward we can expect in a state(and then follow a policy).` RL agents which use these are called value-based agents.
+- **Value Function**: Predicts the expected future reward an agent can get from being in a particular state (V) or from taking a particular action in a particular state (Q). This helps the agent make long-term plans. RL agents which use these are called value-based agents.
+    - **Q-value (Action-Value Function):** $Q(s, a)$ tells us the amount of reward we can expect starting from a specific state $s$ and picking a specific action $a$, and then following a particular policy thereafter. Finding the optimal q-value is the ultimate goal of RL.
+    - **V-value (State-Value Function):** $V(s)$ tells us the amount of reward we can expect starting from a specific state $s$, and then following a particular policy thereafter. The optimal policy is found by selecting actions that have the highest Q-value for each state.
 - **Episode**: A sequence of states, actions, and rewards that ends in a terminal state .
 - **Return**: The total accumulated reward from a state until the end of an episode, discounted by a factor γ. It is one sample of the different possiblities from MDP.
 

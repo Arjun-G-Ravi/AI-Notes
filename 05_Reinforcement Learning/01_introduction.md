@@ -25,13 +25,12 @@
 ## Important Concepts:
 - **Exploration vs. Exploitation**: The agent must balance exploring new actions to discover their rewards (exploration) and using known actions that yield high rewards (exploitation). This is a fundamental trade-off in RL.
 - **Discount Factor (γ)**: A value between 0 and 1 (generally between 0.9 and 0.99) that determines the importance of future rewards. A higher γ means the agent values future rewards more, while a lower γ focuses on immediate rewards.`The value of reward R after k steps is (γ^k)R`.
-- **Markov Decision Process (MDP)**: A mathematical framework for modeling decision-making, consisting of states, actions, rewards, and transition probabilities. It provides a formal structure for RL problems.
-An MDP is a 5-tuple, `< S, A, R, P, ρ >`, where
+- **Markov Decision Process (MDP)**: A mathematical framework for modeling decision-making, consisting of states, actions, rewards, and transition probabilities. It provides a formal structure for RL problems. The name Markov Decision Process refers to the fact that the system obeys the Markov property. An MDP is defined as a 5-tuple, `< S, A, R, P, ρ >`, where
     - S is the set of all valid states,
     - A is the set of all valid actions,
     - R is the reward function
     - P is the transition probability function
     - ρ(rho) is the starting state distribution. It tells us how likely it is to start in each state at the very beginning of each episode.
-
+- **Markov Property:** Transitions only depend on the most recent state and action, and no prior history.
 - **Bellman Equation** provide a set of recursive relationships that `define the value functions` (𝑉(𝑠)V(s) for state-value and 𝑄(𝑠,𝑎)Q(s,a) for action-value) in terms of the values of successor states. It state that `The value of your starting point is the reward you expect to get from being there, plus the value of wherever you land next.`
 ![alt text](image-4.png)

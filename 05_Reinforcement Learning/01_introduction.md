@@ -16,6 +16,7 @@
 - **Episode**: A sequence of states, actions, and rewards that ends in a terminal state .
 - **Reward** (R): Feedback from the environment. This tells the agent how good or bad its last action was in that state.
 - **Return**: The total accumulated reward from a state until the end of an episode, discounted by a factor γ. It is one sample of the different possiblities from MDP.
+- **Model:** Some RL algorithms use a model of the environment to predict the next state and reward given a state and action, some do not. Having a model is generally more sample efficient. A model, in terms of RL, is a function that predicts state transitions and rewards. The main upside to having a model is that it allows the agent to plan by thinking ahead, seeing what would happen for a range of possible choices, and explicitly deciding between its options. 
 - **Value Function**: Predicts the expected future reward an agent can get from being in a particular state (V) or from taking a particular action in a particular state (Q). This helps the agent make long-term plans. RL agents which use these are called value-based agents.
     - **Q-value (Action-Value Function):** $Q(s, a)$ tells us the amount of reward we can expect starting from a specific state $s$ and picking a specific action $a$, and then following a particular policy thereafter. Finding the optimal q-value is the ultimate goal of RL.
     - **V-value (State-Value Function):** $V(s)$ tells us the amount of reward we can expect starting from a specific state $s$, and then following a particular policy thereafter. The optimal policy is found by selecting actions that have the highest Q-value for each state.
@@ -34,3 +35,9 @@
 - **Markov Property:** Transitions only depend on the most recent state and action, and no prior history.
 - **Bellman Equation** provide a set of recursive relationships that `define the value functions` (𝑉(𝑠)V(s) for state-value and 𝑄(𝑠,𝑎)Q(s,a) for action-value) in terms of the values of successor states. It state that `The value of your starting point is the reward you expect to get from being there, plus the value of wherever you land next.`
 ![alt text](image-4.png)
+- **Dynamic Programming:** A set of algorithms that use the Bellman equation to compute the value functions and optimal policies. It is used for planning the MDP. 
+  - It requires optimal substructure(The optimal solution to a problem can be constructed from the optimal solutions of its subproblems) and principle of optimality(The optimal policy has the property that, regardless of the initial state and initial action, the remaining actions must constitute an optimal policy with regard to the state resulting from the first action. ).
+  - It requires a complete model of the environment (transition probabilities and rewards).
+  - In DP, we divide the problem into smaller, overlapping subproblems and solve them recursively.
+- **Evaluating a policy**
+- Iterate through all states and calculate the value of each state under the current policy.

@@ -1,12 +1,3 @@
-## Practical Advice for Starting RL:
-1. Start with PPO or SAC: For most continuous control problems, PPO is a great first try due to its stability and widespread use. SAC is often used when you want to push for slightly better performance and are comfortable with its complexity.
-2. For Discrete Actions, use DQN variants: If your actions are discrete, start with a well-implemented DQN variant (like the one in Stable Baselines3 which includes many improvements).
-3. Use Existing Libraries: Do NOT implement these from scratch unless it's for learning purposes. Use robust libraries like:
-   - Stable Baselines3: Excellent for standard algorithms (PPO, SAC, TD3, DQN, A2C) with PyTorch. Well-documented and easy to use.
-   - Ray RLLib: A more scalable library that supports a wider range of algorithms and distributed training.
-   - TensorForce, Keras-RL, etc.: Other options exist, but Stable Baselines3 and RLLib are currently very popular and well-maintained.
-4. Hyperparameter Tuning is Crucial: RL algorithms are notoriously sensitive to hyperparameters. Be prepared to experiment with learning rates, discount factors, network architectures, etc. Libraries often provide good default values, but they might not be optimal for your specific task.
-
 # Best RL Algorithms
 1. PPO (Proximal Policy Optimization):
     - What it is: A policy gradient algorithm that updates the policy in small, stable steps.
@@ -28,4 +19,15 @@
     - What it is: A class of algorithms that learn a model of the environment's dynamics and use this model to plan or generate synthetic data for training.
     - Why it's important: Can be significantly more sample-efficient than model-free methods, requiring less interaction with the real environment.
     - Best for: Scenarios where interacting with the environment is expensive or slow (e.g., real-world robotics).
+
+(obviously all algorithms are good in some sense, but these are like the best algorithms in a practical viewpoint)
+
+## Practical Advice for actually doing RL:
+1. Start with PPO or SAC: For `most` continuous control problems, PPO is a great first try due to its stability and widespread use. SAC is often used when you want to push for slightly better performance and are comfortable with its complexity.
+2. For Discrete Actions, use DQN variants: If your actions are discrete, start with a well-implemented DQN variant (like the one in Stable Baselines3 which includes many improvements).
+3. Use Existing Libraries: Do NOT implement these from scratch unless it's for learning purposes. Use robust libraries like:
+   - Stable Baselines3: Excellent for standard algorithms (PPO, SAC, TD3, DQN, A2C) with PyTorch. Well-documented and easy to use.
+   - Ray RLLib: A more scalable library that supports a wider range of algorithms and distributed training.
+   - TensorForce, Keras-RL, etc.: Other options exist, but Stable Baselines3 and RLLib are currently very popular and well-maintained.
+4. Hyperparameter Tuning is Crucial: RL algorithms are notoriously sensitive to hyperparameters. Be prepared to experiment with learning rates, discount factors, network architectures, etc. Libraries often provide good default values, but they might not be optimal for your specific task.
 

@@ -1,3 +1,4 @@
+# Reinforcement Learning Techniques
 1. HER(Hindsight Experience Replay):
      - What it is: A technique that allows agents to learn from failed episodes by treating them as if they were successful, using hindsight to adjust the goals.
      - Why it's important: Significantly improves sample efficiency in sparse reward environments.

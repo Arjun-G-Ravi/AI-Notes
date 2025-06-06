@@ -39,5 +39,8 @@
   - It requires optimal substructure(The optimal solution to a problem can be constructed from the optimal solutions of its subproblems) and principle of optimality(The optimal policy has the property that, regardless of the initial state and initial action, the remaining actions must constitute an optimal policy with regard to the state resulting from the first action. ).
   - It requires a complete model of the environment (transition probabilities and rewards).
   - In DP, we divide the problem into smaller, overlapping subproblems and solve them recursively.
-- **Evaluating a policy**
-- Iterate through all states and calculate the value of each state under the current policy.
+
+## Problems with RL
+- Absence of independent and identically distributed data can massively slow down RL
+- The choice of exploration vs exploitation
+- Some reward can be delayed after actions

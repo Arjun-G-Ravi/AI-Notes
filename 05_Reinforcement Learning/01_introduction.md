@@ -22,17 +22,21 @@
     - **V-value (State-Value Function):** $V(s)$ tells us the amount of reward we can expect starting from a specific state $s$, and then following a particular policy thereafter. The optimal policy is found by selecting actions that have the highest Q-value for each state.
     - **Difference:** The Q-value takes into account an action taken (which may not be in the policy) and the state(and then the policy thereafter), while the V-value only considers the state(and then the policy thereafter). The V-value is the expected value over all possible actions in the state, weighted by the policy's probability of choosing each action.
 - **Advantage Functions:** It is the difference between the Q-value and the V-value. It measures how much better a particular action is compared to the average action at that state under the current policy.
+
 ![alt text](image-5.png)
 ## Important Concepts:
 - **Exploration vs. Exploitation**: The agent must balance exploring new actions to discover their rewards (exploration) and using known actions that yield high rewards (exploitation). This is a fundamental trade-off in RL.
 - **Discount Factor (γ)**: A value between 0 and 1 (generally between 0.9 and 0.99) that determines the importance of future rewards. A higher γ means the agent values future rewards more, while a lower γ focuses on immediate rewards.`The value of reward R after k steps is (γ^k)R`. A γ value of 0 is greedy.
-- **Markov Decision Process (MDP)**: A mathematical framework for modeling decision-making, consisting of states, actions, rewards, and transition probabilities. It provides a formal structure for RL problems. The name Markov Decision Process refers to the fact that the system obeys the Markov property. An MDP is defined as a 5-tuple, `< S, A, R, P, ρ >`, where
+- **Markov Property:** Transitions only depend on the most recent state and action, and no prior history.
+- **Markov Chain/ Markov Process:** A sequence of random states where the probability of moving to the next state depends only on the current state (the Markov property). It ve no rewards or actions involved.
+- **Markov Reward Process (MRP):** A Markov Process with rewards associated with each state (or state transition).
+- **Markov Decision Process (MDP)**: An extension of Markov Reward Process that includes actions, which influence state transitions and rewards. A mathematical framework for modeling decision-making, consisting of states, actions, rewards, and transition probabilities. It provides a formal structure for RL problems. 
+An MDP is defined as a 5-tuple, `< S, A, R, P, ρ >`, where
     - S is the set of all valid states,
     - A is the set of all valid actions,
     - R is the reward function
     - P is the transition probability function
     - ρ(rho) is the starting state distribution. It tells us how likely it is to start in each state at the very beginning of each episode.
-- **Markov Property:** Transitions only depend on the most recent state and action, and no prior history.
 - **Bellman Equation** provide a set of recursive relationships that `define the value functions` (𝑉(𝑠) for state-value and 𝑄(𝑠,𝑎) for action-value) in terms of the values of successor states. It state that `The value of your starting point is the reward you expect to get from being there, plus the value of wherever you land next.`
 ![alt text](image-4.png)
 - **Dynamic Programming:** A set of algorithms that use the Bellman equation to compute the value functions and optimal policies. It is used for planning the MDP. 

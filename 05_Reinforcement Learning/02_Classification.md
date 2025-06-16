@@ -1,5 +1,6 @@
 # Classification of RL Algorithms
 ![alt text](image-6.png)
+
 In the highest level, we can classify RL algorithms into two main categories: Model-based and Model-free.
 ## Model-based RL
 Model-based RL algorithms build a model of the environment and use it to make decisions. They can plan ahead by simulating future states and actions, which allows them to make more informed decisions. A model is nothing but a function that predicts state transitions and rewards. They are generally more sample efficient because they can learn from fewer interactions with the environment, but are harder to develop and require more computational resources.
@@ -22,3 +23,18 @@ Model-free RL algorithms do not build a model of the environment. Instead, they 
 - Combine both policy-based and value-based approaches.
 - Use two models: an actor (learns the policy) and a critic (learns the value function).
 - Example: A2C, DDPG, PPO.
+
+# On-policy vs Off-policy
+**On-Policy RL**
+- In on-policy methods, the agent learns about the policy it is currently following.
+- The actions used to update the agent are those actually taken by the current policy.
+- The same policy is used for both exploring the environment and for learning.
+- **Example algorithms:** SARSA, A2C (Advantage Actor-Critic)
+- **Key point:** Learning is based on the behavior of the current policy.
+
+**Off-Policy RL**
+- In off-policy methods, the agent learns about a different policy than the one used to generate the data.
+- The agent can learn from experiences gathered by any policy (including old policies or even random behavior).
+- This allows using past data or data collected by another agent.
+- **Example algorithms:** Q-learning, DDPG
+- **Key point:** Learning is based on the target policy, but experience can come from other (behavior) policies.

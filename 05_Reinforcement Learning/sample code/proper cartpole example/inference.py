@@ -11,6 +11,5 @@ for _ in range(10):
         action = randomAgent.select_action()
         obs, reward, _, _, _ = cartPoleEnv.step(action)
         tot_reward += reward
+        # print(cartPoleEnv.get_observations())
     print(tot_reward)
-
-

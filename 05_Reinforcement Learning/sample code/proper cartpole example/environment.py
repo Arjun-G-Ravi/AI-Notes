@@ -5,7 +5,7 @@ class Environment:
         self.env = gym.make('CartPole-v1', render_mode=render_mode)
         self.done = False
         self.tot_reward = 0
-        self.obs = []
+        self.obs = [0. for _ in range(4)]
     
     def get_actions(self):
         return list(range(self.env.action_space.n))
@@ -26,8 +26,3 @@ class Environment:
     def reset(self):
         obs, info = self.env.reset()
         self.done = False
-
-    
-if __name__ == '__main__':
-    cartpoleEnv = Environment()
-    print(cartpoleEnv.get_actions())

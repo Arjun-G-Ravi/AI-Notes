@@ -1,4 +1,4 @@
-# Best RL Algorithms
+# Important RL Algorithms
 1. PPO (Proximal Policy Optimization):
     - What it is: A policy gradient algorithm that updates the policy in small, stable steps.
     - Why it's important: Known for its balance of performance, stability, and relative ease of implementation/tuning. It's often the default choice for many tasks.

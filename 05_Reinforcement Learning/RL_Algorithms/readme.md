@@ -6,4 +6,9 @@ Current plan
 2. CEM
 3. Value Iteration
 4. Q-learning
-5. 
+5. REINFORCE
+6. Vanilla Policy Gradient
+7. TRPO
+8. PPO
+9. DDPG
+10. SAC

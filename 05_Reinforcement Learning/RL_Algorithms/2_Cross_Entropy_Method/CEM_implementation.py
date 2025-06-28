@@ -1,43 +1,26 @@
-These include RL algorithms that I am learning and/or implementing. The list is not exhaustive and will be updated as I learn more algorithms.
-
-Current plan
-
-1. Hill climbing
-2. CEM
-3. Value Iteration
-4. Q-learning
-5. REINFORCE
-6. Vanilla Policy Gradient
-7. TRPO
-8. PPO
-9. DDPG
-10. SAC
-
-# Basic Algorithm
-
-
-```python
 import random
 import torch
 import torch.nn as nn
-import numpy as np
 import gymnasium as gym
 
 class Agent:
     def __init__(self, env):
         self.env = env
+        self.distribution_mean = 0.
+        self.distribution_std = 1.
 
     def select_action(self):
-        action = int(self.model(torch.tensor(self.env.obs)) > 0.5)
-        return action
+        return torch.normal(mean=self.distribution_mean, std=self.distribution_std, size=(1,))
+
     
     def predict(self, obs):
         # use the current model and sample an action
-        action = random.choice([0, 1])
+        action = int(self.select_action() > 0)
         return action
 
     def learn(self, n_episodes = 100):
-        '''update the Agent to learn'''
+        # add this
+        ...
 
             
 class Environment:
@@ -80,4 +63,3 @@ if __name__ == '__main__':
             print(env.tot_reward)
             env.reset()
             ct += 1
-```

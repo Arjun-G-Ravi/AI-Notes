@@ -22,6 +22,7 @@
     - **V-value (State-Value Function):** $V(s)$ tells us the amount of reward we can expect starting from a specific state $s$, and then following a particular policy thereafter. The optimal policy is found by selecting actions that have the highest Q-value for each state.
     - **Difference:** The Q-value takes into account an action taken (which may not be in the policy) and the state(and then the policy thereafter), while the V-value only considers the state(and then the policy thereafter). The V-value is the expected value over all possible actions in the state, weighted by the policy's probability of choosing each action.
 - **Advantage Functions:** It is the difference between the Q-value and the V-value. It measures how much better a particular action is compared to the average action at that state under the current policy.
+- **Trajectory:** A sequence of states, actions, and rewards that the agent experiences during an episode. It is a sample from the MDP.
 
 ![alt text](image-5.png)
 ## Important Concepts:

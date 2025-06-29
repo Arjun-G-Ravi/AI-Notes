@@ -18,10 +18,10 @@ class Agent:
         action = int(self.select_action() > 0)
         return action
 
-    def learn(self, n_episodes = 100):
-        # add this
-        ...
-
+    def learn(self, num_epochs = 10, bs = 100):
+        while True:
+            pass
+        
             
 class Environment:
     def __init__(self, render_mode='human'):
@@ -48,18 +48,21 @@ class Environment:
         self.tot_reward = 0
 
 
-# inference
 if __name__ == '__main__':
     env = Environment()
     agent = Agent(env)
     env.reset()
 
-    ct = 0
-    while ct < 10:
-        obs = env.obs
-        act = agent.predict(obs)
-        env.step(act)
-        if env.done:
-            print(env.tot_reward)
-            env.reset()
-            ct += 1
+    # training
+    agent.learn(1000)
+
+    # inference
+    # ct = 0
+    # while ct < 10:
+    #     obs = env.obs
+    #     act = agent.predict(obs)
+    #     env.step(act)
+    #     if env.done:
+    #         print(env.tot_reward)
+    #         env.reset()
+    #         ct += 1

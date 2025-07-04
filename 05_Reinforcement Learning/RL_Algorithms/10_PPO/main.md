@@ -26,7 +26,7 @@ PPO uses a soft constraint (a penalty or modification of the objective function)
 ![alt text](image-1.png)
 
 ![alt text](image-2.png)
-Watch tte video's PPO section for a better understanding of the above image: [PPO Algorithm](https://www.youtube.com/watch?v=MVXdncpCbYE)
+Watch the video's PPO section for a better understanding of the above image: [PPO Algorithm](https://www.youtube.com/watch?v=MVXdncpCbYE)
 
 # Key Components & Concepts
 

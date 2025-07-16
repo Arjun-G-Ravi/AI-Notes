@@ -22,3 +22,6 @@ ML models are never meant to be perfect. They are meant to be 'good enough' to b
 	3. Semi supervised ML: 
  		  • Mixture of labelled and unlabelled data. The qty of unlabeled data will be small. But it will vastly enhance the model’s performance.
  		  • One semi-supervised algorithm leverages the small amount of labeled data to guide its learning process, using the labeled examples to build a model and then extending its predictions to the unlabeled data.
+	4. Reinforcement Learning: 
+  		  - An agent is put in an environment, where it takes actions and recieves rewards or penalties based on its actions.
+  		  - Eventually, this reward signals guides the agent to learn the best actions to take in different situations.

@@ -13,6 +13,6 @@
 # Important Skills
 - Data Preprocessing and Visualization (to identify patterns and anomalies for feature engineering)
 - Feature Engineering (more important than the model)
-- Model Ensembling
-- Hyperparameter Tuning
-- Model Validation
+- Model Ensembling - stacking, voting
+- Hyperparameter Tuning - optuna
+- Model Validation - custom validation strategies, cross-validation(k-fold, stratified, etc.)

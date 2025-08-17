@@ -14,24 +14,33 @@ The confusion matrix is a table that summarizes how successful the classificatio
 ![Alt text](image.png)
 
 It also helps us to have an idea about where the prediction is going wrong. This can help us address that problem with more data focusing on that problem.
+```
+True/False - whether the prediction is correct or not
+Positive/Negative - whether the prediction is positive value or negative value
+```
+
 
 ### Precision and Recall – Best for skewed class prediction
 - Precision is the ratio of correct positive predictions to the overall number of positive predictions. 
 ```Precision = TP/ (TP+FP)```
 
       High precision => if prediction == Positive: result = Positive  # says +ve only if sure
+      False positives are small
 
 - Recall is the ratio of correct positive predictions to the overall number of "True" answers in the dataset.
 ```Recall = TP/ (TP+FN)```
 
       High recall => if  result == Positive: prediction = Positive # says +ve if there is a chance
+      False negatives are small
 
 Almost always, in practice, we have to choose between a high precision or a high recall. It’s usually impossible to have both.
 
 ### Accuracy 
 Accuracy is given by the number of correctly classified examples divided by the total number of classified examples.
 
-```Accuracy = (TP + TN)/ (TP + TN + FP + FN)```
+      Accuracy = (TP + TN)/ (TP + TN + FP + FN)
+               =  True/ Total
+
 
 #### Cost-sensitive Accuracy
 

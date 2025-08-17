@@ -17,15 +17,18 @@ Linear regression for 1 dimension has a closed form solution. That means that gr
     (1) Let our model be  f(x) = w.x + b
     (2) First we define cost function. Here we consider squared error cost function.
             J = (1/m) Σmi=1( [f(x) – y ]^2 )
-    (3) We now find the partial derivatives of J with respect to parameters w and b. Gradient is the vector which will lead to the maximum increase in the function. Negative of this gradient leads to maximum decrease. Gradient is nothing but partial derivatives w.r.t each variable written as component of a vector. Thus the vector sum of the partial derivatives gives gradient vector. So, negative partial derivative for a variable gives the change in that variable which will result in the highest decrement of the cost function.
+    (3) We now find the partial derivatives of J with respect to parameters w and b(which is called the gradient of J). 
+ Gradient is the vector which will lead to the maximum increase in the function. Negative of this gradient leads to maximum decrease. Gradient is nothing but partial derivatives w.r.t each variable written as component of a vector. Thus the vector sum of the partial derivatives gives gradient vector. So, negative partial derivative for a variable gives the change in that variable which will result in the highest decrement of the cost function.
+
     (4) So  we update each variable as:
                 w = w – lr. ∂J/∂w
                 b  = b – lr . ∂J/∂b
-    (5) The learning rate (lr) is a hyperparameter that decides the length of every gradient descent step in the negative diection of gradient. It is typically a small value, set numbers like 10^(-4).
-    (6) Do this over multiple epoch, and the function will converge at the minima. Then the values of w and b will be optimal, denoted as w* and b*.
+The learning rate (lr) is a hyperparameter that decides the length of every gradient descent step in the negative diection of gradient. It is typically a small value, set numbers like 10^(-4).
 
-### Optimisations
-Gradient descent is also slow for large datasets. Minibatch stochastic gradient descent (minibatch SGD) is a version of the algorithm that speeds up the computation by approximating the gradient using smaller batches (subsets) of the training data. 
+    (5) Do this over multiple epoch, and the function will converge at the minima. Then the values of w and b will be optimal, denoted as w* and b*.
+
+### Optimizations
+Gradient descent is slow for large datasets. Minibatch stochastic gradient descent (minibatch SGD) is a version of the algorithm that speeds up the computation by approximating the gradient using smaller batches (subsets) of the training data. 
 
 Adagrad is a version of SGD that scales α for each parameter according to the history of gradients. As a result, α is reduced for very large gradients and vice-versa. Momentum is a method that helps accelerate SGD by orienting the gradient descent in the relevant direction and reducing oscillations. In neural network training, variants of SGD such as RMSprop and Adam, are very frequently used.
 

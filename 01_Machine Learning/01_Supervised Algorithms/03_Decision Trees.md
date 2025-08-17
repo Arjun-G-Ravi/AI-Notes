@@ -10,7 +10,7 @@ The picture shows how the data is split into sections, for the tree to split.
 ![Alt text](<Screenshot from 2023-12-14 12-56-48.png>)
 
 ### Notes:
-- Ensemble based tree models like Random forest and XGBoost are really good.
+- Ensemble based tree models like Random forest and XGBoost are really good(and is widely used even for Kaggle competions and all).
   
 - A decision tree can be converted to a set of IF-THEN rules that are easily understandable. For this reason, decision trees are very popular and sometimes preferred over more accurate but less interpretable methods.
 
@@ -27,7 +27,7 @@ Decision Trees are of two types:
  2. Regression trees
 
 ### Classification Trees
-In the case of a decision tree for classiﬁcation, the goodness of a split is quantiﬁed by an impurity measure.A split is pure if after the split, for all branches, all the instances choosing a branch belong to the same class. There are multiple functions which can be used to quatify the impurity.
+In the case of a decision tree for classiﬁcation, the goodness of a split is quantiﬁed by an impurity measure. A split is pure if after the split, for all branches, all the instances choosing a branch belong to the same class. There are multiple functions which can be used to quatify the impurity.
 
 ##### 1. Entropy
 Entropy is a measure of impurity or disorder in a set of data. It is commonly used in decision tree algorithms, such as ID3 (Iterative Dichotomiser 3), C4.5, and CART (Classification and Regression Trees), to determine the best feature to split the data at each node.

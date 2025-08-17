@@ -6,7 +6,7 @@ The activation function determines if the neuron is activated for the next layer
 
 For each layer L ,if g is the activation function,
 
-                f(X) = g( W.X + b )
+            f(X) = g( W.X + b )
 
 So, the whole NN would look like: ```fnn(X) = f1(f2(f3(X)))``` 
 

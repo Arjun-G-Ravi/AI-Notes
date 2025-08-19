@@ -10,16 +10,14 @@ Normalisation is the process of converting a dataset which has a high varience t
 ![Alt text](<Screenshot from 2023-10-11 20-38-12.png>)
 
 # Regularisation
+`It is a method to reduce overfitting in a model. It does this by adding a penalty term to the loss function, which discourages the model from fitting too closely to the training data. This helps to improve the model's generalization to unseen data.`
 L2 Regularisation can be implemented in nn, just like in other ML algorithms by adding a regularising term. 
 
 In neural networks, besides L0 and L2 regularization, you can use neural network specific regularizers: dropout, early stopping, and batch-normalization.
 
 - Dropout: Each time you run a training example through the network, you temporarily exclude at random some units from the computation. The higher the percentage of units excluded the higher the regularization effect.
-  
-- Early stopping: It works by monitoring a model's performance on a held-out validation set, and stopping training when the model's performance on the validation set starts to degrade.
 
-- L1 & L2 regularisation
-  
+- Early stopping: It works by monitoring a model's performance on a held-out validation set, and stopping training when the model's performance on the validation set starts to degrade.  
 - Batch normalization (which rather has to be called batch standardization) is a technique that consists of standardizing the outputs of each layer before the units of the subsequent layer receive them as input. In practice, batch normalization results in faster and more stable training, as well as some regularization effect.
 
 # Gradient checking

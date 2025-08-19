@@ -2,16 +2,18 @@
 
 - Get training data
   - Data exploration and analysis
+  - Finding what data is relevand and what is not
 
 - Preprocess training data
   - Normalization and Standardisation
   - Batching
   - Splitting to train/val/test sets
+  - Manage missing data
   - Data augmentation
-  - Feature engineering
+  - Feature engineering(modify existing features and create new ones)
 
-- Designing model
-  - Basic model design
+- Designing ML model
+  - Basic ML model design
     - Design model architecture
     - Hyperparameter tuning
     - Proper loss function
@@ -21,7 +23,6 @@
       - stratified sampling
     - Model evaluation
       - Proper metric selection
-      - Cross validation
 
   - Optimising the training process
     - Parameter initialization

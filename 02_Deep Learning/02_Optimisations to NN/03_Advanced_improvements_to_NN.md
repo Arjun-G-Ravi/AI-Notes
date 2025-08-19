@@ -1,9 +1,16 @@
+# Summary
+- Exponentially weighted average - uses previous gradients to update current gradients
+- Gradient Descent with momentum - Updates weights based on previous gradients, creating a "momentum" effect
+- RMSprop - Adjusts learning rates based on historical gradient information
+- Adam - Combines momentum and RMSprop
+- Learning Rate Decay - Gradually reduces the learning rate over time
+
 # Exponentially weighted average
 Exponentially weighted average is a statistical technique that give `more weight to recent data points, while diminishing the influence of older data points`.
 
 This is a technique that can be used in DL optimisation to update paramters based on influence from earlier parameters. -> `used in momentum`
 
-y(t) = beta*y(t-1) + (1-beta)*f(x)
+    y(t) = beta*y(t-1) + (1-beta)*f(x)
 
 Bias correction can be implemented in this to make this more accurate.
 
